@@ -1,0 +1,17 @@
+{
+    "name": "Serbull.GameAssets.Pets.Samples",
+    "rootNamespace": "Serbull.GameAssets.Pets.Samples",
+    "references": [
+        "Serbull.GameAssets",
+        "Serbull.GameAssets.Pets"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

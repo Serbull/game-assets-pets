@@ -1,0 +1,18 @@
+{
+    "name": "Serbull.GameAssets.Pets.Editor",
+    "rootNamespace": "Serbull.GameAssets.Pets.Editor",
+    "references": [
+        "Serbull.GameAssets.Pets"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

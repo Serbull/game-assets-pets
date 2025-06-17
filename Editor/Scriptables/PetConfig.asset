@@ -1,0 +1,235 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a677a7f78c4b248878560700834bb527, type: 3}
+  m_Name: PetConfig
+  m_EditorClassIdentifier: 
+  InventoryCapacity: 50
+  Rares:
+  - Id: common
+    Color: {r: 0.3882353, g: 0.3882353, b: 0.3882353, a: 1}
+  - Id: uncommon
+    Color: {r: 0.23137255, g: 1, b: 0.44313726, a: 1}
+  - Id: rare
+    Color: {r: 0.21176471, g: 0.69803923, b: 1, a: 1}
+  - Id: epic
+    Color: {r: 0.77254903, g: 0.23921569, b: 1, a: 1}
+  - Id: legendary
+    Color: {r: 1, g: 0.49019608, b: 0.09019608, a: 1}
+  - Id: secret
+    Color: {r: 1, g: 0, b: 0.7882353, a: 1}
+  Pets:
+  - Id: bear
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bird
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bunny
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: cat
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: chick
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: chicken
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: cow
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: deer
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: dog
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: duck
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: fox
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: goat
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: horse
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: lion
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: lizard
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: zebra
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 0
+    Undeletable: 0
+    IsInApp: 0
+  - Id: wolf
+    Rare: common
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: pet_inapp_1
+    Rare: secret
+    Bonus: 0.2
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 0
+    Undeletable: 0
+    IsInApp: 1
+  EggsDatas:
+  - Id: egg_1
+    Price: 100
+    PetPobabilities:
+    - PetId: bear
+      Pobability: 50
+    - PetId: bird
+      Pobability: 35
+    - PetId: bunny
+      Pobability: 15
+  - Id: egg_2
+    Price: 100000
+    PetPobabilities:
+    - PetId: cat
+      Pobability: 80
+    - PetId: chick
+      Pobability: 20
+  - Id: egg_3
+    Price: 10000000
+    PetPobabilities:
+    - PetId: chicken
+      Pobability: 80
+    - PetId: cow
+      Pobability: 20
+  - Id: 2_egg_1
+    Price: 100000000
+    PetPobabilities:
+    - PetId: deer
+      Pobability: 80
+    - PetId: dog
+      Pobability: 20
+  - Id: 2_egg_2
+    Price: 1000000000
+    PetPobabilities:
+    - PetId: duck
+      Pobability: 80
+    - PetId: fox
+      Pobability: 20
+  - Id: 3_egg_1
+    Price: 100000000000
+    PetPobabilities:
+    - PetId: goat
+      Pobability: 80
+    - PetId: horse
+      Pobability: 20
+  - Id: 3_egg_2
+    Price: 1000000000000
+    PetPobabilities:
+    - PetId: lion
+      Pobability: 80
+    - PetId: lizard
+      Pobability: 20
+  - Id: 4_egg_1
+    Price: 6000000000000
+    PetPobabilities:
+    - PetId: zebra
+      Pobability: 100
+  - Id: 5_egg_1
+    Price: 1500000000000000000
+    PetPobabilities:
+    - PetId: wolf
+      Pobability: 100

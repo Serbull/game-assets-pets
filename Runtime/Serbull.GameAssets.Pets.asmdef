@@ -1,0 +1,17 @@
+{
+    "name": "Serbull.GameAssets.Pets",
+    "rootNamespace": "Serbull.GameAssets.Pets",
+    "references": [
+        "Serbull.GameAssets",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
