@@ -1,8 +1,5 @@
 using UnityEngine;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using Random = UnityEngine.Random;
 
 namespace Serbull.GameAssets.Pets
 {
@@ -22,12 +19,14 @@ namespace Serbull.GameAssets.Pets
         {
             public string Id;
             [PetRareDropdown] public string Rare = "common";
-            public float Bonus = 0.2f;
+            [SerializeField] private float _bonus = 0.2f;
             public Sprite Icon;
             public Pet Prefab;
             public bool Mergable;
             public bool Undeletable;
             public bool IsInApp;
+
+            public float GetBonus(bool isGold) => _bonus * (isGold ? 2f : 1f);
         }
 
         [Serializable]
@@ -38,7 +37,7 @@ namespace Serbull.GameAssets.Pets
         }
 
         [Serializable]
-        public class EggsData
+        public class EggData
         {
             public string Id;
             public long Price;
@@ -47,99 +46,33 @@ namespace Serbull.GameAssets.Pets
 
         public RareData[] Rares;
         public PetData[] Pets;
-        public EggsData[] EggsDatas;
+        public EggData[] Eggs;
 
-
-        public EggsData GetEggData(string id)
+        private void OnValidate()
         {
-            foreach (var data in EggsDatas)
+            foreach (var egg in Eggs)
             {
-                if (data.Id == id)
+                var lastProbability = 100;
+                for (int i = 0; i < egg.PetPobabilities.Length - 1; i++)
                 {
-                    return data;
+                    lastProbability -= egg.PetPobabilities[i].Pobability;
                 }
+                egg.PetPobabilities[^1].Pobability = lastProbability;
             }
-
-            return null;
         }
 
-        public List<int> GetEggIndexes(string id)
-        {
-            var eggData = GetEggData(id);
-            if (eggData != null)
-            {
-                return eggData.PetPobabilities.Select(p => p.Pobability).ToList();
-            }
-            return new List<int>();
-        }
-
-        public float GetPetBonus(string petId, bool isGold)
-        {
-            for (int i = 0; i < Pets.Length; i++)
-            {
-                if (Pets[i].Id == petId)
-                {
-                    return Pets[i].Bonus * (isGold ? 2f : 1f);
-                }
-            }
-
-            Debug.LogError($"Bonus not found for Pet ID: {petId}");
-            return 0f;
-        }
-
-        public bool IsMergable(string id)
-        {
-            for (int i = 0; i < Pets.Length; i++)
-            {
-                if (Pets[i].Id == id)
-                {
-                    return Pets[i].Mergable;
-                }
-            }
-
-            Debug.LogError($"Speed bonus not found for Pet ID: {id}");
-            return false;
-        }
-
-        public bool IsUndelitable(string id)
-        {
-            for (int i = 0; i < Pets.Length; i++)
-            {
-                if (Pets[i].Id == id)
-                {
-                    return Pets[i].Undeletable;
-                }
-            }
-
-            Debug.LogError($"Speed bonus not found for Pet ID: {id}");
-            return false;
-        }
-
-        public RareData GetRareData(string id)
+        public RareData GetRareData(string rareId)
         {
             foreach (var rare in Rares)
             {
-                if (rare.Id == id)
+                if (rare.Id == rareId)
                 {
                     return rare;
                 }
             }
 
-            Debug.LogError($"Not found rare with id: {id}");
+            Debug.LogError($"Not found RareData with id: {rareId}");
             return null;
-        }
-
-        public int GetPetIndex(string id)
-        {
-            for (int i = 0; i < Pets.Length; i++)
-            {
-                if (Pets[i].Id == id)
-                {
-                    return i;
-                }
-            }
-
-            return 0;
         }
 
         public PetData GetPetData(string petId)
@@ -156,26 +89,18 @@ namespace Serbull.GameAssets.Pets
             return null;
         }
 
-        public Pet GetRandomPet()
+        public EggData GetEggData(string eggId)
         {
-            int randomIndex = Random.Range(0, Pets.Length);
-            return Pets[randomIndex].Prefab;
-        }
-
-        public Pet GetRandomPet(string[] ids, out string id)
-        {
-            var availablePets = Pets.Where(p => ids.Contains(p.Id)).ToList();
-
-            if (availablePets.Count == 0)
+            foreach (var data in Eggs)
             {
-                Debug.LogWarning("Нет доступных питомцев с указанными ID.");
-                id = null;
-                return null;
+                if (data.Id == eggId)
+                {
+                    return data;
+                }
             }
 
-            int randomIndex = Random.Range(0, availablePets.Count);
-            id = availablePets[randomIndex].Id;
-            return availablePets[randomIndex].Prefab;
+            Debug.LogError($"Not found EggData with id: {eggId}");
+            return null;
         }
     }
 }

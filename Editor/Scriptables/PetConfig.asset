@@ -29,7 +29,7 @@ MonoBehaviour:
   Pets:
   - Id: bear
     Rare: common
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: bb3b064507f3f442d9cdf76ab7350008, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
@@ -37,7 +37,7 @@ MonoBehaviour:
     IsInApp: 0
   - Id: bird
     Rare: uncommon
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: ade23b9a7dd8a43f0825ecd11b11c8f0, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
@@ -45,7 +45,7 @@ MonoBehaviour:
     IsInApp: 0
   - Id: bunny
     Rare: rare
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: acbb470f8982743dc8630a317b957bd8, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
@@ -53,7 +53,7 @@ MonoBehaviour:
     IsInApp: 0
   - Id: cat
     Rare: epic
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: a5bc2cb9c9c7b4eb09a88293cb6145bb, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
@@ -61,7 +61,7 @@ MonoBehaviour:
     IsInApp: 0
   - Id: chick
     Rare: legendary
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: 342d1d2c0c1954d99afdb07793461acd, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
@@ -69,7 +69,7 @@ MonoBehaviour:
     IsInApp: 0
   - Id: chicken
     Rare: secret
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: 3ff95ba369e3d471485c8bb197feaffe, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
@@ -77,7 +77,7 @@ MonoBehaviour:
     IsInApp: 0
   - Id: cow
     Rare: common
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: b26f73d1be4474d22931668db0039e11, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
@@ -85,7 +85,7 @@ MonoBehaviour:
     IsInApp: 0
   - Id: deer
     Rare: uncommon
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: 1ddde3857dc65499caaa4a5cd2474bec, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
@@ -93,7 +93,7 @@ MonoBehaviour:
     IsInApp: 0
   - Id: dog
     Rare: rare
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: 073f585f9320a4ba98234b7cec6524fe, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
@@ -101,7 +101,7 @@ MonoBehaviour:
     IsInApp: 0
   - Id: duck
     Rare: epic
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: e48518bac48024585871103176442b94, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
@@ -109,7 +109,7 @@ MonoBehaviour:
     IsInApp: 0
   - Id: fox
     Rare: legendary
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: 1b4c56bafcf9c4169908e48eebdc3a0b, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
@@ -117,7 +117,7 @@ MonoBehaviour:
     IsInApp: 0
   - Id: goat
     Rare: secret
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: 9419f8f7f7bd34c1389acba38d5ab28b, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
@@ -125,7 +125,7 @@ MonoBehaviour:
     IsInApp: 0
   - Id: horse
     Rare: common
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: 69c93a7d395c54dafb4066c1f9ed60fa, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
@@ -133,7 +133,7 @@ MonoBehaviour:
     IsInApp: 0
   - Id: lion
     Rare: uncommon
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: 437fdbe1c9d92462a90c6fdc96e0de08, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
@@ -141,7 +141,7 @@ MonoBehaviour:
     IsInApp: 0
   - Id: lizard
     Rare: rare
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: 193be8e4ab00c49a99805ea0c2691507, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
@@ -149,15 +149,15 @@ MonoBehaviour:
     IsInApp: 0
   - Id: zebra
     Rare: epic
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: 34fd1d920fef24ac7870979dfb12d964, type: 3}
     Prefab: {fileID: 0}
-    Mergable: 0
+    Mergable: 1
     Undeletable: 0
     IsInApp: 0
   - Id: wolf
     Rare: legendary
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 21300000, guid: 3f0269c195e7347eb9e2d7ec19c9c0a6, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
@@ -165,13 +165,13 @@ MonoBehaviour:
     IsInApp: 0
   - Id: pet_inapp_1
     Rare: secret
-    Bonus: 0.2
+    _bonus: 0.2
     Icon: {fileID: 0}
     Prefab: {fileID: 0}
     Mergable: 0
     Undeletable: 1
     IsInApp: 1
-  EggsDatas:
+  Eggs:
   - Id: egg_1
     Price: 100
     PetPobabilities:
@@ -185,51 +185,15 @@ MonoBehaviour:
     Price: 100000
     PetPobabilities:
     - PetId: cat
-      Pobability: 80
+      Pobability: 50
     - PetId: chick
-      Pobability: 20
+      Pobability: 35
+    - PetId: chicken
+      Pobability: 15
   - Id: egg_3
     Price: 10000000
     PetPobabilities:
-    - PetId: chicken
-      Pobability: 80
     - PetId: cow
-      Pobability: 20
-  - Id: 2_egg_1
-    Price: 100000000
-    PetPobabilities:
+      Pobability: 80
     - PetId: deer
-      Pobability: 80
-    - PetId: dog
       Pobability: 20
-  - Id: 2_egg_2
-    Price: 1000000000
-    PetPobabilities:
-    - PetId: duck
-      Pobability: 80
-    - PetId: fox
-      Pobability: 20
-  - Id: 3_egg_1
-    Price: 100000000000
-    PetPobabilities:
-    - PetId: goat
-      Pobability: 80
-    - PetId: horse
-      Pobability: 20
-  - Id: 3_egg_2
-    Price: 1000000000000
-    PetPobabilities:
-    - PetId: lion
-      Pobability: 80
-    - PetId: lizard
-      Pobability: 20
-  - Id: 4_egg_1
-    Price: 6000000000000
-    PetPobabilities:
-    - PetId: zebra
-      Pobability: 100
-  - Id: 5_egg_1
-    Price: 1500000000000000000
-    PetPobabilities:
-    - PetId: wolf
-      Pobability: 100

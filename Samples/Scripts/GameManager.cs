@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using Random = UnityEngine.Random;
 
 namespace Serbull.GameAssets.Pets.Samples
 {
@@ -20,6 +21,21 @@ namespace Serbull.GameAssets.Pets.Samples
             _saveData ??= new SaveData();
 
             PetManager.Initialize(_saveData.pets);
+
+            Debug.Log("Use 'P' to add random pet.");
         }
+
+#if UNITY_EDITOR
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                var pets = PetManager.Config.Pets;
+                var pet = pets[Random.Range(0, pets.Length)];
+                PetManager.AddPet(pet.Id);
+                Debug.Log("Added random pet");
+            }
+        }
+#endif
     }
 }

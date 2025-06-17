@@ -53,20 +53,6 @@ namespace Serbull.GameAssets.Pets
             UpdatePanel();
         }
 
-#if UNITY_EDITOR
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                Debug.Log("Add random pet");
-                var pets = PetManager.Config.Pets;
-                var pet = pets[Random.Range(0, pets.Length)];
-                PetManager.AddPet(pet.Id);
-                Init();
-            }
-        }
-#endif
-
         public void Init()
         {
             bool hasSelected = false;
@@ -87,10 +73,10 @@ namespace Serbull.GameAssets.Pets
             {
                 var slot = Instantiate(_petSlot, _petContent);
                 var petData = PetManager.Config.GetPetData(petSave.Id);
-                var bonus = PetManager.Config.GetPetBonus(petSave.Id, petSave.IsGold);
                 var rare = PetManager.Config.GetRareData(petData.Rare);
+                var bonus = petData.GetBonus(petSave.IsGold).ToShortValue();
 
-                slot.Init(petSave, petData.Icon, rare.Color, $"x{bonus.ToShortValue()}");
+                slot.Init(petSave, petData.Icon, rare.Color, $"x{bonus}");
                 slot.OnClicked += Slot_OnClicked;
 
                 if (!hasSelected && petSave.Id == _lastSelectedId)
@@ -106,16 +92,18 @@ namespace Serbull.GameAssets.Pets
                 Slot_OnClicked(firstPet);
             }
 
-            _equippedPetCountText.text = $"{PetManager.GetEqippedPets().Count}/{3}";
-            _petCountText.text = $"{PetManager.PetSaveData.Count}/{PetManager.Config.InventoryCapacity}";
-            _removeButton.gameObject.SetActive(_currentPetData != null && !_currentPetData.IsEquipped);
             UpdatePanel();
-
         }
 
         private void UpdatePanel()
         {
+            //main layout
             _mainPetLayout.SetActive(_currentPetData != null);
+
+            //down layout
+            _equippedPetCountText.text = $"{PetManager.GetEqippedPets().Count}/{3}";
+            _petCountText.text = $"{PetManager.PetSaveData.Count}/{PetManager.Config.InventoryCapacity}";
+            _removeButton.gameObject.SetActive(_currentPetData != null && !_currentPetData.IsEquipped);
         }
 
         private void Slot_OnClicked(PetData petData)
@@ -131,31 +119,30 @@ namespace Serbull.GameAssets.Pets
             var mergePetsCount = Mathf.Min(PetManager.GetSamePetsCount(petData.Id), 5);
             _mergeText.SetLocalizationId("merge", mergePetsCount);
             _mergeChancheText.SetLocalizationId("chance", mergePetsCount * 20);
-            _bonusText.text = $"x{petConfig.GetPetBonus(petData.Id, petData.IsGold).ToShortValue()}";
-            _removeButton.gameObject.SetActive(_currentPetData != null && !_currentPetData.IsEquipped && !petConfig.IsUndelitable(petData.Id));
+            _bonusText.text = $"x{pet.GetBonus(petData.IsGold).ToShortValue()}";
+            _removeButton.gameObject.SetActive(_currentPetData != null && !_currentPetData.IsEquipped && !pet.Undeletable);
 
-            Debug.LogError("Check");
-            //...text = LocalizationManager.GetText(rare.Id);
-            _mainPetNameText.text = pet.Id;
-            _rareText.text = rare.Id;
+            _mainPetNameText.text = LocalizationProvider.GetText(pet.Id);
+            _rareText.text = LocalizationProvider.GetText(rare.Id);
+
             _rareText.color = rare.Color;
-
-            _mainPetImage.sprite = pet.Icon;
             _mainPetBg.color = rare.Color;
 
-            bool isMergable = petConfig.IsMergable(petData.Id) && !_currentPetData.IsGold;
+            _mainPetImage.sprite = pet.Icon;
+
+            bool isMergable = pet.Mergable && !_currentPetData.IsGold;
             _mergeButton.gameObject.SetActive(isMergable);
 
             if (_currentPetData.IsGold)
             {
                 _specificPetText.gameObject.SetActive(true);
-                _specificPetText.text = "gold";
+                _specificPetText.text = LocalizationProvider.GetText("gold");
                 _specificPetText.colorGradient = _goldPetColor;
             }
             else if (petConfig.GetPetData(petData.Id).Undeletable)
             {
                 _specificPetText.gameObject.SetActive(true);
-                _specificPetText.text = "premium";
+                _specificPetText.text = LocalizationProvider.GetText("premium");
                 _specificPetText.colorGradient = _premiumPetColor;
             }
             else

@@ -153,7 +153,7 @@ namespace Serbull.GameAssets.Pets
                 var pet = PetSaveData[i];
                 if (pet.IsEquipped)
                 {
-                    totalBonus += Config.GetPetBonus(pet.Id, pet.IsGold);
+                    totalBonus += Config.GetPetData(pet.Id).GetBonus(pet.IsGold);
                 }
             }
 
@@ -179,7 +179,12 @@ namespace Serbull.GameAssets.Pets
 
         private static void SortPets()
         {
-            PetSaveData.Sort((x, y) => Config.GetPetBonus(y.Id, y.IsGold).CompareTo(Config.GetPetBonus(x.Id, x.IsGold)));
+            PetSaveData.Sort((x, y) =>
+            {
+                var xBonus = Config.GetPetData(x.Id).GetBonus(x.IsGold);
+                var yBonus = Config.GetPetData(y.Id).GetBonus(y.IsGold);
+                return yBonus.CompareTo(xBonus);
+            });
         }
     }
 }
