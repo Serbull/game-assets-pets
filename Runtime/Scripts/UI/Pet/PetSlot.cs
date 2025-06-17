@@ -9,8 +9,8 @@ namespace Serbull.GameAssets.Pets
     {
         public Action<PetData> OnClicked;
 
-        [SerializeField] private Image _petIcon;
         [SerializeField] private Image _background;
+        [SerializeField] private Image _petIcon;
         [SerializeField] private TextMeshProUGUI _speedBonus;
         [SerializeField] private GameObject _equipMark;
         [SerializeField] private Sprite _goldSprite;

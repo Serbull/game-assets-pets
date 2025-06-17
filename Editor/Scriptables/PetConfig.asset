@@ -15,7 +15,7 @@ MonoBehaviour:
   InventoryCapacity: 50
   Rares:
   - Id: common
-    Color: {r: 0.3882353, g: 0.3882353, b: 0.3882353, a: 1}
+    Color: {r: 0.6, g: 0.6, b: 0.6, a: 1}
   - Id: uncommon
     Color: {r: 0.23137255, g: 1, b: 0.44313726, a: 1}
   - Id: rare
@@ -30,47 +30,47 @@ MonoBehaviour:
   - Id: bear
     Rare: common
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: bb3b064507f3f442d9cdf76ab7350008, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
   - Id: bird
-    Rare: common
+    Rare: uncommon
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: ade23b9a7dd8a43f0825ecd11b11c8f0, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
   - Id: bunny
-    Rare: common
+    Rare: rare
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: acbb470f8982743dc8630a317b957bd8, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
   - Id: cat
-    Rare: common
+    Rare: epic
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: a5bc2cb9c9c7b4eb09a88293cb6145bb, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
   - Id: chick
-    Rare: common
+    Rare: legendary
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 342d1d2c0c1954d99afdb07793461acd, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
   - Id: chicken
-    Rare: common
+    Rare: secret
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 3ff95ba369e3d471485c8bb197feaffe, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
     Undeletable: 0
@@ -78,47 +78,47 @@ MonoBehaviour:
   - Id: cow
     Rare: common
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: b26f73d1be4474d22931668db0039e11, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
   - Id: deer
-    Rare: common
+    Rare: uncommon
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 1ddde3857dc65499caaa4a5cd2474bec, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
   - Id: dog
-    Rare: common
+    Rare: rare
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 073f585f9320a4ba98234b7cec6524fe, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
   - Id: duck
-    Rare: common
+    Rare: epic
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: e48518bac48024585871103176442b94, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
   - Id: fox
-    Rare: common
+    Rare: legendary
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 1b4c56bafcf9c4169908e48eebdc3a0b, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
   - Id: goat
-    Rare: common
+    Rare: secret
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 9419f8f7f7bd34c1389acba38d5ab28b, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
     Undeletable: 0
@@ -126,39 +126,39 @@ MonoBehaviour:
   - Id: horse
     Rare: common
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 69c93a7d395c54dafb4066c1f9ed60fa, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
   - Id: lion
-    Rare: common
+    Rare: uncommon
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 437fdbe1c9d92462a90c6fdc96e0de08, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
   - Id: lizard
-    Rare: common
+    Rare: rare
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 193be8e4ab00c49a99805ea0c2691507, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
   - Id: zebra
-    Rare: common
+    Rare: epic
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 34fd1d920fef24ac7870979dfb12d964, type: 3}
     Prefab: {fileID: 0}
     Mergable: 0
     Undeletable: 0
     IsInApp: 0
   - Id: wolf
-    Rare: common
+    Rare: legendary
     Bonus: 0.2
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 3f0269c195e7347eb9e2d7ec19c9c0a6, type: 3}
     Prefab: {fileID: 0}
     Mergable: 1
     Undeletable: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
     Icon: {fileID: 0}
     Prefab: {fileID: 0}
     Mergable: 0
-    Undeletable: 0
+    Undeletable: 1
     IsInApp: 1
   EggsDatas:
   - Id: egg_1
