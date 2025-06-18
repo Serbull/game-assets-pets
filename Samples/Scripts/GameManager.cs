@@ -34,7 +34,7 @@ namespace Serbull.GameAssets.Pets.Samples
                 var pets = PetManager.Config.Pets;
                 var pet = pets[Random.Range(0, pets.Length)];
                 PetManager.AddPet(pet.Id);
-                Debug.Log("Added random pet");
+                Debug.Log("Added random pet: " + pet.Id);
             }
 
             if (Input.GetKeyDown(KeyCode.O))

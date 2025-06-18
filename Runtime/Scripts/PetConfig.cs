@@ -19,7 +19,7 @@ namespace Serbull.GameAssets.Pets
         {
             public string Id;
             [PetRareDropdown] public string Rare = "common";
-            [SerializeField] private float _bonus = 0.2f;
+            [SerializeField] private float _bonus = 1f;
             public Sprite Icon;
             public Pet Prefab;
             public bool Mergable;
