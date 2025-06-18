@@ -19,9 +19,11 @@ namespace Serbull.GameAssets.Pets
 
         [Header("Main Pet")]
         [SerializeField] private GameObject _mainPetLayout;
+        [SerializeField] private TextMeshProUGUI _mainPetNameText;
         [SerializeField] private Image _mainPetImage;
         [SerializeField] private Image _mainPetBg;
-        [SerializeField] private TextMeshProUGUI _mainPetNameText;
+        [SerializeField] private Image _bonusImage;
+        [SerializeField] private GameObject _goldObj;
 
         [SerializeField] private TextMeshProUGUI _rareText;
         [SerializeField] private TextMeshProUGUI _equippedPetCountText;
@@ -35,7 +37,6 @@ namespace Serbull.GameAssets.Pets
         [SerializeField] private VertexGradient _premiumPetColor;
 
         private PetData _currentPetData;
-        private string _lastSelectedId = null;
 
         private void Awake()
         {
@@ -45,6 +46,10 @@ namespace Serbull.GameAssets.Pets
             _mergeButton.onClick.AddListener(MergeButton_OnClick);
             _equipTheBest.onClick.AddListener(EquipTheBest_OnClick);
             _removeButton.onClick.AddListener(RemoveButton_OnClick);
+
+            var bonusSprite = PetManager.Config.Visual.BonusSprite;
+            _bonusImage.gameObject.SetActive(bonusSprite);
+            _bonusImage.sprite = bonusSprite;
         }
 
         private void OnEnable()
@@ -79,7 +84,7 @@ namespace Serbull.GameAssets.Pets
                 slot.Init(petSave, petData.Icon, rare.Color, $"x{bonus}");
                 slot.OnClicked += Slot_OnClicked;
 
-                if (!hasSelected && petSave.Id == _lastSelectedId)
+                if (!hasSelected)
                 {
                     hasSelected = true;
                     Slot_OnClicked(petSave);
@@ -132,6 +137,9 @@ namespace Serbull.GameAssets.Pets
 
             bool isMergable = pet.Mergable && !_currentPetData.IsGold;
             _mergeButton.gameObject.SetActive(isMergable);
+
+            _goldObj.SetActive(_currentPetData.IsGold);
+            _mainPetImage.color = _currentPetData.IsGold ? Color.yellow : Color.white;
 
             if (_currentPetData.IsGold)
             {

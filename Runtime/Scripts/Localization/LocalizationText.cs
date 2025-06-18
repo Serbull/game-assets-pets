@@ -18,20 +18,12 @@ namespace Serbull.GameAssets.Pets
 
         private void OnEnable()
         {
-            //LocalizationManager.OnLanguageChanged += UpdateText;
             UpdateText();
-        }
-
-        private void OnDisable()
-        {
-           // LocalizationManager.OnLanguageChanged -= UpdateText;
         }
 
         protected void UpdateText()
         {
-            Debug.LogError("CHECK");
-            //var text = string.Format(LocalizationManager.GetText(_id), _arg0);
-            var text = string.Format(_id, _arg0);
+            var text = string.Format(LocalizationProvider.GetText(_id), _arg0);
 
             if (_text != null && text != null)
             {

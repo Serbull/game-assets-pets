@@ -20,9 +20,10 @@ namespace Serbull.GameAssets.Pets.Samples
             _saveData = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString("saveData"));
             _saveData ??= new SaveData();
 
-            PetManager.Initialize(_saveData.pets);
+            PetManager.Initialize(_saveData.pets, "ru");
 
             Debug.Log("Use 'P' to add random pet.");
+            Debug.Log("Use 'O' to add all pets.");
         }
 
 #if UNITY_EDITOR
@@ -34,6 +35,15 @@ namespace Serbull.GameAssets.Pets.Samples
                 var pet = pets[Random.Range(0, pets.Length)];
                 PetManager.AddPet(pet.Id);
                 Debug.Log("Added random pet");
+            }
+
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                foreach (var pet in PetManager.Config.Pets)
+                {
+                    PetManager.AddPet(pet.Id);
+                }
+                Debug.Log("Added all pets");
             }
         }
 #endif

@@ -13,7 +13,6 @@ namespace Serbull.GameAssets.Pets
         [SerializeField] private Image _petIcon;
         [SerializeField] private TextMeshProUGUI _speedBonus;
         [SerializeField] private GameObject _equipMark;
-        [SerializeField] private Sprite _goldSprite;
         [SerializeField] private GameObject _goldObj;
 
         private Button _button;
@@ -36,7 +35,7 @@ namespace Serbull.GameAssets.Pets
 
             if (petData.IsGold)
             {
-                _background.sprite = _goldSprite;
+                _petIcon.color = Color.yellow;
             }
         }
 

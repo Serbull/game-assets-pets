@@ -41,9 +41,10 @@ namespace Serbull.GameAssets.Pets
             }
         }
 
-        public static void Initialize(List<PetData> petSaveData)
+        public static void Initialize(List<PetData> petSaveData, string language = "en")
         {
             _petSaveData = petSaveData;
+            LocalizationProvider.Initialize(language);
         }
 
         public static void EquipPet(string id)
@@ -70,9 +71,9 @@ namespace Serbull.GameAssets.Pets
             }
         }
 
-        public static void AddPet(string id)
+        public static void AddPet(string id, bool isGold = false)
         {
-            PetSaveData.Add(new PetData { Id = id, IsEquipped = false });
+            PetSaveData.Add(new PetData { Id = id, IsGold = isGold });
             SortPets();
             OnPetAdded?.Invoke();
         }
@@ -92,27 +93,42 @@ namespace Serbull.GameAssets.Pets
         {
             var matchingPets = PetSaveData.FindAll(p => p.Id == id && !p.IsGold);
 
-            var percent = UnityEngine.Mathf.Clamp(matchingPets.Count * 20, 0, 100);
+            var percent = Mathf.Clamp(matchingPets.Count * 20, 0, 100);
 
             var success = UnityEngine.Random.Range(0, 100) < percent;
 
             var count = 0;
+            var hasEquippedPets = false;
+
             foreach (var item in matchingPets)
             {
                 if (count >= 5) break;
+
+                if (!hasEquippedPets && item.IsEquipped)
+                {
+                    hasEquippedPets = true;
+                }
+
                 _petSaveData.Remove(item);
                 count++;
             }
 
+            if (hasEquippedPets)
+            {
+                OnEquippedPetChanged?.Invoke();
+            }
+
             if (!success)
             {
+                Debug.LogError("fail");
                 //Notification.ShowRed(LocalizationManager.GetText("merge_fail"));
                 return;
             }
 
+            Debug.LogError("success");
             //Notification.ShowGreen(LocalizationManager.GetText("merge_success"));
 
-            _petSaveData.Add(new PetData { Id = id, IsGold = true });
+            AddPet(id, true);
         }
 
         public static void SetTheBest()

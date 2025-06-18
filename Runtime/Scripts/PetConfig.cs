@@ -44,9 +44,27 @@ namespace Serbull.GameAssets.Pets
             public PetPobability[] PetPobabilities;
         }
 
+        [Serializable]
+        public class VisualData
+        {
+            public Sprite BonusSprite;
+        }
+
+        [Serializable]
+        public class LocalizationData
+        {
+            public string Id;
+            public string English;
+            public string Russian;
+        }
+
         public RareData[] Rares;
         public PetData[] Pets;
         public EggData[] Eggs;
+        [Space]
+        public VisualData Visual;
+        [Space]
+        public LocalizationData[] Localizations;
 
         private void OnValidate()
         {
