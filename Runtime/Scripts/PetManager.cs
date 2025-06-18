@@ -120,13 +120,11 @@ namespace Serbull.GameAssets.Pets
 
             if (!success)
             {
-                Debug.LogError("fail");
-                //Notification.ShowRed(LocalizationManager.GetText("merge_fail"));
+                Notification.Instance.ShowRed(LocalizationProvider.GetText("merge_fail"));
                 return;
             }
 
-            Debug.LogError("success");
-            //Notification.ShowGreen(LocalizationManager.GetText("merge_success"));
+            Notification.Instance.ShowGreen(LocalizationProvider.GetText("merge_success"));
 
             AddPet(id, true);
         }

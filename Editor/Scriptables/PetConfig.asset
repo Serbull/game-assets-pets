@@ -163,9 +163,57 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: pet_inapp_1
+  - Id: cute_dragon1
     Rare: secret
-    _bonus: 0.2
+    _bonus: 100
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 0
+    Undeletable: 1
+    IsInApp: 1
+  - Id: cute_dragon2
+    Rare: secret
+    _bonus: 200
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 0
+    Undeletable: 1
+    IsInApp: 1
+  - Id: cute_dragon3
+    Rare: secret
+    _bonus: 300
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 0
+    Undeletable: 1
+    IsInApp: 1
+  - Id: cute_dragon4
+    Rare: secret
+    _bonus: 400
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 0
+    Undeletable: 1
+    IsInApp: 1
+  - Id: cute_dragon5
+    Rare: secret
+    _bonus: 500
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 0
+    Undeletable: 1
+    IsInApp: 1
+  - Id: cute_dragon6
+    Rare: secret
+    _bonus: 600
+    Icon: {fileID: 0}
+    Prefab: {fileID: 0}
+    Mergable: 0
+    Undeletable: 1
+    IsInApp: 1
+  - Id: cute_dragon7
+    Rare: secret
+    _bonus: 700
     Icon: {fileID: 0}
     Prefab: {fileID: 0}
     Mergable: 0
@@ -216,6 +264,14 @@ MonoBehaviour:
   - Id: merge
     English: Merge <b>{0}/5
     Russian: "\u0421\u043B\u0438\u044F\u043D\u0438\u0435 <b>{0}/5"
+  - Id: merge_success
+    English: the pet was successfully created
+    Russian: "\u043F\u0438\u0442\u043E\u043C\u0435\u0446 \u0443\u0434\u0430\u0447\u043D\u043E
+      \u0441\u043E\u0437\u0434\u0430\u043D"
+  - Id: merge_fail
+    English: failed to create a pet
+    Russian: "\u043D\u0435 \u0443\u0434\u0430\u043B\u043E\u0441\u044C \u0441\u043E\u0437\u0434\u0430\u0442\u044C
+      \u043F\u0438\u0442\u043E\u043C\u0446\u0430"
   - Id: chance
     English: Chance <color=yellow><b>{0}%
     Russian: "\u0428\u0430\u043D\u0441 <color=yellow><b>{0}%"
@@ -294,36 +350,24 @@ MonoBehaviour:
   - Id: wolf
     English: Wolf
     Russian: "\u0412\u043E\u043B\u043A"
-  - Id: 
-    English: 
-    Russian: 
-  - Id: 
-    English: 
-    Russian: 
-  - Id: 
-    English: 
-    Russian: 
-  - Id: 
-    English: 
-    Russian: 
-  - Id: 
-    English: 
-    Russian: 
-  - Id: 
-    English: 
-    Russian: 
-  - Id: 
-    English: 
-    Russian: 
-  - Id: 
-    English: 
-    Russian: 
-  - Id: 
-    English: 
-    Russian: 
-  - Id: 
-    English: 
-    Russian: 
-  - Id: 
-    English: 
-    Russian: 
+  - Id: cute_dragon1
+    English: Nightram
+    Russian: "\u041D\u0430\u0439\u0442\u0440\u0430\u043C"
+  - Id: cute_dragon2
+    English: Inferny
+    Russian: "\u0418\u043D\u0444\u0435\u0440\u043D\u0438"
+  - Id: cute_dragon3
+    English: Icytail
+    Russian: "\u0410\u0439\u0441\u0438\u0442\u0435\u0439\u043B"
+  - Id: cute_dragon4
+    English: Sunleaf
+    Russian: "\u0421\u0430\u043D\u043B\u0438\u0444"
+  - Id: cute_dragon5
+    English: Mystclaw
+    Russian: "\u041C\u0438\u0441\u0442\u0438\u043A\u043B\u0430\u043F"
+  - Id: cute_dragon6
+    English: Voltwing
+    Russian: "\u0412\u043E\u043B\u044C\u0442\u043A\u0440\u044B\u043B"
+  - Id: cute_dragon7
+    English: Frosty
+    Russian: "\u0424\u0440\u043E\u0441\u0442\u0438"

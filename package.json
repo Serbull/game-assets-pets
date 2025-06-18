@@ -1,15 +1,15 @@
 {
-    "name": "com.serbull.gameasset.pets",
+    "name": "com.serbull.gameassets.pets",
     "author": {
         "name": "Serbull"
     },
-    "displayName": "Asset Pets",
+    "displayName": "Game Assets | Pets",
     "unity": "2020.3",
     "version": "1.0.0",
-    "keywords": [ "builder", "fastbuilder", "build" ],
+    "keywords": [ "gameassets", "pets" ],
     "dependencies": {},
     "repository": {
         "type": "git",
-        "url": "https://github.com/Serbull/game-asset-pets.git"
+        "url": "https://github.com/Serbull/game-assets-pets.git"
     }
 }

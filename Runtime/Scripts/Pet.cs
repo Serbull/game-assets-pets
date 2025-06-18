@@ -5,11 +5,7 @@ public class Pet : MonoBehaviour
     private readonly float _maxDistance = 0.2f;
     private readonly float _moveSpeed = 2f;
 
-    [SerializeField] private Sprite _icon;
-
     private Transform _followTarget;
-
-    public Sprite Icon => _icon;
 
     private void OnEnable()
     {
