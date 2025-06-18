@@ -8,8 +8,8 @@ namespace Serbull.GameAssets.Pets
 {
     public static class PetManager
     {
-        public static Action OnEquippedPetChanged;
-        public static Action OnPetAdded;
+        public static event Action OnEquippedPetChanged;
+        public static event Action OnPetAdded;
 
         private static PetConfig _config;
         private static List<PetData> _petSaveData;
@@ -195,9 +195,14 @@ namespace Serbull.GameAssets.Pets
         {
             PetSaveData.Sort((x, y) =>
             {
-                var xBonus = Config.GetPetData(x.Id).GetBonus(x.IsGold);
-                var yBonus = Config.GetPetData(y.Id).GetBonus(y.IsGold);
-                return yBonus.CompareTo(xBonus);
+                if (x.IsEquipped && !y.IsEquipped) return -1;
+                else if (!x.IsEquipped && y.IsEquipped) return 1;
+                else
+                {
+                    var xBonus = Config.GetPetData(x.Id).GetBonus(x.IsGold);
+                    var yBonus = Config.GetPetData(y.Id).GetBonus(y.IsGold);
+                    return yBonus.CompareTo(xBonus);
+                }
             });
         }
     }

@@ -1,4 +1,3 @@
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -58,10 +57,13 @@ namespace Serbull.GameAssets.Pets
             UpdatePanel();
         }
 
+        private void OnDisable()
+        {
+            _currentPetData = null;
+        }
+
         public void Init()
         {
-            bool hasSelected = false;
-
             foreach (Transform child in _petContent)
             {
                 Destroy(child.gameObject);
@@ -82,20 +84,24 @@ namespace Serbull.GameAssets.Pets
                 var bonus = petData.GetBonus(petSave.IsGold).ToShortValue();
 
                 slot.Init(petSave, petData.Icon, rare.Color, $"x{bonus}");
-                slot.OnClicked += Slot_OnClicked;
-
-                if (!hasSelected)
-                {
-                    hasSelected = true;
-                    Slot_OnClicked(petSave);
-                }
+                slot.OnClicked += SelectPet;
             }
 
-            if (!hasSelected && PetManager.PetSaveData.Count > 0)
-            {
-                var firstPet = PetManager.PetSaveData.First();
-                Slot_OnClicked(firstPet);
-            }
+            SelectPet(PetManager.PetSaveData[0]);
+
+            //if (_currentPetData != null)
+            //{
+            //    _currentPetData = PetManager.PetSaveData.FirstOrDefault((p) => p.Id == _currentPetData.Id && p.IsEquipped == _currentPetData.IsEquipped);
+            //}
+
+            //if (_currentPetData != null)
+            //{
+            //    SelectPet(_currentPetData);
+            //}
+            //else
+            //{
+
+            //}
 
             UpdatePanel();
         }
@@ -111,7 +117,7 @@ namespace Serbull.GameAssets.Pets
             _removeButton.gameObject.SetActive(_currentPetData != null && !_currentPetData.IsEquipped);
         }
 
-        private void Slot_OnClicked(PetData petData)
+        private void SelectPet(PetData petData)
         {
             var petConfig = PetManager.Config;
             var pet = petConfig.GetPetData(petData.Id);
@@ -173,13 +179,11 @@ namespace Serbull.GameAssets.Pets
 
         private void EquipButton_OnClick()
         {
-            if (_currentPetData == null)
-            {
-                return;
-            }
+            if (_currentPetData == null) return;
 
             if (PetManager.GetEqippedPets().Count >= 3)
             {
+                Notification.Instance.ShowRed(LocalizationProvider.GetText("equip_max"));
                 return;
             }
 
