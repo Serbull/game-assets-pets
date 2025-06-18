@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using Random = UnityEngine.Random;
+using TMPro;
 
 namespace Serbull.GameAssets.Pets.Samples
 {
@@ -13,6 +14,11 @@ namespace Serbull.GameAssets.Pets.Samples
 
     public class GameManager : MonoBehaviour
     {
+        public EggPopup EggPopup;
+
+        public UnityEngine.UI.Button ButtonPrefab;
+        public Transform ButtonsParent;
+
         private SaveData _saveData;
 
         private void Start()
@@ -22,8 +28,22 @@ namespace Serbull.GameAssets.Pets.Samples
 
             PetManager.Initialize(_saveData.pets, "ru");
 
+            InitializeEggButtons();
+
             Debug.Log("Use 'P' to add random pet.");
             Debug.Log("Use 'O' to add all pets.");
+        }
+
+        private void InitializeEggButtons()
+        {
+            for (int i = 0; i < PetManager.Config.Eggs.Length; i++)
+            {
+                var eggData = PetManager.Config.Eggs[i];
+                var btn = Instantiate(ButtonPrefab, ButtonsParent);
+                btn.onClick = new UnityEngine.UI.Button.ButtonClickedEvent();
+                btn.onClick.AddListener(() => EggPopup.Show(eggData.Id));
+                btn.GetComponentInChildren<TextMeshProUGUI>().text = eggData.Id;
+            }
         }
 
 #if UNITY_EDITOR

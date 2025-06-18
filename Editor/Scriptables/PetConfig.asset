@@ -263,7 +263,7 @@ MonoBehaviour:
   - Id: egg_1
     Price: 100
     PetPobabilities:
-    - PetId: goat
+    - PetId: bear
       Pobability: 50
     - PetId: bird
       Pobability: 30
@@ -280,6 +280,7 @@ MonoBehaviour:
       Pobability: 20
   Visual:
     BonusSprite: {fileID: 21300000, guid: e59251683cb71492ca2b6d7a48bf8ddf, type: 3}
+    EggPriceSprite: {fileID: 0}
   Localizations:
   - Id: pets
     English: Pets
@@ -313,6 +314,12 @@ MonoBehaviour:
   - Id: chance
     English: Chance <color=yellow><b>{0}%
     Russian: "\u0428\u0430\u043D\u0441 <color=yellow><b>{0}%"
+  - Id: inventory_full
+    English: The inventory is full
+    Russian: "\u0418\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C \u043F\u043E\u043B\u043E\u043D"
+  - Id: not_enough_money
+    English: Not enough money
+    Russian: "\u041D\u0435 \u0445\u0432\u0430\u0442\u0430\u0435\u0442 \u0434\u0435\u043D\u0435\u0433"
   - Id: common
     English: Common
     Russian: "\u041E\u0431\u044B\u0447\u043D\u044B\u0439"

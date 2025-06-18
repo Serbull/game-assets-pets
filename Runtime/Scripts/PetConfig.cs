@@ -48,6 +48,7 @@ namespace Serbull.GameAssets.Pets
         public class VisualData
         {
             public Sprite BonusSprite;
+            public Sprite EggPriceSprite;
         }
 
         [Serializable]

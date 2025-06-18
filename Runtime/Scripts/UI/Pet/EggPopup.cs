@@ -13,47 +13,61 @@ namespace Serbull.GameAssets.Pets
         [SerializeField] private Button _closeButton;
         [SerializeField] private Button _buyButton;
 
+        [SerializeField] private Image _priceImage;
         [SerializeField] private TextMeshProUGUI _priceText;
 
-        [SerializeField] private GameObject _notEnoughtCup;
-        [SerializeField] private GameObject _inventoryFull;
-
-        private string _eggId;
+        private string _currentEggId;
+        private string _lastShownEggId;
 
         private void Awake()
         {
             _closeButton.onClick.AddListener(CloseButton_OnClick);
             _buyButton.onClick.AddListener(BuyButton_OnClick);
+
+            _priceImage.sprite = PetManager.Config.Visual.EggPriceSprite;
         }
 
-        public void Init(string eggId)
-        {
-            Debug.LogError("Check");
-            //ClearContent();
-
-            //_eggId = eggId;
-            //var petConfig = PetManager.Config;
-            //var eggData = petConfig.GetEggData(eggId);
-            //_notEnoughtCup.SetActive(false);
-
-            //for (int i = 0; i < eggData.PetPobabilities.Length; i++)
-            //{
-            //    var slot = Instantiate(_eggSlotPrefab, _content);
-            //    var icon = petConfig.GetPet(eggData.PetPobabilities[i].PetId).Icon;
-            //    slot.Init(petConfig.GetPetRare(eggData.PetPobabilities[i].PetId), eggData.PetPobabilities[i].Pobability, icon);
-            //}
-
-            //_priceText.text = eggData.Price.ToShortValue();
-            //_priceText.color = SaveManager.Data.money < petConfig.GetEggData(_eggId).Price ? Color.red : Color.white;
-            //_inventoryFull.SetActive(petConfig.IsInventoryFull());
-        }
-
-        private void ClearContent()
+        private void OnEnable()
         {
             foreach (Transform child in _content)
             {
                 Destroy(child.gameObject);
             }
+
+            if (string.IsNullOrEmpty(_currentEggId))
+            {
+                Debug.LogError($"For showing use 'Show' method.");
+                return;
+            }
+
+            Debug.LogError("Check");
+
+            var petConfig = PetManager.Config;
+            var eggData = petConfig.GetEggData(_currentEggId);
+
+            for (int i = 0; i < eggData.PetPobabilities.Length; i++)
+            {
+                var slot = Instantiate(_eggSlotPrefab, _content);
+                var petData = petConfig.GetPetData(eggData.PetPobabilities[i].PetId);
+                slot.Init(petData.Icon, eggData.PetPobabilities[i].Pobability, petData.Rare);
+            }
+
+            _priceText.text = eggData.Price.ToShortValue();
+            Debug.LogError("Check");
+            //_priceText.color = SaveManager.Data.money < petConfig.GetEggData(_eggId).Price ? Color.red : Color.white;
+            //_inventoryFull.SetActive(petConfig.IsInventoryFull());
+        }
+
+        private void OnDisable()
+        {
+            _lastShownEggId = _currentEggId;
+            _currentEggId = null;
+        }
+
+        public void Show(string eggId)
+        {
+            _currentEggId = eggId;
+            gameObject.SetActive(true);
         }
 
         private void CloseButton_OnClick()
@@ -64,6 +78,8 @@ namespace Serbull.GameAssets.Pets
         private void BuyButton_OnClick()
         {
             Debug.LogError("Check");
+
+
             //var price = PetManager.Config.GetEggData(_eggId).Price;
             //if (SaveManager.Data.money < price)
             //{

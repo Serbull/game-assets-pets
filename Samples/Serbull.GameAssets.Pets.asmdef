@@ -3,7 +3,8 @@
     "rootNamespace": "Serbull.GameAssets.Pets.Samples",
     "references": [
         "Serbull.GameAssets",
-        "Serbull.GameAssets.Pets"
+        "Serbull.GameAssets.Pets",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
