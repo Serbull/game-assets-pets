@@ -377,12 +377,27 @@ MonoBehaviour:
   - Id: lizard
     English: Lizard
     Russian: "\u042F\u0449\u0435\u0440\u0438\u0446\u0430"
-  - Id: zebra
-    English: Zebra
-    Russian: "\u0417\u0435\u0431\u0440\u0430"
+  - Id: owl
+    English: Owl
+    Russian: "\u0421\u043E\u0432\u0430"
+  - Id: panda
+    English: Panda
+    Russian: "\u041F\u0430\u043D\u0434\u0430"
+  - Id: pig
+    English: Pig
+    Russian: "\u0421\u0432\u0438\u043D\u044C\u044F"
+  - Id: sheep
+    English: Sheep
+    Russian: "\u041E\u0432\u0446\u0430"
+  - Id: turtle
+    English: Turtle
+    Russian: "\u0427\u0435\u0440\u0435\u043F\u0430\u0445\u0430"
   - Id: wolf
     English: Wolf
     Russian: "\u0412\u043E\u043B\u043A"
+  - Id: zebra
+    English: Zebra
+    Russian: "\u0417\u0435\u0431\u0440\u0430"
   - Id: cute_dragon1
     English: Nightram
     Russian: "\u041D\u0430\u0439\u0442\u0440\u0430\u043C"
