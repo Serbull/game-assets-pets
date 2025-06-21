@@ -13,6 +13,18 @@ PrefabInstance:
       value: Lizard
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: cca1f1cc6a644e0da57c87dc0e9d596f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: cca1f1cc6a644e0da57c87dc0e9d596f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: cca1f1cc6a644e0da57c87dc0e9d596f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: cca1f1cc6a644e0da57c87dc0e9d596f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -51,6 +63,10 @@ PrefabInstance:
     - target: {fileID: 400014, guid: cca1f1cc6a644e0da57c87dc0e9d596f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: cca1f1cc6a644e0da57c87dc0e9d596f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: cca1f1cc6a644e0da57c87dc0e9d596f, type: 3}
       propertyPath: m_Controller

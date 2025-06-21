@@ -1,11 +1,15 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Serbull.GameAssets.Pets.Samples
 {
-    public class Player : MonoBehaviour
+    public class PetHolder : MonoBehaviour
     {
         private readonly List<Pet> _pets = new();
+
+        [SerializeField] private float _distance = 1.3f;
+        [SerializeField] private float _angle = 50f;
 
         private void Start()
         {
@@ -26,12 +30,21 @@ namespace Serbull.GameAssets.Pets.Samples
 
             _pets.Clear();
 
+            var number = 0;
+
+            var equippedCount = PetManager.PetSaveData.Count((p) => p.IsEquipped);
+
             foreach (var petData in PetManager.PetSaveData)
             {
                 if (petData.IsEquipped)
                 {
                     var prefab = PetManager.Config.GetPetData(petData.Id).Prefab;
-                    _pets.Add(Instantiate(prefab, transform));
+                    var pet = Instantiate(prefab, transform);
+
+                    var angle = (equippedCount - 1) * _angle / 2f - number * _angle;
+                    pet.transform.localPosition = Quaternion.Euler(0, angle, 0) * (Vector3.back * _distance);
+                    _pets.Add(pet);
+                    number++;
                 }
             }
         }
