@@ -102,26 +102,9 @@ namespace Serbull.GameAssets.Pets
                 return;
             }
 
-            EggHatchPreviewPopup.Instance.Show(() => PreviewPet(petId));
+            EggHatchPreviewPopup.Instance.Show(() => PetManager.PreviewPet(petId));
         }
 
-        private void PreviewPet(string petId)
-        {
-            if (!RewardPreviewPopup.Instance)
-            {
-                Debug.LogError("Add 'RewardPreviewPopup.prefab' on the scene.");
-                return;
-            }
 
-            var petData = PetManager.Config.GetPetData(petId);
-            var rareData = PetManager.Config.GetRareData(petData.Rare);
-
-            var item = new RewardPreviewItem(LocalizationProvider.GetText(petId),
-                LocalizationProvider.GetText(petData.Rare),
-                petData.Icon, 1, true,
-                Color.white, rareData.Color, rareData.Color);
-
-            RewardPreviewPopup.Instance.Show(item);
-        }
     }
 }

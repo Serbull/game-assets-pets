@@ -205,5 +205,24 @@ namespace Serbull.GameAssets.Pets
                 }
             });
         }
+
+        public static void PreviewPet(string petId)
+        {
+            if (!RewardPreviewPopup.Instance)
+            {
+                Debug.LogError("Add 'RewardPreviewPopup.prefab' on the scene.");
+                return;
+            }
+
+            var petData = Config.GetPetData(petId);
+            var rareData = Config.GetRareData(petData.Rare);
+
+            var item = new RewardPreviewItem(LocalizationProvider.GetText(petId),
+                LocalizationProvider.GetText(petData.Rare),
+                petData.Icon, 1, true,
+                Color.white, rareData.Color, rareData.Color);
+
+            RewardPreviewPopup.Instance.Show(item);
+        }
     }
 }
