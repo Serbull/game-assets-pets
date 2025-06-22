@@ -2,7 +2,6 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using Random = UnityEngine.Random;
-using TMPro;
 
 namespace Serbull.GameAssets.Pets.Samples
 {
@@ -13,40 +12,21 @@ namespace Serbull.GameAssets.Pets.Samples
         public int Money = 1000;
     }
 
-    public class GameManager : MonoBehaviour
+    public class GameManager : Singleton<GameManager>
     {
         public EggPopup EggPopup;
 
-        public UnityEngine.UI.Button ButtonPrefab;
-        public Transform ButtonsParent;
-
-        private SaveData _saveData;
-        private Money _money;
+        public SaveData SaveData;
 
         private void Start()
         {
-            _saveData = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString("saveData"));
-            _saveData ??= new SaveData();
-            _money = new Money(_saveData);
+            SaveData = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString("saveData"));
+            SaveData ??= new SaveData();
 
-            PetManager.Initialize(_saveData.Pets, "ru");
-
-            InitializeEggButtons();
+            PetManager.Initialize(SaveData.Pets, "ru");
 
             Debug.Log("Use 'P' to add random pet.");
             Debug.Log("Use 'O' to add all pets.");
-        }
-
-        private void InitializeEggButtons()
-        {
-            for (int i = 0; i < PetManager.Config.Eggs.Length; i++)
-            {
-                var eggData = PetManager.Config.Eggs[i];
-                var btn = Instantiate(ButtonPrefab, ButtonsParent);
-                btn.onClick = new UnityEngine.UI.Button.ButtonClickedEvent();
-                btn.onClick.AddListener(() => EggPopup.Show(eggData.Id, _money));
-                btn.GetComponentInChildren<TextMeshProUGUI>().text = eggData.Id;
-            }
         }
 
 #if UNITY_EDITOR

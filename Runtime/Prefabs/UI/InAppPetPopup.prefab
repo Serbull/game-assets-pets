@@ -1198,8 +1198,6 @@ GameObject:
   - component: {fileID: 3571888992820641728}
   - component: {fileID: 757516503615441860}
   - component: {fileID: 4531158276262819023}
-  - component: {fileID: 8004361657873033707}
-  - component: {fileID: 6750201345625518300}
   m_Layer: 5
   m_Name: InAppPetPopup
   m_TagString: Untagged
@@ -1278,34 +1276,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _closeButton: {fileID: 5286330882939850095}
-  _buyButton: {fileID: 1362825683428001225}
   _petId: bear
   _petIcon: {fileID: 1451872111000185765}
   _valueTxt: {fileID: 8769376608995283885}
---- !u!114 &8004361657873033707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8336727192270917225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14490a9414bba48089019c572e413881, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6750201345625518300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8336727192270917225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a33910adb20124a28b572f71be5a2bc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8477672592760806974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,7 +1441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967aa1b0f5c9d4ad2bf1b10b51b41685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _productId: pet_100
+  _productId: '-'
   _priceText: {fileID: 2390374825226568063}
   _currencyImage: {fileID: 5126138954707805770}
   _onPurchaseSuccessful:

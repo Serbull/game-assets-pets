@@ -5,9 +5,9 @@ namespace Serbull.GameAssets.Pets.Samples
     {
         private readonly SaveData _saveData;
 
-        public Money(SaveData saveData)
+        public Money()
         {
-            _saveData = saveData;
+            _saveData = GameManager.Instance.SaveData;
         }
 
         public long Amount => _saveData.Money;
