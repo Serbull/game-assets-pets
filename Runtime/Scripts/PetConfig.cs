@@ -30,18 +30,18 @@ namespace Serbull.GameAssets.Pets
         }
 
         [Serializable]
-        public class PetPobability
-        {
-            [PetDropdown] public string PetId;
-            public int Pobability;
-        }
-
-        [Serializable]
         public class EggData
         {
+            [Serializable]
+            public class Pet
+            {
+                [PetDropdown] public string PetId;
+                public int Weight;
+            }
+
             public string Id;
             public long Price;
-            public PetPobability[] PetPobabilities;
+            public Pet[] Pets;
         }
 
         [Serializable]
@@ -63,20 +63,20 @@ namespace Serbull.GameAssets.Pets
         public PetData[] Pets;
         public EggData[] Eggs;
         [Space]
-        public VisualData Visual;
-        [Space]
         public LocalizationData[] Localizations;
+        [Space]
+        public VisualData Visual;
 
         private void OnValidate()
         {
             foreach (var egg in Eggs)
             {
                 var lastProbability = 100;
-                for (int i = 0; i < egg.PetPobabilities.Length - 1; i++)
+                for (int i = 0; i < egg.Pets.Length - 1; i++)
                 {
-                    lastProbability -= egg.PetPobabilities[i].Pobability;
+                    lastProbability -= egg.Pets[i].Weight;
                 }
-                egg.PetPobabilities[^1].Pobability = lastProbability;
+                egg.Pets[^1].Weight = lastProbability;
             }
         }
 

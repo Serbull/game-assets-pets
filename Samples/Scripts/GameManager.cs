@@ -9,7 +9,8 @@ namespace Serbull.GameAssets.Pets.Samples
     [Serializable]
     public class SaveData
     {
-        public List<PetData> pets = new();
+        public List<PetData> Pets = new();
+        public int Money = 1000;
     }
 
     public class GameManager : MonoBehaviour
@@ -20,13 +21,15 @@ namespace Serbull.GameAssets.Pets.Samples
         public Transform ButtonsParent;
 
         private SaveData _saveData;
+        private Money _money;
 
         private void Start()
         {
             _saveData = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString("saveData"));
             _saveData ??= new SaveData();
+            _money = new Money(_saveData);
 
-            PetManager.Initialize(_saveData.pets, "ru");
+            PetManager.Initialize(_saveData.Pets, "ru");
 
             InitializeEggButtons();
 
@@ -41,7 +44,7 @@ namespace Serbull.GameAssets.Pets.Samples
                 var eggData = PetManager.Config.Eggs[i];
                 var btn = Instantiate(ButtonPrefab, ButtonsParent);
                 btn.onClick = new UnityEngine.UI.Button.ButtonClickedEvent();
-                btn.onClick.AddListener(() => EggPopup.Show(eggData.Id));
+                btn.onClick.AddListener(() => EggPopup.Show(eggData.Id, _money));
                 btn.GetComponentInChildren<TextMeshProUGUI>().text = eggData.Id;
             }
         }

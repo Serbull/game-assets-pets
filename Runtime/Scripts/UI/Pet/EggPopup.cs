@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 namespace Serbull.GameAssets.Pets
 {
@@ -17,7 +18,7 @@ namespace Serbull.GameAssets.Pets
         [SerializeField] private TextMeshProUGUI _priceText;
 
         private string _currentEggId;
-        private string _lastShownEggId;
+        private ICurrency _currency;
 
         private void Awake()
         {
@@ -40,33 +41,29 @@ namespace Serbull.GameAssets.Pets
                 return;
             }
 
-            Debug.LogError("Check");
-
             var petConfig = PetManager.Config;
             var eggData = petConfig.GetEggData(_currentEggId);
 
-            for (int i = 0; i < eggData.PetPobabilities.Length; i++)
+            for (int i = 0; i < eggData.Pets.Length; i++)
             {
                 var slot = Instantiate(_eggSlotPrefab, _content);
-                var petData = petConfig.GetPetData(eggData.PetPobabilities[i].PetId);
-                slot.Init(petData.Icon, eggData.PetPobabilities[i].Pobability, petData.Rare);
+                var petData = petConfig.GetPetData(eggData.Pets[i].PetId);
+                slot.Init(petData.Icon, eggData.Pets[i].Weight, petData.Rare);
             }
 
             _priceText.text = eggData.Price.ToShortValue();
-            Debug.LogError("Check");
-            //_priceText.color = SaveManager.Data.money < petConfig.GetEggData(_eggId).Price ? Color.red : Color.white;
-            //_inventoryFull.SetActive(petConfig.IsInventoryFull());
         }
 
         private void OnDisable()
         {
-            _lastShownEggId = _currentEggId;
             _currentEggId = null;
         }
 
-        public void Show(string eggId)
+        public void Show(string eggId, ICurrency currency)
         {
             _currentEggId = eggId;
+            _currency = currency;
+
             gameObject.SetActive(true);
         }
 
@@ -77,24 +74,38 @@ namespace Serbull.GameAssets.Pets
 
         private void BuyButton_OnClick()
         {
-            Debug.LogError("Check");
+            if (_currentEggId == null) return;
 
+            var config = PetManager.Config.GetEggData(_currentEggId);
+            if (config.Price > _currency.Amount)
+            {
+                Notification.Instance.ShowRed(LocalizationProvider.GetText("not_enough_money"));
+                return;
+            }
 
-            //var price = PetManager.Config.GetEggData(_eggId).Price;
-            //if (SaveManager.Data.money < price)
-            //{
-            //    _notEnoughtCup.SetActive(true);
-            //    return;
-            //}
+            if (PetManager.IsInventoryFull())
+            {
+                Notification.Instance.ShowRed(LocalizationProvider.GetText("inventory_full"));
+                return;
+            }
 
-            //if (PetManager.IsInventoryFull())
-            //{
-            //    Debug.Log("Show notification inventory is full");
-            //    return;
-            //}
+            _currency.Spend(config.Price);
 
-            //GameValues.SubstractEnergy(price);
-            //new GiftRewardGiver().AddEgg(_eggId);
+            var weights = config.Pets.Select((i) => i.Weight).ToArray();
+            var id = MathfUtils.GetRandomIndexByWeight(weights);
+            PetManager.AddPet(config.Pets[id].PetId);
+
+            if (!EggHatchPreviewPanel.Instance)
+            {
+                Debug.LogError("Add 'EggHatchPreviewPanel.prefab' on the scene.");
+                return;
+            }
+
+            EggHatchPreviewPanel.Instance.Show(() =>
+            {
+                Debug.LogError("CHECK");
+                //new GiftRewardGiver().AddEgg(_eggId); });
+            });
         }
     }
 }
