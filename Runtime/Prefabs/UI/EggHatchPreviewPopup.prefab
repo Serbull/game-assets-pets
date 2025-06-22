@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 502043885386093433}
   - component: {fileID: 1277355865219386523}
   m_Layer: 5
-  m_Name: EggHatchPreviewPanel
+  m_Name: EggHatchPreviewPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

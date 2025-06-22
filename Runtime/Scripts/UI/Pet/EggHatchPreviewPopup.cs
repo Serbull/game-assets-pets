@@ -2,7 +2,7 @@ using System;
 
 namespace Serbull.GameAssets.Pets
 {
-    public class EggHatchPreviewPanel : Singleton<EggHatchPreviewPanel>
+    public class EggHatchPreviewPopup : Singleton<EggHatchPreviewPopup>
     {
         private Action _onHideCallback;
 

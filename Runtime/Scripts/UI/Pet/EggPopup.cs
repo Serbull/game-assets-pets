@@ -93,19 +93,35 @@ namespace Serbull.GameAssets.Pets
 
             var weights = config.Pets.Select((i) => i.Weight).ToArray();
             var id = MathfUtils.GetRandomIndexByWeight(weights);
-            PetManager.AddPet(config.Pets[id].PetId);
+            var petId = config.Pets[id].PetId;
+            PetManager.AddPet(petId);
 
-            if (!EggHatchPreviewPanel.Instance)
+            if (!EggHatchPreviewPopup.Instance)
             {
-                Debug.LogError("Add 'EggHatchPreviewPanel.prefab' on the scene.");
+                Debug.LogError("Add 'EggHatchPreviewPopup.prefab' on the scene.");
                 return;
             }
 
-            EggHatchPreviewPanel.Instance.Show(() =>
+            EggHatchPreviewPopup.Instance.Show(() => PreviewPet(petId));
+        }
+
+        private void PreviewPet(string petId)
+        {
+            if (!RewardPreviewPopup.Instance)
             {
-                Debug.LogError("CHECK");
-                //new GiftRewardGiver().AddEgg(_eggId); });
-            });
+                Debug.LogError("Add 'RewardPreviewPopup.prefab' on the scene.");
+                return;
+            }
+
+            var petData = PetManager.Config.GetPetData(petId);
+            var rareData = PetManager.Config.GetRareData(petData.Rare);
+
+            var item = new RewardPreviewItem(LocalizationProvider.GetText(petId),
+                LocalizationProvider.GetText(petData.Rare),
+                petData.Icon, 1, true,
+                Color.white, rareData.Color, rareData.Color);
+
+            RewardPreviewPopup.Instance.Show(item);
         }
     }
 }
