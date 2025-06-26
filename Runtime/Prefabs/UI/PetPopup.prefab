@@ -294,8 +294,8 @@ MonoBehaviour:
   _petCountText: {fileID: 2829977479929035949}
   _bonusText: {fileID: 3482243531932297784}
   _specificPetText: {fileID: 6118682310269012923}
-  _mergeText: {fileID: 7549307382416921041}
-  _mergeChancheText: {fileID: 4073329079690636576}
+  _mergeText: {fileID: 7788754617598733978}
+  _mergeChancheText: {fileID: 959947881890025168}
   _goldPetColor:
     topLeft: {r: 1, g: 0.84313726, b: 0, a: 1}
     topRight: {r: 1, g: 0.84313726, b: 0, a: 1}
@@ -692,7 +692,7 @@ GameObject:
   - component: {fileID: 3318694587521337525}
   - component: {fileID: 683404812900832570}
   - component: {fileID: 3032210859176414049}
-  - component: {fileID: 7279566892853005366}
+  - component: {fileID: 7172932690592108946}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -818,7 +818,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &7279566892853005366
+--- !u!114 &7172932690592108946
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -827,7 +827,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2731829634714400325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8494a72f2c1e54ea8beab5e096931ff4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e4a451791b649a8840809a866111145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _id: equip_best
@@ -917,7 +917,7 @@ GameObject:
   - component: {fileID: 7499578209732369655}
   - component: {fileID: 1497167590916715867}
   - component: {fileID: 3414109183848863497}
-  - component: {fileID: 4073329079690636576}
+  - component: {fileID: 959947881890025168}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &4073329079690636576
+--- !u!114 &959947881890025168
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1052,7 +1052,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3206993628982617347}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8494a72f2c1e54ea8beab5e096931ff4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e4a451791b649a8840809a866111145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _id: chance
@@ -1739,7 +1739,7 @@ GameObject:
   - component: {fileID: 6415736735746469982}
   - component: {fileID: 4335108240777899860}
   - component: {fileID: 1243446797101943664}
-  - component: {fileID: 5411768352386324954}
+  - component: {fileID: 5777192852379080958}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1865,7 +1865,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &5411768352386324954
+--- !u!114 &5777192852379080958
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1874,7 +1874,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5253689782706537822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8494a72f2c1e54ea8beab5e096931ff4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e4a451791b649a8840809a866111145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _id: equip
@@ -2223,7 +2223,7 @@ GameObject:
   - component: {fileID: 4488495122115573109}
   - component: {fileID: 8575232306689480590}
   - component: {fileID: 2214910399217570298}
-  - component: {fileID: 5160203016849800050}
+  - component: {fileID: 2456691546773943918}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2349,7 +2349,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &5160203016849800050
+--- !u!114 &2456691546773943918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2358,7 +2358,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6200908653456792396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8494a72f2c1e54ea8beab5e096931ff4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e4a451791b649a8840809a866111145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _id: pets
@@ -3666,7 +3666,7 @@ GameObject:
   - component: {fileID: 8014526669701757645}
   - component: {fileID: 6348665101776906592}
   - component: {fileID: 6396319045813936719}
-  - component: {fileID: 807718191620508451}
+  - component: {fileID: 5338139453397161093}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3792,7 +3792,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &807718191620508451
+--- !u!114 &5338139453397161093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3801,7 +3801,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8761443701823730754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8494a72f2c1e54ea8beab5e096931ff4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e4a451791b649a8840809a866111145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _id: unequip
@@ -3992,7 +3992,7 @@ GameObject:
   - component: {fileID: 3444024409683296605}
   - component: {fileID: 3568143465879891336}
   - component: {fileID: 4454114531277059871}
-  - component: {fileID: 7549307382416921041}
+  - component: {fileID: 7788754617598733978}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4118,7 +4118,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &7549307382416921041
+--- !u!114 &7788754617598733978
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4127,7 +4127,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9190680889252526155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8494a72f2c1e54ea8beab5e096931ff4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e4a451791b649a8840809a866111145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _id: merge
