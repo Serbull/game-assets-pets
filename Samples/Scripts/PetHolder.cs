@@ -18,11 +18,20 @@ namespace Serbull.GameAssets.Pets.Samples
         private void Start()
         {
             PetManager.OnEquippedPetChanged += PetManager_OnEquippedPetChanged;
+            PetManager_OnEquippedPetChanged();
         }
 
         private void OnDestroy()
         {
             PetManager.OnEquippedPetChanged -= PetManager_OnEquippedPetChanged;
+
+            for (int i = 0; i < _pets.Count; i++)
+            {
+                if (_pets[i] != null)
+                {
+                    Destroy(_pets[i].gameObject);
+                }
+            }
         }
 
         private void Update()
@@ -34,7 +43,7 @@ namespace Serbull.GameAssets.Pets.Samples
 
         private void FixedUpdate()
         {
-            if (_update != UpdateType.Update) return;
+            if (_update != UpdateType.FixedUpdate) return;
 
             UpdatePets(Time.fixedDeltaTime);
         }
