@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 4043157986501169291}
   - component: {fileID: 8828673554444694093}
   m_Layer: 0
-  m_Name: EggStand
+  m_Name: EggStand_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
