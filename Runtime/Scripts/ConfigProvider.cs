@@ -9,10 +9,10 @@ namespace Serbull.GameAssets.Pets
     public static class ConfigProvider
     {
         private const string AssetName = "PetConfig.asset";
-        private const string LocalDevPath = "Assets/Serbull/Game Assets/Modules/Pets/Editor/Scriptables/" + AssetName;
-        private const string PackagePath = "Packages/com.serbull.gameassets.pets/Editor/Scriptables/" + AssetName;
+        private const string AssetFullName = AssetName + ".asset";
+        private const string LocalDevPath = "Assets/Serbull/Game Assets/Modules/Pets/Editor/Scriptables/" + AssetFullName;
+        private const string PackagePath = "Packages/com.serbull.gameassets.pets/Editor/Scriptables/" + AssetFullName;
         private const string CopyTargetPath = "Assets/Resources/" + AssetName;
-        private const string ResourcesPath = "Resources/" + AssetName;
 
         public static PetConfig LoadConfig()
         {
@@ -27,11 +27,8 @@ namespace Serbull.GameAssets.Pets
                 File.Copy(PackagePath, CopyTargetPath);
                 AssetDatabase.Refresh();
             }
-
-            return AssetDatabase.LoadAssetAtPath<PetConfig>(CopyTargetPath);
-#else
-            return Resources.Load<PetConfig>(ResourcesPath);
 #endif
+            return Resources.Load<PetConfig>(AssetName);
         }
     }
 }
