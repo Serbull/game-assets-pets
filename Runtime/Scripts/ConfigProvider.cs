@@ -8,7 +8,7 @@ namespace Serbull.GameAssets.Pets
 {
     public static class ConfigProvider
     {
-        private const string AssetName = "PetConfig.asset";
+        private const string AssetName = "PetConfig";
         private const string AssetFullName = AssetName + ".asset";
         private const string LocalDevPath = "Assets/Serbull/Game Assets/Modules/Pets/Editor/Scriptables/" + AssetFullName;
         private const string PackagePath = "Packages/com.serbull.gameassets.pets/Editor/Scriptables/" + AssetFullName;
