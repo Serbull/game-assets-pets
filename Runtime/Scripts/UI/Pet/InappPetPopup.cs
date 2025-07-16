@@ -35,7 +35,7 @@ namespace Serbull.GameAssets.Pets
             _petNameText.text = LocalizationProvider.GetText(_petId);
             _petRareText.text = LocalizationProvider.GetText(petData.Rare);
             _petRareText.color = rareData.Color;
-            _petBonusText.text = "X" + petData.GetBonus(false);
+            _petBonusText.text = "X" + petData.GetBonus(false).ToShortValue();
         }
 
         private void OnDisable()
