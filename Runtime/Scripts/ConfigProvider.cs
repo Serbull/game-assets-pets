@@ -12,7 +12,7 @@ namespace Serbull.GameAssets.Pets
         private const string AssetFullName = AssetName + ".asset";
         private const string LocalDevPath = "Assets/Serbull/Game Assets/Modules/Pets/Editor/Scriptables/" + AssetFullName;
         private const string PackagePath = "Packages/com.serbull.gameassets.pets/Editor/Scriptables/" + AssetFullName;
-        private const string CopyTargetPath = "Assets/Resources/" + AssetName;
+        private const string CopyTargetPath = "Assets/Resources/" + AssetFullName;
 
         public static PetConfig LoadConfig()
         {
