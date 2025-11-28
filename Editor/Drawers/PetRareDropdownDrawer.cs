@@ -28,7 +28,7 @@ namespace Serbull.GameAssets.Pets.Editor
 
         private string[] GetPetIds()
         {
-            var config = PetManager.PetConfig;
+            var config = ConfigProvider.LoadConfig();
             if (config != null && config.Pets != null)
             {
                 return config.Rares.Select(data => data.Id).ToArray();

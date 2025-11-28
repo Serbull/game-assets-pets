@@ -36,19 +36,8 @@ namespace Serbull.GameAssets.Pets.Samples
 
     public class GameManager : MonoBehaviour
     {
-        public PetInstaller PetInstaller;
-
-        public SaveData SaveData;
-        public Currency TestCurrency;
-
-        private void Awake()
+        private void Start()
         {
-            SaveData = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString("saveData"));
-            SaveData ??= new SaveData();
-            TestCurrency = new Currency(SaveData);
-
-            PetInstaller.Init(TestCurrency, SaveData.Pets, "ru");
-
             Debug.Log("Use 'P' to add random pet.");
             Debug.Log("Use 'O' to add all pets.");
         }

@@ -195,11 +195,11 @@ namespace Serbull.GameAssets.Pets
 
             if (!success)
             {
-                Notification.Instance.ShowRed(LocalizationProvider.GetText("merge_fail"));
+                SGAManager.Notification.ShowRed(LocalizationProvider.GetText("merge_fail"));
                 return;
             }
 
-            Notification.Instance.ShowGreen(LocalizationProvider.GetText("merge_success"));
+            SGAManager.Notification.ShowGreen(LocalizationProvider.GetText("merge_success"));
 
             AddPet(id, true);
         }
@@ -283,12 +283,6 @@ namespace Serbull.GameAssets.Pets
 
         public static void PreviewPet(string petId)
         {
-            if (!RewardPreviewPopup.Instance)
-            {
-                Debug.LogError("Add 'RewardPreviewPopup.prefab' on the scene.");
-                return;
-            }
-
             var petData = PetConfig.GetPetData(petId);
             var rareData = PetConfig.GetRareData(petData.Rare);
 
@@ -297,7 +291,7 @@ namespace Serbull.GameAssets.Pets
                 petData.Icon, 1, true,
                 Color.white, rareData.Color, rareData.Color);
 
-            RewardPreviewPopup.Instance.Show(item);
+            SGAManager.RewardPreviewPopup.Show(item);
         }
     }
 }

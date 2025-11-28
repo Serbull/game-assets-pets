@@ -83,13 +83,13 @@ namespace Serbull.GameAssets.Pets
             var config = PetManager.PetConfig.GetEggData(_currentEggId);
             if (config.Price > _currency.Amount)
             {
-                Notification.Instance.ShowRed(LocalizationProvider.GetText("not_enough_money"));
+                SGAManager.Notification.ShowRed(LocalizationProvider.GetText("not_enough_money"));
                 return;
             }
 
             if (PetManager.IsInventoryFull())
             {
-                Notification.Instance.ShowRed(LocalizationProvider.GetText("inventory_full"));
+                SGAManager.Notification.ShowRed(LocalizationProvider.GetText("inventory_full"));
                 return;
             }
 
