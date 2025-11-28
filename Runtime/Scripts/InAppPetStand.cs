@@ -15,8 +15,8 @@ namespace Serbull.GameAssets.Pets
 
         private void Start()
         {
-            var petData = PetManager.Config.GetPetData(_petId);
-            _currencyImage.sprite = PetManager.Config.Visual.BonusSprite;
+            var petData = PetManager.PetConfig.GetPetData(_petId);
+            _currencyImage.sprite = PetManager.PetConfig.Visual.BonusSprite;
             _priceText.text = "X" + petData.GetBonus(false).ToShortValue();
         }
     }

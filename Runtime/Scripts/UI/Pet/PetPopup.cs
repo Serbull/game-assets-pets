@@ -46,14 +46,14 @@ namespace Serbull.GameAssets.Pets
             _equipTheBest.onClick.AddListener(EquipTheBest_OnClick);
             _removeButton.onClick.AddListener(RemoveButton_OnClick);
 
-            var bonusSprite = PetManager.Config.Visual.BonusSprite;
+            var bonusSprite = PetManager.PetConfig.Visual.BonusSprite;
             _bonusImage.gameObject.SetActive(bonusSprite);
             _bonusImage.sprite = bonusSprite;
         }
 
         private void OnEnable()
         {
-            Init();
+            UpdateUI();
             UpdatePanel();
         }
 
@@ -62,7 +62,7 @@ namespace Serbull.GameAssets.Pets
             _currentPetData = null;
         }
 
-        public void Init()
+        private void UpdateUI()
         {
             foreach (Transform child in _petContent)
             {
@@ -79,8 +79,8 @@ namespace Serbull.GameAssets.Pets
             foreach (PetData petSave in PetManager.PetSaveData)
             {
                 var slot = Instantiate(_petSlot, _petContent);
-                var petData = PetManager.Config.GetPetData(petSave.Id);
-                var rare = PetManager.Config.GetRareData(petData.Rare);
+                var petData = PetManager.PetConfig.GetPetData(petSave.Id);
+                var rare = PetManager.PetConfig.GetRareData(petData.Rare);
                 var bonus = petData.GetBonus(petSave.IsGold).ToShortValue();
 
                 slot.Init(petSave, petData.Icon, rare.Color, $"x{bonus}");
@@ -113,13 +113,13 @@ namespace Serbull.GameAssets.Pets
 
             //down layout
             _equippedPetCountText.text = $"{PetManager.GetEqippedPets().Count}/{3}";
-            _petCountText.text = $"{PetManager.PetSaveData.Count}/{PetManager.Config.InventoryCapacity}";
+            _petCountText.text = $"{PetManager.PetSaveData.Count}/{PetManager.PetConfig.InventoryCapacity}";
             _removeButton.gameObject.SetActive(_currentPetData != null && !_currentPetData.IsEquipped);
         }
 
         private void SelectPet(PetData petData)
         {
-            var petConfig = PetManager.Config;
+            var petConfig = PetManager.PetConfig;
             var pet = petConfig.GetPetData(petData.Id);
             var rare = petConfig.GetRareData(pet.Rare);
             _currentPetData = petData;
@@ -174,7 +174,7 @@ namespace Serbull.GameAssets.Pets
         {
             PetManager.UnequipPet(_currentPetData.Id);
 
-            Init();
+            UpdateUI();
         }
 
         private void EquipButton_OnClick()
@@ -188,25 +188,25 @@ namespace Serbull.GameAssets.Pets
             }
 
             PetManager.EquipPet(_currentPetData.Id);
-            Init();
+            UpdateUI();
         }
 
         private void MergeButton_OnClick()
         {
             PetManager.Merge(_currentPetData.Id);
-            Init();
+            UpdateUI();
         }
 
         private void EquipTheBest_OnClick()
         {
             PetManager.SetTheBest();
-            Init();
+            UpdateUI();
         }
 
         private void RemoveButton_OnClick()
         {
             PetManager.RemovePet(_currentPetData.Id);
-            Init();
+            UpdateUI();
         }
     }
 }

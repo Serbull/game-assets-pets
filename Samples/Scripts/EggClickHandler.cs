@@ -7,7 +7,7 @@ namespace Serbull.GameAssets.Pets.Samples
         private void OnMouseDown()
         {
             var eggId = GetComponent<EggStand>().EggId;
-            GameManager.Instance.EggPopup.Show(eggId, new Money());
+            PetManager.EggPopup.Show(eggId);
         }
     }
 }

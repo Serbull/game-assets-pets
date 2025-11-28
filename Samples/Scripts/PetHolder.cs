@@ -74,7 +74,7 @@ namespace Serbull.GameAssets.Pets.Samples
             {
                 if (petData.IsEquipped)
                 {
-                    var prefab = PetManager.Config.GetPetData(petData.Id).Prefab;
+                    var prefab = PetManager.PetConfig.GetPetData(petData.Id).Prefab;
                     var pet = Instantiate(prefab, transform.position, transform.rotation);
                     _pets.Add(pet.transform);
                 }

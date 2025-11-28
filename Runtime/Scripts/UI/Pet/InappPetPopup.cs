@@ -28,8 +28,8 @@ namespace Serbull.GameAssets.Pets
                 return;
             }
 
-            var petData = PetManager.Config.GetPetData(_petId);
-            var rareData = PetManager.Config.GetRareData(petData.Rare);
+            var petData = PetManager.PetConfig.GetPetData(_petId);
+            var rareData = PetManager.PetConfig.GetRareData(petData.Rare);
             _petIcon.sprite = petData.Icon;
             _glowImage.color = rareData.Color;
             _petNameText.text = LocalizationProvider.GetText(_petId);

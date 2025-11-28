@@ -10,7 +10,7 @@ namespace Serbull.GameAssets.Pets
         public static void Initialize(string language)
         {
             _language = language;
-            _localizations = PetManager.Config.Localizations;
+            _localizations = PetManager.PetConfig.Localizations;
         }
 
         public static string GetText(string id)

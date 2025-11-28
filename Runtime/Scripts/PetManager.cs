@@ -6,24 +6,49 @@ using UnityEngine;
 
 namespace Serbull.GameAssets.Pets
 {
-    public static class PetManager
+    public class PetManager
     {
         public static event Action OnEquippedPetChanged;
         public static event Action OnPetAdded;
 
-        private static PetConfig _config;
+        private static PetConfig _petConfig;
         private static List<PetData> _petSaveData;
 
-        public static PetConfig Config
+        //UI
+        private static PetPopup _petPopup;
+        private static InappPetPopup _inappPetPopup;
+        private static EggPopup _eggPopup;
+        private static EggHatchPreviewPopup _eggHatchPreviewPopup;
+
+        public static void Init(PetConfig petConfig,
+            PetPopup petPopup,
+            InappPetPopup inappPetPopup,
+            EggPopup eggPopup,
+            EggHatchPreviewPopup eggHatchPreviewPopup,
+            List<PetData> petSaveData, string language = "en")
+        {
+            _petConfig = petConfig;
+
+            _petSaveData = petSaveData;
+            LocalizationProvider.Initialize(language);
+
+            _petPopup = petPopup;
+            _inappPetPopup = inappPetPopup;
+            _eggPopup = eggPopup;
+            _eggHatchPreviewPopup = eggHatchPreviewPopup;
+        }
+
+        public static PetConfig PetConfig
         {
             get
             {
-                if (_config == null)
+                if (_petConfig == null)
                 {
-                    _config = ConfigProvider.LoadConfig();
+                    Debug.LogError("Use PetInstaller.Init() to initialize.");
+                    return null;
                 }
 
-                return _config;
+                return _petConfig;
             }
         }
 
@@ -33,7 +58,7 @@ namespace Serbull.GameAssets.Pets
             {
                 if (_petSaveData == null)
                 {
-                    Debug.LogError("Use 'Initialize' method to assign save data");
+                    Debug.LogError("Use PetInstaller.Init() to initialize.");
                     return null;
                 }
 
@@ -41,10 +66,60 @@ namespace Serbull.GameAssets.Pets
             }
         }
 
-        public static void Initialize(List<PetData> petSaveData, string language = "en")
+        public static PetPopup PetPopup
         {
-            _petSaveData = petSaveData;
-            LocalizationProvider.Initialize(language);
+            get
+            {
+                if (_petPopup == null)
+                {
+                    Debug.LogError("Use PetInstaller.Init() to initialize.");
+                    return null;
+                }
+
+                return _petPopup;
+            }
+        }
+
+        public static InappPetPopup InappPetPopup
+        {
+            get
+            {
+                if (_inappPetPopup == null)
+                {
+                    Debug.LogError("Use PetInstaller.Init() to initialize.");
+                    return null;
+                }
+
+                return _inappPetPopup;
+            }
+        }
+
+        public static EggPopup EggPopup
+        {
+            get
+            {
+                if (_eggPopup == null)
+                {
+                    Debug.LogError("Use PetInstaller.Init() to initialize.");
+                    return null;
+                }
+
+                return _eggPopup;
+            }
+        }
+
+        public static EggHatchPreviewPopup EggHatchPreviewPopup
+        {
+            get
+            {
+                if (_eggHatchPreviewPopup == null)
+                {
+                    Debug.LogError("Use PetInstaller.Init() to initialize.");
+                    return null;
+                }
+
+                return _eggHatchPreviewPopup;
+            }
         }
 
         public static void EquipPet(string id)
@@ -167,7 +242,7 @@ namespace Serbull.GameAssets.Pets
                 var pet = PetSaveData[i];
                 if (pet.IsEquipped)
                 {
-                    totalBonus += Config.GetPetData(pet.Id).GetBonus(pet.IsGold);
+                    totalBonus += PetConfig.GetPetData(pet.Id).GetBonus(pet.IsGold);
                 }
             }
 
@@ -178,7 +253,7 @@ namespace Serbull.GameAssets.Pets
         {
             PetSaveData.RemoveAll(pet =>
             {
-                var petData = Config.GetPetData(pet.Id);
+                var petData = PetConfig.GetPetData(pet.Id);
                 return petData != null && !petData.IsInApp;
             });
 
@@ -188,7 +263,7 @@ namespace Serbull.GameAssets.Pets
 
         public static bool IsInventoryFull()
         {
-            return PetSaveData.Count >= Config.InventoryCapacity;
+            return PetSaveData.Count >= PetConfig.InventoryCapacity;
         }
 
         private static void SortPets()
@@ -199,8 +274,8 @@ namespace Serbull.GameAssets.Pets
                 else if (!x.IsEquipped && y.IsEquipped) return 1;
                 else
                 {
-                    var xBonus = Config.GetPetData(x.Id).GetBonus(x.IsGold);
-                    var yBonus = Config.GetPetData(y.Id).GetBonus(y.IsGold);
+                    var xBonus = PetConfig.GetPetData(x.Id).GetBonus(x.IsGold);
+                    var yBonus = PetConfig.GetPetData(y.Id).GetBonus(y.IsGold);
                     return yBonus.CompareTo(xBonus);
                 }
             });
@@ -214,8 +289,8 @@ namespace Serbull.GameAssets.Pets
                 return;
             }
 
-            var petData = Config.GetPetData(petId);
-            var rareData = Config.GetRareData(petData.Rare);
+            var petData = PetConfig.GetPetData(petId);
+            var rareData = PetConfig.GetRareData(petData.Rare);
 
             var item = new RewardPreviewItem(LocalizationProvider.GetText(petId),
                 LocalizationProvider.GetText(petData.Rare),

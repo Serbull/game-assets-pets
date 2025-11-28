@@ -25,7 +25,7 @@ namespace Serbull.GameAssets.Pets
             _closeButton.onClick.AddListener(CloseButton_OnClick);
             _buyButton.onClick.AddListener(BuyButton_OnClick);
 
-            _priceImage.sprite = PetManager.Config.Visual.EggPriceSprite;
+            _priceImage.sprite = PetManager.PetConfig.Visual.EggPriceSprite;
         }
 
         private void OnEnable()
@@ -41,7 +41,7 @@ namespace Serbull.GameAssets.Pets
                 return;
             }
 
-            var petConfig = PetManager.Config;
+            var petConfig = PetManager.PetConfig;
             var eggData = petConfig.GetEggData(_currentEggId);
 
             for (int i = 0; i < eggData.Pets.Length; i++)
@@ -59,10 +59,14 @@ namespace Serbull.GameAssets.Pets
             _currentEggId = null;
         }
 
-        public void Show(string eggId, ICurrency currency)
+        public void Init(ICurrency currency)
+        {
+            _currency = currency;
+        }
+
+        public void Show(string eggId)
         {
             _currentEggId = eggId;
-            _currency = currency;
 
             gameObject.SetActive(true);
         }
@@ -76,7 +80,7 @@ namespace Serbull.GameAssets.Pets
         {
             if (_currentEggId == null) return;
 
-            var config = PetManager.Config.GetEggData(_currentEggId);
+            var config = PetManager.PetConfig.GetEggData(_currentEggId);
             if (config.Price > _currency.Amount)
             {
                 Notification.Instance.ShowRed(LocalizationProvider.GetText("not_enough_money"));

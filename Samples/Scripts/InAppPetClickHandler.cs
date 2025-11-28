@@ -7,7 +7,7 @@ namespace Serbull.GameAssets.Pets.Samples
         private void OnMouseDown()
         {
             var pet = GetComponent<InAppPetStand>().PetId;
-            FindAnyObjectByType<InappPetPopup>(FindObjectsInactive.Include).Show(pet);
+            PetManager.InappPetPopup.Show(pet);
         }
     }
 }

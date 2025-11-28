@@ -767,6 +767,48 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2840987207127893461, guid: 83d98ae03ca324dbfa6c969ff8c0a01a, type: 3}
   m_PrefabInstance: {fileID: 538541068}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &538541070 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1277355865219386523, guid: 83d98ae03ca324dbfa6c969ff8c0a01a, type: 3}
+  m_PrefabInstance: {fileID: 538541068}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c6787777e404264b7a6d5b90f2b348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &551800854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 551800855}
+  m_Layer: 0
+  m_Name: -----------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &551800855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551800854}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &719620871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,7 +1463,7 @@ GameObject:
   - component: {fileID: 1447665765}
   - component: {fileID: 1447665766}
   m_Layer: 0
-  m_Name: ---GameManager---
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1454,7 +1496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842fb22f8483541bf8530d1f009db1e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EggPopup: {fileID: 534229833}
+  PetInstaller: {fileID: 662758439145139583}
   SaveData:
     Pets: []
     Money: 1000
@@ -2042,6 +2084,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1444158511876846958, guid: 5dc414b97a94840319eb0148ec303c57, type: 3}
   m_PrefabInstance: {fileID: 1680570944}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1680570946 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4531158276262819023, guid: 5dc414b97a94840319eb0148ec303c57, type: 3}
+  m_PrefabInstance: {fileID: 1680570944}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e4f480fa497f4458a502225a8467364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1724411290 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3943514910122313656, guid: 2381ab592eb9147818bb42e2b4d3823f, type: 3}
@@ -2305,6 +2358,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3691772774132582784, guid: addb3054b1dbe4c3db35534f5a7efdf2, type: 3}
   m_PrefabInstance: {fileID: 1785212102}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1785212104 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7419773949203028653, guid: addb3054b1dbe4c3db35534f5a7efdf2, type: 3}
+  m_PrefabInstance: {fileID: 1785212102}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124198898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c09eb632ec24499682501603a868822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1821772127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2931,6 +2995,55 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &662758439145139583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7317386267732151379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3983730eee71240ce9e45580fb6420e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _petConfig: {fileID: 11400000, guid: 1040f18e749c44529acd489a92668e5c, type: 2}
+  _petPopup: {fileID: 1785212104}
+  _inappPetPopup: {fileID: 1680570946}
+  _eggPopup: {fileID: 534229833}
+  _eggHatchPreviewPopup: {fileID: 538541070}
+--- !u!4 &3273000444582719466
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7317386267732151379}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7317386267732151379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3273000444582719466}
+  - component: {fileID: 662758439145139583}
+  m_Layer: 0
+  m_Name: PetInstaller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2938,6 +3051,8 @@ SceneRoots:
   - {fileID: 1195434000}
   - {fileID: 1556571228}
   - {fileID: 719620873}
+  - {fileID: 551800855}
+  - {fileID: 3273000444582719466}
   - {fileID: 1447665765}
   - {fileID: 2063772104}
   - {fileID: 343351799}

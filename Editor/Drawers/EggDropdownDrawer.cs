@@ -13,30 +13,46 @@ namespace Serbull.GameAssets.Pets.Editor
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             if (_eggIds == null)
+            {
                 CacheEggData();
+            }
 
-            if (property.propertyType == SerializedPropertyType.String)
+            if (property.propertyType != SerializedPropertyType.String)
             {
-                int currentIndex = Array.IndexOf(_eggIds, property.stringValue);
-                if (currentIndex == -1) currentIndex = 0;
+                EditorGUI.LabelField(position, label.text, "Use [EggDropdown] with a string.");
+                return;
+            }
 
-                EditorGUI.BeginProperty(position, label, property);
+            if (_eggIds == null || _eggIds.Length == 0)
+            {
+                EditorGUI.LabelField(position, label.text, "No eggs in config");
+                return;
+            }
 
-                int newIndex = EditorGUI.Popup(position, label.text, currentIndex, _eggIds);
+            EditorGUI.BeginProperty(position, label, property);
 
+            // mixed mode
+            bool hasMixed = property.hasMultipleDifferentValues;
+            EditorGUI.showMixedValue = hasMixed;
+
+            int currentIndex = Array.IndexOf(_eggIds, property.stringValue);
+            if (currentIndex < 0) currentIndex = 0;
+
+            EditorGUI.BeginChangeCheck();
+            int newIndex = EditorGUI.Popup(position, label.text, currentIndex, _eggIds);
+            if (EditorGUI.EndChangeCheck())
+            {
                 property.stringValue = _eggIds[newIndex];
+            }
 
-                EditorGUI.EndProperty();
-            }
-            else
-            {
-                EditorGUI.LabelField(position, label.text, "Use [PetDropdown] with a string.");
-            }
+            EditorGUI.showMixedValue = false;
+
+            EditorGUI.EndProperty();
         }
 
         private void CacheEggData()
         {
-            var config = PetManager.Config;
+            var config = ConfigProvider.LoadConfig();
             if (config != null && config.Eggs != null)
             {
                 _eggIds = config.Eggs.Select(p => p.Id).ToArray();

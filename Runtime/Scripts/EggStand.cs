@@ -15,8 +15,8 @@ namespace Serbull.GameAssets.Pets
 
         private void Start()
         {
-            _currencyImage.sprite = PetManager.Config.Visual.EggPriceSprite;
-            _priceText.text = PetManager.Config.GetEggData(_eggId).Price.ToShortValue();
+            _currencyImage.sprite = PetManager.PetConfig.Visual.EggPriceSprite;
+            _priceText.text = PetManager.PetConfig.GetEggData(_eggId).Price.ToShortValue();
         }
     }
 }

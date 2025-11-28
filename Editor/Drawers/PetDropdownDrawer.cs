@@ -17,33 +17,46 @@ namespace Serbull.GameAssets.Pets.Editor
             if (_petIds == null)
                 CachePetData();
 
-            if (property.propertyType == SerializedPropertyType.String)
-            {
-                int currentIndex = Array.IndexOf(_petIds, property.stringValue);
-                if (currentIndex == -1) currentIndex = 0;
-
-                EditorGUI.BeginProperty(position, label, property);
-
-                var oldColor = GUI.contentColor;
-                GUI.contentColor = _petColors[currentIndex];
-
-                int newIndex = EditorGUI.Popup(position, label.text, currentIndex, _petLabels);
-
-                GUI.contentColor = oldColor;
-
-                property.stringValue = _petIds[newIndex];
-
-                EditorGUI.EndProperty();
-            }
-            else
+            if (property.propertyType != SerializedPropertyType.String)
             {
                 EditorGUI.LabelField(position, label.text, "Use [PetDropdown] with a string.");
+                return;
             }
+
+            if (_petIds == null || _petIds.Length == 0)
+            {
+                EditorGUI.LabelField(position, label.text, "No pets in config");
+                return;
+            }
+
+            EditorGUI.BeginProperty(position, label, property);
+
+            bool hasMixed = property.hasMultipleDifferentValues;
+            EditorGUI.showMixedValue = hasMixed;
+
+            int currentIndex = Array.IndexOf(_petIds, property.stringValue);
+            if (currentIndex < 0) currentIndex = 0;
+
+            var oldColor = GUI.contentColor;
+            if (!hasMixed && currentIndex >= 0 && currentIndex < _petColors.Length)
+                GUI.contentColor = _petColors[currentIndex];
+
+            EditorGUI.BeginChangeCheck();
+            int newIndex = EditorGUI.Popup(position, label.text, currentIndex, _petLabels);
+            if (EditorGUI.EndChangeCheck())
+            {
+                property.stringValue = _petIds[newIndex];
+            }
+
+            GUI.contentColor = oldColor;
+            EditorGUI.showMixedValue = false;
+
+            EditorGUI.EndProperty();
         }
 
         private void CachePetData()
         {
-            var config = PetManager.Config;
+            var config = ConfigProvider.LoadConfig();
             if (config != null && config.Pets != null)
             {
                 _petIds = config.Pets.Select(p => p.Id).ToArray();
@@ -57,14 +70,5 @@ namespace Serbull.GameAssets.Pets.Editor
                 _petColors = new Color[0];
             }
         }
-
-        //private string[] GetPetIds()
-        //{
-        //    var config = PetManager.Config;
-
-        //    if (config == null || config.Pets == null) return new string[0];
-
-        //    return config.Pets.Select(data => data.Id).ToArray();
-        //}
     }
 }
