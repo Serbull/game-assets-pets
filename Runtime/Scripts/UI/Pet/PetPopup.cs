@@ -183,7 +183,7 @@ namespace Serbull.GameAssets.Pets
 
             if (PetManager.GetEqippedPets().Count >= 3)
             {
-                SGAManager.Notification.ShowRed(LocalizationProvider.GetText("equip_max"));
+                Services.UI.Notification.ShowRed(LocalizationProvider.GetText("equip_max"));
                 return;
             }
 

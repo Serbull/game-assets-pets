@@ -195,11 +195,11 @@ namespace Serbull.GameAssets.Pets
 
             if (!success)
             {
-                SGAManager.Notification.ShowRed(LocalizationProvider.GetText("merge_fail"));
+                Services.UI.Notification.ShowRed(LocalizationProvider.GetText("merge_fail"));
                 return;
             }
 
-            SGAManager.Notification.ShowGreen(LocalizationProvider.GetText("merge_success"));
+            Services.UI.Notification.ShowGreen(LocalizationProvider.GetText("merge_success"));
 
             AddPet(id, true);
         }
@@ -291,7 +291,7 @@ namespace Serbull.GameAssets.Pets
                 petData.Icon, 1, true,
                 Color.white, rareData.Color, rareData.Color);
 
-            SGAManager.RewardPreviewPopup.Show(item);
+            Services.UI.RewardPreviewPopup.Show(item);
         }
     }
 }
