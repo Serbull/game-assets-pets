@@ -14,8 +14,7 @@ namespace Serbull.GameAssets.Pets.Editor
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
-            if (_petIds == null)
-                CachePetData();
+            CachePetData();
 
             if (property.propertyType != SerializedPropertyType.String)
             {
@@ -60,7 +59,7 @@ namespace Serbull.GameAssets.Pets.Editor
             if (config != null && config.Pets != null)
             {
                 _petIds = config.Pets.Select(p => p.Id).ToArray();
-                _petLabels = config.Pets.Select(p => $"{p.Id} [x{ p.GetBonus(false)}]").ToArray();
+                _petLabels = config.Pets.Select(p => $"{p.Id} [x{p.GetBonus(false)}]").ToArray();
                 _petColors = config.Pets.Select(p => config.GetRareData(p.Rare).Color).ToArray();
             }
             else

@@ -1725,8 +1725,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89810b54fa5fd4789a50d37311c56c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rewardPreviewPopup: {fileID: 1674512120}
-  _notification: {fileID: 687763360}
+  _useAudio: 0
+  _usePlaytimeGift: 0
+  _useRoulette: 0
+  LocalizationConfig: {fileID: 11400000, guid: 2d105407e60aa4704a3aeb6c820731f9, type: 2}
+  RareConfig: {fileID: 11400000, guid: 832faf0ec43604b8a88ffaa4ddf9e681, type: 2}
+  AudioConfig: {fileID: 0}
+  PlaytimeGiftConfig: {fileID: 0}
+  RouletteConfig: {fileID: 0}
+  PlaytimeGiftPopup: {fileID: 0}
+  RoulettePopup: {fileID: 0}
+  RewardPreviewPopup: {fileID: 1674512120}
+  Notification: {fileID: 687763360}
 --- !u!1001 &1669667520
 PrefabInstance:
   m_ObjectHideFlags: 0

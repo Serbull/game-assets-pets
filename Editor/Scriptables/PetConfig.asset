@@ -1282,27 +1282,50 @@ MonoBehaviour:
     IsInApp: 1
   Eggs:
   - Id: egg_1
-    Price: 100
+    Price: 0
     Pets:
-    - PetId: chick
-      Weight: 50
-    - PetId: bird
-      Weight: 30
-    - PetId: bunny
-      Weight: 12
-    - PetId: cat
-      Weight: 6
-    - PetId: dog
+    - PetId: chick_common
+      Weight: 45
+    - PetId: bird_uncommon
+      Weight: 25
+    - PetId: bunny_rare
+      Weight: 15
+    - PetId: cat_epic
+      Weight: 8
+    - PetId: dog_legendary
+      Weight: 5
+    - PetId: chicken_mystical
       Weight: 2
   - Id: egg_2
-    Price: 10000
+    Price: 0
     Pets:
-    - PetId: chicken
-      Weight: 60
-    - PetId: duck
-      Weight: 30
-    - PetId: cow
-      Weight: 10
+    - PetId: duck_common
+      Weight: 45
+    - PetId: cow_uncommon
+      Weight: 25
+    - PetId: horse_rare
+      Weight: 15
+    - PetId: bear_epic
+      Weight: 8
+    - PetId: lizard_legendary
+      Weight: 5
+    - PetId: goat_mystical
+      Weight: 2
+  - Id: egg_3
+    Price: 0
+    Pets:
+    - PetId: owl_common
+      Weight: 45
+    - PetId: deer_uncommon
+      Weight: 25
+    - PetId: lion_rare
+      Weight: 15
+    - PetId: pig_epic
+      Weight: 8
+    - PetId: sheep_legendary
+      Weight: 5
+    - PetId: zebra_mystical
+      Weight: 2
   Localizations:
   - Id: pets
     English: Pets
@@ -1357,6 +1380,9 @@ MonoBehaviour:
   - Id: legendary
     English: Legendary
     Russian: "\u041B\u0435\u0433\u0435\u043D\u0434\u0430\u0440\u043D\u044B\u0439"
+  - Id: mystical
+    English: Mystical
+    Russian: "\u041C\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0439"
   - Id: secret
     English: Secret
     Russian: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439"

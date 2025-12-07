@@ -1,5 +1,8 @@
 using UnityEngine;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using static Serbull.GameAssets.Pets.PetConfig.EggData;
 
 namespace Serbull.GameAssets.Pets
 {
@@ -20,6 +23,7 @@ namespace Serbull.GameAssets.Pets
             public string Id;
             [PetRareDropdown] public string Rare = "common";
             [SerializeField] private float _bonus = 1f;
+            public string Title;
             public Sprite Icon;
             public Pet Prefab;
             public bool Mergable;
@@ -78,6 +82,134 @@ namespace Serbull.GameAssets.Pets
                 }
                 egg.Pets[^1].Weight = lastProbability;
             }
+        }
+
+        [Button("Auto Generate Eggs (6 Pets in egg)", 10)]
+        private void AutoEgg6Pets()
+        {
+            var allPets = new List<PetData>();
+            var uniquePets = new List<string>();
+            foreach (var pet in Pets)
+            {
+                if (!pet.IsInApp)
+                {
+                    allPets.Add(pet);
+
+                    var id = pet.Id.Split("_")[0];
+                    if (!uniquePets.Contains(id))
+                    {
+                        uniquePets.Add(id);
+                    }
+                }
+            }
+
+            var eggsCount = allPets.Count / 6;
+            var eggs = new List<EggData>(eggsCount);
+            var uniquePetsInEggs = new List<string>();
+            var weights = new int[] { 45, 25, 15, 8, 5, 2 };
+
+            for (int i = 0; i < eggsCount; i++)
+            {
+                var egg = new EggData() { Id = "egg_" + (i + 1) };
+
+                var raresInEgg = new List<string>();
+                var uniquePetsInEgg = new List<string>();
+
+                var eggPets = new List<EggData.Pet>();
+
+                for (int j = 0; j < allPets.Count; j++)
+                {
+                    if (uniquePetsInEggs.Count == uniquePets.Count)
+                    {
+                        uniquePetsInEggs.Clear();
+                        j = 0;
+                    }
+
+                    var id = allPets[j].Id.Split("_")[0];
+
+                    if (!raresInEgg.Contains(allPets[j].Rare) && !uniquePetsInEgg.Contains(id) && !uniquePetsInEggs.Contains(id))
+                    {
+                        raresInEgg.Add(allPets[j].Rare);
+                        uniquePetsInEgg.Add(id);
+                        uniquePetsInEggs.Add(id);
+                        eggPets.Add(new EggData.Pet() { PetId = allPets[j].Id, Weight = weights[eggPets.Count] });
+                        allPets.RemoveAt(j);
+                    }
+                }
+
+                egg.Pets = eggPets.ToArray();
+
+                eggs.Add(egg);
+            }
+
+            Eggs = eggs.ToArray();
+        }
+
+        [Button("Auto Generate Eggs (3 Pets in egg)")]
+        private void AutoEgg3Pets()
+        {
+            var allPets = new List<PetData>();
+            var uniquePets = new List<string>();
+            foreach (var pet in Pets)
+            {
+                if (!pet.IsInApp)
+                {
+                    allPets.Add(pet);
+
+                    var id = pet.Id.Split("_")[0];
+                    if (!uniquePets.Contains(id))
+                    {
+                        uniquePets.Add(id);
+                    }
+                }
+            }
+
+            var eggsCount = allPets.Count / 6;
+            var eggs = new List<EggData>(eggsCount);
+            var uniquePetsInEggs = new List<string>();
+            var weights = new int[] { 60, 30, 10 };
+
+           
+            for (int i = 0; i < eggsCount; i++)
+            {
+                var targetRares = (i + 1) % 2 == 1 ?
+                    new string[] { "common","rare","legendary" } :
+                    new string[] { "uncommon", "epic", "mystical" };
+
+                var egg = new EggData() { Id = "egg_" + (i + 1) };
+
+                var raresInEgg = new List<string>();
+                var uniquePetsInEgg = new List<string>();
+
+                var eggPets = new List<EggData.Pet>();
+
+                for (int j = 0; j < allPets.Count; j++)
+                {
+                    if (uniquePetsInEggs.Count == uniquePets.Count)
+                    {
+                        uniquePetsInEggs.Clear();
+                        j = 0;
+                    }
+
+                    var id = allPets[j].Id.Split("_")[0];
+
+                    if (!raresInEgg.Contains(allPets[j].Rare) && !uniquePetsInEgg.Contains(id) && !uniquePetsInEggs.Contains(id) && targetRares.Contains(allPets[j].Rare))
+                    {
+                        raresInEgg.Add(allPets[j].Rare);
+                        uniquePetsInEgg.Add(id);
+                        uniquePetsInEggs.Add(id);
+
+                        eggPets.Add(new EggData.Pet() { PetId = allPets[j].Id, Weight = weights[eggPets.Count] });
+                        allPets.RemoveAt(j);
+                    }
+                }
+
+                egg.Pets = eggPets.ToArray();
+
+                eggs.Add(egg);
+            }
+
+            Eggs = eggs.ToArray();
         }
 
         public RareData GetRareData(string rareId)

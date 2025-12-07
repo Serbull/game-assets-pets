@@ -133,7 +133,7 @@ namespace Serbull.GameAssets.Pets
             _bonusText.text = $"x{pet.GetBonus(petData.IsGold).ToShortValue()}";
             _removeButton.gameObject.SetActive(_currentPetData != null && !_currentPetData.IsEquipped && !pet.Undeletable);
 
-            _mainPetNameText.text = LocalizationProvider.GetText(pet.Id);
+            _mainPetNameText.text = LocalizationProvider.GetText(pet.Title);
             _rareText.text = LocalizationProvider.GetText(rare.Id);
 
             _rareText.color = rare.Color;
