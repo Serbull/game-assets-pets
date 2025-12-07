@@ -29,7 +29,7 @@ MonoBehaviour:
   - Id: secret
     Color: {r: 1, g: 0, b: 0.7882353, a: 1}
   Pets:
-  - Id: chick
+  - Id: chick_common
     Rare: common
     _bonus: 1
     Title: chick
@@ -38,7 +38,61 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: bird
+  - Id: chick_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: chick
+    Icon: {fileID: 21300000, guid: 342d1d2c0c1954d99afdb07793461acd, type: 3}
+    Prefab: {fileID: 8885327295969518618, guid: add2c233a658841119f74657a59c153a, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: chick_rare
+    Rare: rare
+    _bonus: 1
+    Title: chick
+    Icon: {fileID: 21300000, guid: 342d1d2c0c1954d99afdb07793461acd, type: 3}
+    Prefab: {fileID: 8885327295969518618, guid: add2c233a658841119f74657a59c153a, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: chick_epic
+    Rare: epic
+    _bonus: 1
+    Title: chick
+    Icon: {fileID: 21300000, guid: 342d1d2c0c1954d99afdb07793461acd, type: 3}
+    Prefab: {fileID: 8885327295969518618, guid: add2c233a658841119f74657a59c153a, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: chick_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: chick
+    Icon: {fileID: 21300000, guid: 342d1d2c0c1954d99afdb07793461acd, type: 3}
+    Prefab: {fileID: 8885327295969518618, guid: add2c233a658841119f74657a59c153a, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: chick_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: chick
+    Icon: {fileID: 21300000, guid: 342d1d2c0c1954d99afdb07793461acd, type: 3}
+    Prefab: {fileID: 8885327295969518618, guid: add2c233a658841119f74657a59c153a, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bird_common
+    Rare: common
+    _bonus: 1
+    Title: bird
+    Icon: {fileID: 21300000, guid: ade23b9a7dd8a43f0825ecd11b11c8f0, type: 3}
+    Prefab: {fileID: 4396264088611719322, guid: bc2fe7c0374d947dba828b298d292a01, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bird_uncommon
     Rare: uncommon
     _bonus: 1
     Title: bird
@@ -47,7 +101,61 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: bunny
+  - Id: bird_rare
+    Rare: rare
+    _bonus: 1
+    Title: bird
+    Icon: {fileID: 21300000, guid: ade23b9a7dd8a43f0825ecd11b11c8f0, type: 3}
+    Prefab: {fileID: 4396264088611719322, guid: bc2fe7c0374d947dba828b298d292a01, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bird_epic
+    Rare: epic
+    _bonus: 1
+    Title: bird
+    Icon: {fileID: 21300000, guid: ade23b9a7dd8a43f0825ecd11b11c8f0, type: 3}
+    Prefab: {fileID: 4396264088611719322, guid: bc2fe7c0374d947dba828b298d292a01, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bird_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: bird
+    Icon: {fileID: 21300000, guid: ade23b9a7dd8a43f0825ecd11b11c8f0, type: 3}
+    Prefab: {fileID: 4396264088611719322, guid: bc2fe7c0374d947dba828b298d292a01, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bird_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: bird
+    Icon: {fileID: 21300000, guid: ade23b9a7dd8a43f0825ecd11b11c8f0, type: 3}
+    Prefab: {fileID: 4396264088611719322, guid: bc2fe7c0374d947dba828b298d292a01, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bunny_common
+    Rare: common
+    _bonus: 1
+    Title: bunny
+    Icon: {fileID: 21300000, guid: acbb470f8982743dc8630a317b957bd8, type: 3}
+    Prefab: {fileID: 4073706201343944842, guid: ec00e34524ae0491a8e27c1da369e050, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bunny_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: bunny
+    Icon: {fileID: 21300000, guid: acbb470f8982743dc8630a317b957bd8, type: 3}
+    Prefab: {fileID: 4073706201343944842, guid: ec00e34524ae0491a8e27c1da369e050, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bunny_rare
     Rare: rare
     _bonus: 1
     Title: bunny
@@ -56,7 +164,61 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: cat
+  - Id: bunny_epic
+    Rare: epic
+    _bonus: 1
+    Title: bunny
+    Icon: {fileID: 21300000, guid: acbb470f8982743dc8630a317b957bd8, type: 3}
+    Prefab: {fileID: 4073706201343944842, guid: ec00e34524ae0491a8e27c1da369e050, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bunny_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: bunny
+    Icon: {fileID: 21300000, guid: acbb470f8982743dc8630a317b957bd8, type: 3}
+    Prefab: {fileID: 4073706201343944842, guid: ec00e34524ae0491a8e27c1da369e050, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bunny_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: bunny
+    Icon: {fileID: 21300000, guid: acbb470f8982743dc8630a317b957bd8, type: 3}
+    Prefab: {fileID: 4073706201343944842, guid: ec00e34524ae0491a8e27c1da369e050, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: cat_common
+    Rare: common
+    _bonus: 1
+    Title: cat
+    Icon: {fileID: 21300000, guid: a5bc2cb9c9c7b4eb09a88293cb6145bb, type: 3}
+    Prefab: {fileID: 7361875963071127964, guid: d79cc26ad3f57423294672554130db6b, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: cat_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: cat
+    Icon: {fileID: 21300000, guid: a5bc2cb9c9c7b4eb09a88293cb6145bb, type: 3}
+    Prefab: {fileID: 7361875963071127964, guid: d79cc26ad3f57423294672554130db6b, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: cat_rare
+    Rare: rare
+    _bonus: 1
+    Title: cat
+    Icon: {fileID: 21300000, guid: a5bc2cb9c9c7b4eb09a88293cb6145bb, type: 3}
+    Prefab: {fileID: 7361875963071127964, guid: d79cc26ad3f57423294672554130db6b, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: cat_epic
     Rare: epic
     _bonus: 1
     Title: cat
@@ -65,7 +227,61 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: dog
+  - Id: cat_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: cat
+    Icon: {fileID: 21300000, guid: a5bc2cb9c9c7b4eb09a88293cb6145bb, type: 3}
+    Prefab: {fileID: 7361875963071127964, guid: d79cc26ad3f57423294672554130db6b, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: cat_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: cat
+    Icon: {fileID: 21300000, guid: a5bc2cb9c9c7b4eb09a88293cb6145bb, type: 3}
+    Prefab: {fileID: 7361875963071127964, guid: d79cc26ad3f57423294672554130db6b, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: dog_common
+    Rare: common
+    _bonus: 1
+    Title: dog
+    Icon: {fileID: 21300000, guid: 073f585f9320a4ba98234b7cec6524fe, type: 3}
+    Prefab: {fileID: 2709774093959840978, guid: 301df18a98b2a4f96bf08478d42f90f9, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: dog_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: dog
+    Icon: {fileID: 21300000, guid: 073f585f9320a4ba98234b7cec6524fe, type: 3}
+    Prefab: {fileID: 2709774093959840978, guid: 301df18a98b2a4f96bf08478d42f90f9, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: dog_rare
+    Rare: rare
+    _bonus: 1
+    Title: dog
+    Icon: {fileID: 21300000, guid: 073f585f9320a4ba98234b7cec6524fe, type: 3}
+    Prefab: {fileID: 2709774093959840978, guid: 301df18a98b2a4f96bf08478d42f90f9, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: dog_epic
+    Rare: epic
+    _bonus: 1
+    Title: dog
+    Icon: {fileID: 21300000, guid: 073f585f9320a4ba98234b7cec6524fe, type: 3}
+    Prefab: {fileID: 2709774093959840978, guid: 301df18a98b2a4f96bf08478d42f90f9, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: dog_legendary
     Rare: legendary
     _bonus: 1
     Title: dog
@@ -74,7 +290,16 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: chicken
+  - Id: dog_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: dog
+    Icon: {fileID: 21300000, guid: 073f585f9320a4ba98234b7cec6524fe, type: 3}
+    Prefab: {fileID: 2709774093959840978, guid: 301df18a98b2a4f96bf08478d42f90f9, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: chicken_common
     Rare: common
     _bonus: 1
     Title: chicken
@@ -83,7 +308,61 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: duck
+  - Id: chicken_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: chicken
+    Icon: {fileID: 21300000, guid: 3ff95ba369e3d471485c8bb197feaffe, type: 3}
+    Prefab: {fileID: 2667784402382324752, guid: 0d8dbd612bad54ee298009dadc0c3720, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: chicken_rare
+    Rare: rare
+    _bonus: 1
+    Title: chicken
+    Icon: {fileID: 21300000, guid: 3ff95ba369e3d471485c8bb197feaffe, type: 3}
+    Prefab: {fileID: 2667784402382324752, guid: 0d8dbd612bad54ee298009dadc0c3720, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: chicken_epic
+    Rare: epic
+    _bonus: 1
+    Title: chicken
+    Icon: {fileID: 21300000, guid: 3ff95ba369e3d471485c8bb197feaffe, type: 3}
+    Prefab: {fileID: 2667784402382324752, guid: 0d8dbd612bad54ee298009dadc0c3720, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: chicken_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: chicken
+    Icon: {fileID: 21300000, guid: 3ff95ba369e3d471485c8bb197feaffe, type: 3}
+    Prefab: {fileID: 2667784402382324752, guid: 0d8dbd612bad54ee298009dadc0c3720, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: chicken_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: chicken
+    Icon: {fileID: 21300000, guid: 3ff95ba369e3d471485c8bb197feaffe, type: 3}
+    Prefab: {fileID: 2667784402382324752, guid: 0d8dbd612bad54ee298009dadc0c3720, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: duck_common
+    Rare: common
+    _bonus: 1
+    Title: duck
+    Icon: {fileID: 21300000, guid: e48518bac48024585871103176442b94, type: 3}
+    Prefab: {fileID: 222819843744760894, guid: b196e5454ff734f99b9abcd28ad0ad38, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: duck_uncommon
     Rare: uncommon
     _bonus: 1
     Title: duck
@@ -92,7 +371,61 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: cow
+  - Id: duck_rare
+    Rare: rare
+    _bonus: 1
+    Title: duck
+    Icon: {fileID: 21300000, guid: e48518bac48024585871103176442b94, type: 3}
+    Prefab: {fileID: 222819843744760894, guid: b196e5454ff734f99b9abcd28ad0ad38, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: duck_epic
+    Rare: epic
+    _bonus: 1
+    Title: duck
+    Icon: {fileID: 21300000, guid: e48518bac48024585871103176442b94, type: 3}
+    Prefab: {fileID: 222819843744760894, guid: b196e5454ff734f99b9abcd28ad0ad38, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: duck_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: duck
+    Icon: {fileID: 21300000, guid: e48518bac48024585871103176442b94, type: 3}
+    Prefab: {fileID: 222819843744760894, guid: b196e5454ff734f99b9abcd28ad0ad38, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: duck_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: duck
+    Icon: {fileID: 21300000, guid: e48518bac48024585871103176442b94, type: 3}
+    Prefab: {fileID: 222819843744760894, guid: b196e5454ff734f99b9abcd28ad0ad38, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: cow_common
+    Rare: common
+    _bonus: 1
+    Title: cow
+    Icon: {fileID: 21300000, guid: b26f73d1be4474d22931668db0039e11, type: 3}
+    Prefab: {fileID: 3964189790450385877, guid: 0cb3e2c1afe9a41b38fef37c66edfa43, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: cow_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: cow
+    Icon: {fileID: 21300000, guid: b26f73d1be4474d22931668db0039e11, type: 3}
+    Prefab: {fileID: 3964189790450385877, guid: 0cb3e2c1afe9a41b38fef37c66edfa43, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: cow_rare
     Rare: rare
     _bonus: 1
     Title: cow
@@ -101,7 +434,61 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: horse
+  - Id: cow_epic
+    Rare: epic
+    _bonus: 1
+    Title: cow
+    Icon: {fileID: 21300000, guid: b26f73d1be4474d22931668db0039e11, type: 3}
+    Prefab: {fileID: 3964189790450385877, guid: 0cb3e2c1afe9a41b38fef37c66edfa43, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: cow_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: cow
+    Icon: {fileID: 21300000, guid: b26f73d1be4474d22931668db0039e11, type: 3}
+    Prefab: {fileID: 3964189790450385877, guid: 0cb3e2c1afe9a41b38fef37c66edfa43, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: cow_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: cow
+    Icon: {fileID: 21300000, guid: b26f73d1be4474d22931668db0039e11, type: 3}
+    Prefab: {fileID: 3964189790450385877, guid: 0cb3e2c1afe9a41b38fef37c66edfa43, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: horse_common
+    Rare: common
+    _bonus: 1
+    Title: horse
+    Icon: {fileID: 21300000, guid: 69c93a7d395c54dafb4066c1f9ed60fa, type: 3}
+    Prefab: {fileID: 5215397378125811052, guid: ff4e1dc38000549398e3981901cc23e6, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: horse_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: horse
+    Icon: {fileID: 21300000, guid: 69c93a7d395c54dafb4066c1f9ed60fa, type: 3}
+    Prefab: {fileID: 5215397378125811052, guid: ff4e1dc38000549398e3981901cc23e6, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: horse_rare
+    Rare: rare
+    _bonus: 1
+    Title: horse
+    Icon: {fileID: 21300000, guid: 69c93a7d395c54dafb4066c1f9ed60fa, type: 3}
+    Prefab: {fileID: 5215397378125811052, guid: ff4e1dc38000549398e3981901cc23e6, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: horse_epic
     Rare: epic
     _bonus: 1
     Title: horse
@@ -110,7 +497,61 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: bear
+  - Id: horse_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: horse
+    Icon: {fileID: 21300000, guid: 69c93a7d395c54dafb4066c1f9ed60fa, type: 3}
+    Prefab: {fileID: 5215397378125811052, guid: ff4e1dc38000549398e3981901cc23e6, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: horse_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: horse
+    Icon: {fileID: 21300000, guid: 69c93a7d395c54dafb4066c1f9ed60fa, type: 3}
+    Prefab: {fileID: 5215397378125811052, guid: ff4e1dc38000549398e3981901cc23e6, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bear_common
+    Rare: common
+    _bonus: 1
+    Title: bear
+    Icon: {fileID: 21300000, guid: bb3b064507f3f442d9cdf76ab7350008, type: 3}
+    Prefab: {fileID: 2667970465280866127, guid: 3d67c180c098a4c429f3a7e150c76469, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bear_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: bear
+    Icon: {fileID: 21300000, guid: bb3b064507f3f442d9cdf76ab7350008, type: 3}
+    Prefab: {fileID: 2667970465280866127, guid: 3d67c180c098a4c429f3a7e150c76469, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bear_rare
+    Rare: rare
+    _bonus: 1
+    Title: bear
+    Icon: {fileID: 21300000, guid: bb3b064507f3f442d9cdf76ab7350008, type: 3}
+    Prefab: {fileID: 2667970465280866127, guid: 3d67c180c098a4c429f3a7e150c76469, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bear_epic
+    Rare: epic
+    _bonus: 1
+    Title: bear
+    Icon: {fileID: 21300000, guid: bb3b064507f3f442d9cdf76ab7350008, type: 3}
+    Prefab: {fileID: 2667970465280866127, guid: 3d67c180c098a4c429f3a7e150c76469, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: bear_legendary
     Rare: legendary
     _bonus: 1
     Title: bear
@@ -119,7 +560,16 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: lizard
+  - Id: bear_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: bear
+    Icon: {fileID: 21300000, guid: bb3b064507f3f442d9cdf76ab7350008, type: 3}
+    Prefab: {fileID: 2667970465280866127, guid: 3d67c180c098a4c429f3a7e150c76469, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: lizard_common
     Rare: common
     _bonus: 1
     Title: lizard
@@ -128,7 +578,61 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: goat
+  - Id: lizard_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: lizard
+    Icon: {fileID: 21300000, guid: 193be8e4ab00c49a99805ea0c2691507, type: 3}
+    Prefab: {fileID: 2157421729122151871, guid: 01dce81bb1b2e42d8b69e4819b2ee7e5, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: lizard_rare
+    Rare: rare
+    _bonus: 1
+    Title: lizard
+    Icon: {fileID: 21300000, guid: 193be8e4ab00c49a99805ea0c2691507, type: 3}
+    Prefab: {fileID: 2157421729122151871, guid: 01dce81bb1b2e42d8b69e4819b2ee7e5, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: lizard_epic
+    Rare: epic
+    _bonus: 1
+    Title: lizard
+    Icon: {fileID: 21300000, guid: 193be8e4ab00c49a99805ea0c2691507, type: 3}
+    Prefab: {fileID: 2157421729122151871, guid: 01dce81bb1b2e42d8b69e4819b2ee7e5, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: lizard_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: lizard
+    Icon: {fileID: 21300000, guid: 193be8e4ab00c49a99805ea0c2691507, type: 3}
+    Prefab: {fileID: 2157421729122151871, guid: 01dce81bb1b2e42d8b69e4819b2ee7e5, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: lizard_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: lizard
+    Icon: {fileID: 21300000, guid: 193be8e4ab00c49a99805ea0c2691507, type: 3}
+    Prefab: {fileID: 2157421729122151871, guid: 01dce81bb1b2e42d8b69e4819b2ee7e5, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: goat_common
+    Rare: common
+    _bonus: 1
+    Title: goat
+    Icon: {fileID: 21300000, guid: 9419f8f7f7bd34c1389acba38d5ab28b, type: 3}
+    Prefab: {fileID: 3339271256994816282, guid: f72a3a13a7336457d9fde4e130efe6ee, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: goat_uncommon
     Rare: uncommon
     _bonus: 1
     Title: goat
@@ -137,7 +641,61 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: owl
+  - Id: goat_rare
+    Rare: rare
+    _bonus: 1
+    Title: goat
+    Icon: {fileID: 21300000, guid: 9419f8f7f7bd34c1389acba38d5ab28b, type: 3}
+    Prefab: {fileID: 3339271256994816282, guid: f72a3a13a7336457d9fde4e130efe6ee, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: goat_epic
+    Rare: epic
+    _bonus: 1
+    Title: goat
+    Icon: {fileID: 21300000, guid: 9419f8f7f7bd34c1389acba38d5ab28b, type: 3}
+    Prefab: {fileID: 3339271256994816282, guid: f72a3a13a7336457d9fde4e130efe6ee, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: goat_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: goat
+    Icon: {fileID: 21300000, guid: 9419f8f7f7bd34c1389acba38d5ab28b, type: 3}
+    Prefab: {fileID: 3339271256994816282, guid: f72a3a13a7336457d9fde4e130efe6ee, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: goat_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: goat
+    Icon: {fileID: 21300000, guid: 9419f8f7f7bd34c1389acba38d5ab28b, type: 3}
+    Prefab: {fileID: 3339271256994816282, guid: f72a3a13a7336457d9fde4e130efe6ee, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: owl_common
+    Rare: common
+    _bonus: 1
+    Title: owl
+    Icon: {fileID: 21300000, guid: f2f92fb280f40403aa17f0ef0c5c39fd, type: 3}
+    Prefab: {fileID: 1172004912084586251, guid: d6fe95147b7b04d5ab684423608fd1f6, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: owl_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: owl
+    Icon: {fileID: 21300000, guid: f2f92fb280f40403aa17f0ef0c5c39fd, type: 3}
+    Prefab: {fileID: 1172004912084586251, guid: d6fe95147b7b04d5ab684423608fd1f6, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: owl_rare
     Rare: rare
     _bonus: 1
     Title: owl
@@ -146,7 +704,61 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: deer
+  - Id: owl_epic
+    Rare: epic
+    _bonus: 1
+    Title: owl
+    Icon: {fileID: 21300000, guid: f2f92fb280f40403aa17f0ef0c5c39fd, type: 3}
+    Prefab: {fileID: 1172004912084586251, guid: d6fe95147b7b04d5ab684423608fd1f6, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: owl_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: owl
+    Icon: {fileID: 21300000, guid: f2f92fb280f40403aa17f0ef0c5c39fd, type: 3}
+    Prefab: {fileID: 1172004912084586251, guid: d6fe95147b7b04d5ab684423608fd1f6, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: owl_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: owl
+    Icon: {fileID: 21300000, guid: f2f92fb280f40403aa17f0ef0c5c39fd, type: 3}
+    Prefab: {fileID: 1172004912084586251, guid: d6fe95147b7b04d5ab684423608fd1f6, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: deer_common
+    Rare: common
+    _bonus: 1
+    Title: deer
+    Icon: {fileID: 21300000, guid: 1ddde3857dc65499caaa4a5cd2474bec, type: 3}
+    Prefab: {fileID: 6355505883683325847, guid: 0c661bef1ca554ef89db59f4cbfcca05, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: deer_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: deer
+    Icon: {fileID: 21300000, guid: 1ddde3857dc65499caaa4a5cd2474bec, type: 3}
+    Prefab: {fileID: 6355505883683325847, guid: 0c661bef1ca554ef89db59f4cbfcca05, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: deer_rare
+    Rare: rare
+    _bonus: 1
+    Title: deer
+    Icon: {fileID: 21300000, guid: 1ddde3857dc65499caaa4a5cd2474bec, type: 3}
+    Prefab: {fileID: 6355505883683325847, guid: 0c661bef1ca554ef89db59f4cbfcca05, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: deer_epic
     Rare: epic
     _bonus: 1
     Title: deer
@@ -155,7 +767,61 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: lion
+  - Id: deer_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: deer
+    Icon: {fileID: 21300000, guid: 1ddde3857dc65499caaa4a5cd2474bec, type: 3}
+    Prefab: {fileID: 6355505883683325847, guid: 0c661bef1ca554ef89db59f4cbfcca05, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: deer_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: deer
+    Icon: {fileID: 21300000, guid: 1ddde3857dc65499caaa4a5cd2474bec, type: 3}
+    Prefab: {fileID: 6355505883683325847, guid: 0c661bef1ca554ef89db59f4cbfcca05, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: lion_common
+    Rare: common
+    _bonus: 1
+    Title: lion
+    Icon: {fileID: 21300000, guid: 437fdbe1c9d92462a90c6fdc96e0de08, type: 3}
+    Prefab: {fileID: 807426246399427981, guid: 04e0ccf350be24427b89ffe39a9bf1f7, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: lion_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: lion
+    Icon: {fileID: 21300000, guid: 437fdbe1c9d92462a90c6fdc96e0de08, type: 3}
+    Prefab: {fileID: 807426246399427981, guid: 04e0ccf350be24427b89ffe39a9bf1f7, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: lion_rare
+    Rare: rare
+    _bonus: 1
+    Title: lion
+    Icon: {fileID: 21300000, guid: 437fdbe1c9d92462a90c6fdc96e0de08, type: 3}
+    Prefab: {fileID: 807426246399427981, guid: 04e0ccf350be24427b89ffe39a9bf1f7, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: lion_epic
+    Rare: epic
+    _bonus: 1
+    Title: lion
+    Icon: {fileID: 21300000, guid: 437fdbe1c9d92462a90c6fdc96e0de08, type: 3}
+    Prefab: {fileID: 807426246399427981, guid: 04e0ccf350be24427b89ffe39a9bf1f7, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: lion_legendary
     Rare: legendary
     _bonus: 1
     Title: lion
@@ -164,7 +830,16 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: pig
+  - Id: lion_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: lion
+    Icon: {fileID: 21300000, guid: 437fdbe1c9d92462a90c6fdc96e0de08, type: 3}
+    Prefab: {fileID: 807426246399427981, guid: 04e0ccf350be24427b89ffe39a9bf1f7, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: pig_common
     Rare: common
     _bonus: 1
     Title: pig
@@ -173,7 +848,61 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: sheep
+  - Id: pig_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: pig
+    Icon: {fileID: 21300000, guid: 8dd3bbd62e69141efb6e969c65d55579, type: 3}
+    Prefab: {fileID: 1419375650144831797, guid: 53315c1794faf43e697e2743aaca7603, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: pig_rare
+    Rare: rare
+    _bonus: 1
+    Title: pig
+    Icon: {fileID: 21300000, guid: 8dd3bbd62e69141efb6e969c65d55579, type: 3}
+    Prefab: {fileID: 1419375650144831797, guid: 53315c1794faf43e697e2743aaca7603, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: pig_epic
+    Rare: epic
+    _bonus: 1
+    Title: pig
+    Icon: {fileID: 21300000, guid: 8dd3bbd62e69141efb6e969c65d55579, type: 3}
+    Prefab: {fileID: 1419375650144831797, guid: 53315c1794faf43e697e2743aaca7603, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: pig_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: pig
+    Icon: {fileID: 21300000, guid: 8dd3bbd62e69141efb6e969c65d55579, type: 3}
+    Prefab: {fileID: 1419375650144831797, guid: 53315c1794faf43e697e2743aaca7603, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: pig_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: pig
+    Icon: {fileID: 21300000, guid: 8dd3bbd62e69141efb6e969c65d55579, type: 3}
+    Prefab: {fileID: 1419375650144831797, guid: 53315c1794faf43e697e2743aaca7603, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: sheep_common
+    Rare: common
+    _bonus: 1
+    Title: sheep
+    Icon: {fileID: 21300000, guid: f09ab9cface484cf2a0e3b4b90391abb, type: 3}
+    Prefab: {fileID: 3833595726313352688, guid: 338e456d67efa44efa02ec3722ad8d9b, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: sheep_uncommon
     Rare: uncommon
     _bonus: 1
     Title: sheep
@@ -182,7 +911,61 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: zebra
+  - Id: sheep_rare
+    Rare: rare
+    _bonus: 1
+    Title: sheep
+    Icon: {fileID: 21300000, guid: f09ab9cface484cf2a0e3b4b90391abb, type: 3}
+    Prefab: {fileID: 3833595726313352688, guid: 338e456d67efa44efa02ec3722ad8d9b, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: sheep_epic
+    Rare: epic
+    _bonus: 1
+    Title: sheep
+    Icon: {fileID: 21300000, guid: f09ab9cface484cf2a0e3b4b90391abb, type: 3}
+    Prefab: {fileID: 3833595726313352688, guid: 338e456d67efa44efa02ec3722ad8d9b, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: sheep_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: sheep
+    Icon: {fileID: 21300000, guid: f09ab9cface484cf2a0e3b4b90391abb, type: 3}
+    Prefab: {fileID: 3833595726313352688, guid: 338e456d67efa44efa02ec3722ad8d9b, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: sheep_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: sheep
+    Icon: {fileID: 21300000, guid: f09ab9cface484cf2a0e3b4b90391abb, type: 3}
+    Prefab: {fileID: 3833595726313352688, guid: 338e456d67efa44efa02ec3722ad8d9b, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: zebra_common
+    Rare: common
+    _bonus: 1
+    Title: zebra
+    Icon: {fileID: 21300000, guid: 34fd1d920fef24ac7870979dfb12d964, type: 3}
+    Prefab: {fileID: 547730300657282392, guid: a742a32e1ae204815910b631a37d931d, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: zebra_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: zebra
+    Icon: {fileID: 21300000, guid: 34fd1d920fef24ac7870979dfb12d964, type: 3}
+    Prefab: {fileID: 547730300657282392, guid: a742a32e1ae204815910b631a37d931d, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: zebra_rare
     Rare: rare
     _bonus: 1
     Title: zebra
@@ -191,7 +974,70 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: fox
+  - Id: zebra_epic
+    Rare: epic
+    _bonus: 1
+    Title: zebra
+    Icon: {fileID: 21300000, guid: 34fd1d920fef24ac7870979dfb12d964, type: 3}
+    Prefab: {fileID: 547730300657282392, guid: a742a32e1ae204815910b631a37d931d, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: zebra_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: zebra
+    Icon: {fileID: 21300000, guid: 34fd1d920fef24ac7870979dfb12d964, type: 3}
+    Prefab: {fileID: 547730300657282392, guid: a742a32e1ae204815910b631a37d931d, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: zebra_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: zebra
+    Icon: {fileID: 21300000, guid: 34fd1d920fef24ac7870979dfb12d964, type: 3}
+    Prefab: {fileID: 547730300657282392, guid: a742a32e1ae204815910b631a37d931d, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: fox_common
+    Rare: common
+    _bonus: 1
+    Title: fox
+    Icon: {fileID: 21300000, guid: 1b4c56bafcf9c4169908e48eebdc3a0b, type: 3}
+    Prefab: {fileID: 7913356353361117192, guid: 5246e3bb89e254cfda5abe8d161b6916, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: fox_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: fox
+    Icon: {fileID: 21300000, guid: 1b4c56bafcf9c4169908e48eebdc3a0b, type: 3}
+    Prefab: {fileID: 7913356353361117192, guid: 5246e3bb89e254cfda5abe8d161b6916, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: fox_rare
+    Rare: rare
+    _bonus: 1
+    Title: fox
+    Icon: {fileID: 21300000, guid: 1b4c56bafcf9c4169908e48eebdc3a0b, type: 3}
+    Prefab: {fileID: 7913356353361117192, guid: 5246e3bb89e254cfda5abe8d161b6916, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: fox_epic
+    Rare: epic
+    _bonus: 1
+    Title: fox
+    Icon: {fileID: 21300000, guid: 1b4c56bafcf9c4169908e48eebdc3a0b, type: 3}
+    Prefab: {fileID: 7913356353361117192, guid: 5246e3bb89e254cfda5abe8d161b6916, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: fox_legendary
     Rare: legendary
     _bonus: 1
     Title: fox
@@ -200,7 +1046,16 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: turtle
+  - Id: fox_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: fox
+    Icon: {fileID: 21300000, guid: 1b4c56bafcf9c4169908e48eebdc3a0b, type: 3}
+    Prefab: {fileID: 7913356353361117192, guid: 5246e3bb89e254cfda5abe8d161b6916, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: turtle_common
     Rare: common
     _bonus: 1
     Title: turtle
@@ -209,7 +1064,61 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: panda
+  - Id: turtle_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: turtle
+    Icon: {fileID: 21300000, guid: 8011247fd09264d199a524b436f17225, type: 3}
+    Prefab: {fileID: 5768688702327226663, guid: afdb5cfdeeb4a4c9088e4a216a43ed74, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: turtle_rare
+    Rare: rare
+    _bonus: 1
+    Title: turtle
+    Icon: {fileID: 21300000, guid: 8011247fd09264d199a524b436f17225, type: 3}
+    Prefab: {fileID: 5768688702327226663, guid: afdb5cfdeeb4a4c9088e4a216a43ed74, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: turtle_epic
+    Rare: epic
+    _bonus: 1
+    Title: turtle
+    Icon: {fileID: 21300000, guid: 8011247fd09264d199a524b436f17225, type: 3}
+    Prefab: {fileID: 5768688702327226663, guid: afdb5cfdeeb4a4c9088e4a216a43ed74, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: turtle_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: turtle
+    Icon: {fileID: 21300000, guid: 8011247fd09264d199a524b436f17225, type: 3}
+    Prefab: {fileID: 5768688702327226663, guid: afdb5cfdeeb4a4c9088e4a216a43ed74, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: turtle_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: turtle
+    Icon: {fileID: 21300000, guid: 8011247fd09264d199a524b436f17225, type: 3}
+    Prefab: {fileID: 5768688702327226663, guid: afdb5cfdeeb4a4c9088e4a216a43ed74, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: panda_common
+    Rare: common
+    _bonus: 1
+    Title: panda
+    Icon: {fileID: 21300000, guid: bc5308b8cff9143158d1216b17290319, type: 3}
+    Prefab: {fileID: 515874957803375872, guid: 7093a11a8517e4311a8ebc495647c10d, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: panda_uncommon
     Rare: uncommon
     _bonus: 1
     Title: panda
@@ -218,8 +1127,89 @@ MonoBehaviour:
     Mergable: 1
     Undeletable: 0
     IsInApp: 0
-  - Id: wolf
+  - Id: panda_rare
     Rare: rare
+    _bonus: 1
+    Title: panda
+    Icon: {fileID: 21300000, guid: bc5308b8cff9143158d1216b17290319, type: 3}
+    Prefab: {fileID: 515874957803375872, guid: 7093a11a8517e4311a8ebc495647c10d, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: panda_epic
+    Rare: epic
+    _bonus: 1
+    Title: panda
+    Icon: {fileID: 21300000, guid: bc5308b8cff9143158d1216b17290319, type: 3}
+    Prefab: {fileID: 515874957803375872, guid: 7093a11a8517e4311a8ebc495647c10d, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: panda_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: panda
+    Icon: {fileID: 21300000, guid: bc5308b8cff9143158d1216b17290319, type: 3}
+    Prefab: {fileID: 515874957803375872, guid: 7093a11a8517e4311a8ebc495647c10d, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: panda_mystical
+    Rare: mystical
+    _bonus: 1
+    Title: panda
+    Icon: {fileID: 21300000, guid: bc5308b8cff9143158d1216b17290319, type: 3}
+    Prefab: {fileID: 515874957803375872, guid: 7093a11a8517e4311a8ebc495647c10d, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: wolf_common
+    Rare: common
+    _bonus: 1
+    Title: wolf
+    Icon: {fileID: 21300000, guid: 3f0269c195e7347eb9e2d7ec19c9c0a6, type: 3}
+    Prefab: {fileID: 7221616303328546218, guid: 50637c67c6957453db8ec5435719d2ff, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: wolf_uncommon
+    Rare: uncommon
+    _bonus: 1
+    Title: wolf
+    Icon: {fileID: 21300000, guid: 3f0269c195e7347eb9e2d7ec19c9c0a6, type: 3}
+    Prefab: {fileID: 7221616303328546218, guid: 50637c67c6957453db8ec5435719d2ff, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: wolf_rare
+    Rare: rare
+    _bonus: 1
+    Title: wolf
+    Icon: {fileID: 21300000, guid: 3f0269c195e7347eb9e2d7ec19c9c0a6, type: 3}
+    Prefab: {fileID: 7221616303328546218, guid: 50637c67c6957453db8ec5435719d2ff, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: wolf_epic
+    Rare: epic
+    _bonus: 1
+    Title: wolf
+    Icon: {fileID: 21300000, guid: 3f0269c195e7347eb9e2d7ec19c9c0a6, type: 3}
+    Prefab: {fileID: 7221616303328546218, guid: 50637c67c6957453db8ec5435719d2ff, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: wolf_legendary
+    Rare: legendary
+    _bonus: 1
+    Title: wolf
+    Icon: {fileID: 21300000, guid: 3f0269c195e7347eb9e2d7ec19c9c0a6, type: 3}
+    Prefab: {fileID: 7221616303328546218, guid: 50637c67c6957453db8ec5435719d2ff, type: 3}
+    Mergable: 1
+    Undeletable: 0
+    IsInApp: 0
+  - Id: wolf_mystical
+    Rare: mystical
     _bonus: 1
     Title: wolf
     Icon: {fileID: 21300000, guid: 3f0269c195e7347eb9e2d7ec19c9c0a6, type: 3}
