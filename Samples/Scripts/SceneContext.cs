@@ -18,7 +18,7 @@ namespace Serbull.GameAssets.Pets.Samples
 
             var lang = "ru";
 
-            _sgaInstaller.Init(null);
+            _sgaInstaller.Init(null, null);
             _petInstaller.Init(Currency, SaveData.Pets, lang);
         }
     }
