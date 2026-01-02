@@ -8,6 +8,8 @@ namespace Serbull.GameAssets.Pets.Editor
     [CustomPropertyDrawer(typeof(PetDropdownAttribute))]
     public class PetDropdownDrawer : PropertyDrawer
     {
+        private PetConfig _petConfig;
+
         private string[] _petIds;
         private string[] _petLabels;
         private Color[] _petColors;
@@ -55,12 +57,16 @@ namespace Serbull.GameAssets.Pets.Editor
 
         private void CachePetData()
         {
-            var config = ConfigProvider.LoadConfig();
-            if (config != null && config.Pets != null)
+            if (_petConfig == null)
             {
-                _petIds = config.Pets.Select(p => p.Id).ToArray();
-                _petLabels = config.Pets.Select(p => $"{p.Id} [x{p.GetBonus(false)}]").ToArray();
-                _petColors = config.Pets.Select(p => config.GetRareData(p.Rare).Color).ToArray();
+                _petConfig = ConfigProvider.LoadConfig();
+            }
+
+            if (_petConfig != null && _petConfig.Pets != null)
+            {
+                _petIds = _petConfig.Pets.Select(p => p.Id).ToArray();
+                _petLabels = _petConfig.Pets.Select(p => $"{p.Id} [x{p.GetBonus(false)}]").ToArray();
+                _petColors = _petConfig.Pets.Select(p => _petConfig.GetRareData(p.Rare).Color).ToArray();
             }
             else
             {
