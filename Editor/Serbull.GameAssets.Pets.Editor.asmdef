@@ -2,7 +2,8 @@
     "name": "Serbull.GameAssets.Pets.Editor",
     "rootNamespace": "Serbull.GameAssets.Pets.Editor",
     "references": [
-        "Serbull.GameAssets.Pets"
+        "Serbull.GameAssets.Pets",
+        "Serbull.GameAssets"
     ],
     "includePlatforms": [
         "Editor"

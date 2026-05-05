@@ -13,24 +13,9 @@ MonoBehaviour:
   m_Name: PetConfig
   m_EditorClassIdentifier: 
   InventoryCapacity: 50
-  Rares:
-  - Id: common
-    Color: {r: 0.6, g: 0.6, b: 0.6, a: 1}
-  - Id: uncommon
-    Color: {r: 0.23137255, g: 1, b: 0.44313726, a: 1}
-  - Id: rare
-    Color: {r: 0.21176471, g: 0.69803923, b: 1, a: 1}
-  - Id: epic
-    Color: {r: 0.77254903, g: 0.23921569, b: 1, a: 1}
-  - Id: legendary
-    Color: {r: 1, g: 0.49019608, b: 0.09019608, a: 1}
-  - Id: mystical
-    Color: {r: 1, g: 0.008810024, b: 0, a: 1}
-  - Id: secret
-    Color: {r: 1, g: 0, b: 0.7882353, a: 1}
   Pets:
   - Id: chick_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: chick
     Icon: {fileID: 21300000, guid: 342d1d2c0c1954d99afdb07793461acd, type: 3}
@@ -39,7 +24,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: chick_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: chick
     Icon: {fileID: 21300000, guid: 342d1d2c0c1954d99afdb07793461acd, type: 3}
@@ -48,7 +33,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: chick_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: chick
     Icon: {fileID: 21300000, guid: 342d1d2c0c1954d99afdb07793461acd, type: 3}
@@ -57,7 +42,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: chick_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: chick
     Icon: {fileID: 21300000, guid: 342d1d2c0c1954d99afdb07793461acd, type: 3}
@@ -66,7 +51,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: chick_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: chick
     Icon: {fileID: 21300000, guid: 342d1d2c0c1954d99afdb07793461acd, type: 3}
@@ -75,7 +60,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: chick_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: chick
     Icon: {fileID: 21300000, guid: 342d1d2c0c1954d99afdb07793461acd, type: 3}
@@ -84,7 +69,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bird_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: bird
     Icon: {fileID: 21300000, guid: ade23b9a7dd8a43f0825ecd11b11c8f0, type: 3}
@@ -93,7 +78,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bird_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: bird
     Icon: {fileID: 21300000, guid: ade23b9a7dd8a43f0825ecd11b11c8f0, type: 3}
@@ -102,7 +87,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bird_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: bird
     Icon: {fileID: 21300000, guid: ade23b9a7dd8a43f0825ecd11b11c8f0, type: 3}
@@ -111,7 +96,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bird_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: bird
     Icon: {fileID: 21300000, guid: ade23b9a7dd8a43f0825ecd11b11c8f0, type: 3}
@@ -120,7 +105,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bird_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: bird
     Icon: {fileID: 21300000, guid: ade23b9a7dd8a43f0825ecd11b11c8f0, type: 3}
@@ -129,7 +114,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bird_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: bird
     Icon: {fileID: 21300000, guid: ade23b9a7dd8a43f0825ecd11b11c8f0, type: 3}
@@ -138,7 +123,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bunny_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: bunny
     Icon: {fileID: 21300000, guid: acbb470f8982743dc8630a317b957bd8, type: 3}
@@ -147,7 +132,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bunny_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: bunny
     Icon: {fileID: 21300000, guid: acbb470f8982743dc8630a317b957bd8, type: 3}
@@ -156,7 +141,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bunny_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: bunny
     Icon: {fileID: 21300000, guid: acbb470f8982743dc8630a317b957bd8, type: 3}
@@ -165,7 +150,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bunny_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: bunny
     Icon: {fileID: 21300000, guid: acbb470f8982743dc8630a317b957bd8, type: 3}
@@ -174,7 +159,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bunny_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: bunny
     Icon: {fileID: 21300000, guid: acbb470f8982743dc8630a317b957bd8, type: 3}
@@ -183,7 +168,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bunny_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: bunny
     Icon: {fileID: 21300000, guid: acbb470f8982743dc8630a317b957bd8, type: 3}
@@ -192,7 +177,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: cat_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: cat
     Icon: {fileID: 21300000, guid: a5bc2cb9c9c7b4eb09a88293cb6145bb, type: 3}
@@ -201,7 +186,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: cat_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: cat
     Icon: {fileID: 21300000, guid: a5bc2cb9c9c7b4eb09a88293cb6145bb, type: 3}
@@ -210,7 +195,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: cat_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: cat
     Icon: {fileID: 21300000, guid: a5bc2cb9c9c7b4eb09a88293cb6145bb, type: 3}
@@ -219,7 +204,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: cat_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: cat
     Icon: {fileID: 21300000, guid: a5bc2cb9c9c7b4eb09a88293cb6145bb, type: 3}
@@ -228,7 +213,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: cat_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: cat
     Icon: {fileID: 21300000, guid: a5bc2cb9c9c7b4eb09a88293cb6145bb, type: 3}
@@ -237,7 +222,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: cat_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: cat
     Icon: {fileID: 21300000, guid: a5bc2cb9c9c7b4eb09a88293cb6145bb, type: 3}
@@ -246,7 +231,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: dog_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: dog
     Icon: {fileID: 21300000, guid: 073f585f9320a4ba98234b7cec6524fe, type: 3}
@@ -255,7 +240,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: dog_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: dog
     Icon: {fileID: 21300000, guid: 073f585f9320a4ba98234b7cec6524fe, type: 3}
@@ -264,7 +249,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: dog_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: dog
     Icon: {fileID: 21300000, guid: 073f585f9320a4ba98234b7cec6524fe, type: 3}
@@ -273,7 +258,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: dog_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: dog
     Icon: {fileID: 21300000, guid: 073f585f9320a4ba98234b7cec6524fe, type: 3}
@@ -282,7 +267,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: dog_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: dog
     Icon: {fileID: 21300000, guid: 073f585f9320a4ba98234b7cec6524fe, type: 3}
@@ -291,7 +276,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: dog_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: dog
     Icon: {fileID: 21300000, guid: 073f585f9320a4ba98234b7cec6524fe, type: 3}
@@ -300,7 +285,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: chicken_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: chicken
     Icon: {fileID: 21300000, guid: 3ff95ba369e3d471485c8bb197feaffe, type: 3}
@@ -309,7 +294,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: chicken_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: chicken
     Icon: {fileID: 21300000, guid: 3ff95ba369e3d471485c8bb197feaffe, type: 3}
@@ -318,7 +303,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: chicken_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: chicken
     Icon: {fileID: 21300000, guid: 3ff95ba369e3d471485c8bb197feaffe, type: 3}
@@ -327,7 +312,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: chicken_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: chicken
     Icon: {fileID: 21300000, guid: 3ff95ba369e3d471485c8bb197feaffe, type: 3}
@@ -336,7 +321,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: chicken_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: chicken
     Icon: {fileID: 21300000, guid: 3ff95ba369e3d471485c8bb197feaffe, type: 3}
@@ -345,7 +330,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: chicken_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: chicken
     Icon: {fileID: 21300000, guid: 3ff95ba369e3d471485c8bb197feaffe, type: 3}
@@ -354,7 +339,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: duck_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: duck
     Icon: {fileID: 21300000, guid: e48518bac48024585871103176442b94, type: 3}
@@ -363,7 +348,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: duck_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: duck
     Icon: {fileID: 21300000, guid: e48518bac48024585871103176442b94, type: 3}
@@ -372,7 +357,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: duck_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: duck
     Icon: {fileID: 21300000, guid: e48518bac48024585871103176442b94, type: 3}
@@ -381,7 +366,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: duck_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: duck
     Icon: {fileID: 21300000, guid: e48518bac48024585871103176442b94, type: 3}
@@ -390,7 +375,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: duck_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: duck
     Icon: {fileID: 21300000, guid: e48518bac48024585871103176442b94, type: 3}
@@ -399,7 +384,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: duck_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: duck
     Icon: {fileID: 21300000, guid: e48518bac48024585871103176442b94, type: 3}
@@ -408,7 +393,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: cow_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: cow
     Icon: {fileID: 21300000, guid: b26f73d1be4474d22931668db0039e11, type: 3}
@@ -417,7 +402,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: cow_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: cow
     Icon: {fileID: 21300000, guid: b26f73d1be4474d22931668db0039e11, type: 3}
@@ -426,7 +411,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: cow_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: cow
     Icon: {fileID: 21300000, guid: b26f73d1be4474d22931668db0039e11, type: 3}
@@ -435,7 +420,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: cow_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: cow
     Icon: {fileID: 21300000, guid: b26f73d1be4474d22931668db0039e11, type: 3}
@@ -444,7 +429,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: cow_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: cow
     Icon: {fileID: 21300000, guid: b26f73d1be4474d22931668db0039e11, type: 3}
@@ -453,7 +438,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: cow_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: cow
     Icon: {fileID: 21300000, guid: b26f73d1be4474d22931668db0039e11, type: 3}
@@ -462,7 +447,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: horse_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: horse
     Icon: {fileID: 21300000, guid: 69c93a7d395c54dafb4066c1f9ed60fa, type: 3}
@@ -471,7 +456,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: horse_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: horse
     Icon: {fileID: 21300000, guid: 69c93a7d395c54dafb4066c1f9ed60fa, type: 3}
@@ -480,7 +465,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: horse_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: horse
     Icon: {fileID: 21300000, guid: 69c93a7d395c54dafb4066c1f9ed60fa, type: 3}
@@ -489,7 +474,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: horse_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: horse
     Icon: {fileID: 21300000, guid: 69c93a7d395c54dafb4066c1f9ed60fa, type: 3}
@@ -498,7 +483,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: horse_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: horse
     Icon: {fileID: 21300000, guid: 69c93a7d395c54dafb4066c1f9ed60fa, type: 3}
@@ -507,7 +492,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: horse_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: horse
     Icon: {fileID: 21300000, guid: 69c93a7d395c54dafb4066c1f9ed60fa, type: 3}
@@ -516,7 +501,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bear_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: bear
     Icon: {fileID: 21300000, guid: bb3b064507f3f442d9cdf76ab7350008, type: 3}
@@ -525,7 +510,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bear_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: bear
     Icon: {fileID: 21300000, guid: bb3b064507f3f442d9cdf76ab7350008, type: 3}
@@ -534,7 +519,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bear_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: bear
     Icon: {fileID: 21300000, guid: bb3b064507f3f442d9cdf76ab7350008, type: 3}
@@ -543,7 +528,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bear_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: bear
     Icon: {fileID: 21300000, guid: bb3b064507f3f442d9cdf76ab7350008, type: 3}
@@ -552,7 +537,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bear_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: bear
     Icon: {fileID: 21300000, guid: bb3b064507f3f442d9cdf76ab7350008, type: 3}
@@ -561,7 +546,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: bear_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: bear
     Icon: {fileID: 21300000, guid: bb3b064507f3f442d9cdf76ab7350008, type: 3}
@@ -570,7 +555,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: lizard_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: lizard
     Icon: {fileID: 21300000, guid: 193be8e4ab00c49a99805ea0c2691507, type: 3}
@@ -579,7 +564,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: lizard_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: lizard
     Icon: {fileID: 21300000, guid: 193be8e4ab00c49a99805ea0c2691507, type: 3}
@@ -588,7 +573,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: lizard_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: lizard
     Icon: {fileID: 21300000, guid: 193be8e4ab00c49a99805ea0c2691507, type: 3}
@@ -597,7 +582,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: lizard_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: lizard
     Icon: {fileID: 21300000, guid: 193be8e4ab00c49a99805ea0c2691507, type: 3}
@@ -606,7 +591,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: lizard_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: lizard
     Icon: {fileID: 21300000, guid: 193be8e4ab00c49a99805ea0c2691507, type: 3}
@@ -615,7 +600,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: lizard_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: lizard
     Icon: {fileID: 21300000, guid: 193be8e4ab00c49a99805ea0c2691507, type: 3}
@@ -624,7 +609,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: goat_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: goat
     Icon: {fileID: 21300000, guid: 9419f8f7f7bd34c1389acba38d5ab28b, type: 3}
@@ -633,7 +618,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: goat_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: goat
     Icon: {fileID: 21300000, guid: 9419f8f7f7bd34c1389acba38d5ab28b, type: 3}
@@ -642,7 +627,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: goat_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: goat
     Icon: {fileID: 21300000, guid: 9419f8f7f7bd34c1389acba38d5ab28b, type: 3}
@@ -651,7 +636,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: goat_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: goat
     Icon: {fileID: 21300000, guid: 9419f8f7f7bd34c1389acba38d5ab28b, type: 3}
@@ -660,7 +645,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: goat_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: goat
     Icon: {fileID: 21300000, guid: 9419f8f7f7bd34c1389acba38d5ab28b, type: 3}
@@ -669,7 +654,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: goat_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: goat
     Icon: {fileID: 21300000, guid: 9419f8f7f7bd34c1389acba38d5ab28b, type: 3}
@@ -678,7 +663,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: owl_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: owl
     Icon: {fileID: 21300000, guid: f2f92fb280f40403aa17f0ef0c5c39fd, type: 3}
@@ -687,7 +672,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: owl_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: owl
     Icon: {fileID: 21300000, guid: f2f92fb280f40403aa17f0ef0c5c39fd, type: 3}
@@ -696,7 +681,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: owl_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: owl
     Icon: {fileID: 21300000, guid: f2f92fb280f40403aa17f0ef0c5c39fd, type: 3}
@@ -705,7 +690,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: owl_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: owl
     Icon: {fileID: 21300000, guid: f2f92fb280f40403aa17f0ef0c5c39fd, type: 3}
@@ -714,7 +699,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: owl_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: owl
     Icon: {fileID: 21300000, guid: f2f92fb280f40403aa17f0ef0c5c39fd, type: 3}
@@ -723,7 +708,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: owl_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: owl
     Icon: {fileID: 21300000, guid: f2f92fb280f40403aa17f0ef0c5c39fd, type: 3}
@@ -732,7 +717,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: deer_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: deer
     Icon: {fileID: 21300000, guid: 1ddde3857dc65499caaa4a5cd2474bec, type: 3}
@@ -741,7 +726,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: deer_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: deer
     Icon: {fileID: 21300000, guid: 1ddde3857dc65499caaa4a5cd2474bec, type: 3}
@@ -750,7 +735,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: deer_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: deer
     Icon: {fileID: 21300000, guid: 1ddde3857dc65499caaa4a5cd2474bec, type: 3}
@@ -759,7 +744,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: deer_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: deer
     Icon: {fileID: 21300000, guid: 1ddde3857dc65499caaa4a5cd2474bec, type: 3}
@@ -768,7 +753,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: deer_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: deer
     Icon: {fileID: 21300000, guid: 1ddde3857dc65499caaa4a5cd2474bec, type: 3}
@@ -777,7 +762,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: deer_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: deer
     Icon: {fileID: 21300000, guid: 1ddde3857dc65499caaa4a5cd2474bec, type: 3}
@@ -786,7 +771,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: lion_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: lion
     Icon: {fileID: 21300000, guid: 437fdbe1c9d92462a90c6fdc96e0de08, type: 3}
@@ -795,7 +780,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: lion_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: lion
     Icon: {fileID: 21300000, guid: 437fdbe1c9d92462a90c6fdc96e0de08, type: 3}
@@ -804,7 +789,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: lion_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: lion
     Icon: {fileID: 21300000, guid: 437fdbe1c9d92462a90c6fdc96e0de08, type: 3}
@@ -813,7 +798,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: lion_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: lion
     Icon: {fileID: 21300000, guid: 437fdbe1c9d92462a90c6fdc96e0de08, type: 3}
@@ -822,7 +807,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: lion_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: lion
     Icon: {fileID: 21300000, guid: 437fdbe1c9d92462a90c6fdc96e0de08, type: 3}
@@ -831,7 +816,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: lion_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: lion
     Icon: {fileID: 21300000, guid: 437fdbe1c9d92462a90c6fdc96e0de08, type: 3}
@@ -840,7 +825,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: pig_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: pig
     Icon: {fileID: 21300000, guid: 8dd3bbd62e69141efb6e969c65d55579, type: 3}
@@ -849,7 +834,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: pig_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: pig
     Icon: {fileID: 21300000, guid: 8dd3bbd62e69141efb6e969c65d55579, type: 3}
@@ -858,7 +843,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: pig_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: pig
     Icon: {fileID: 21300000, guid: 8dd3bbd62e69141efb6e969c65d55579, type: 3}
@@ -867,7 +852,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: pig_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: pig
     Icon: {fileID: 21300000, guid: 8dd3bbd62e69141efb6e969c65d55579, type: 3}
@@ -876,7 +861,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: pig_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: pig
     Icon: {fileID: 21300000, guid: 8dd3bbd62e69141efb6e969c65d55579, type: 3}
@@ -885,7 +870,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: pig_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: pig
     Icon: {fileID: 21300000, guid: 8dd3bbd62e69141efb6e969c65d55579, type: 3}
@@ -894,7 +879,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: sheep_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: sheep
     Icon: {fileID: 21300000, guid: f09ab9cface484cf2a0e3b4b90391abb, type: 3}
@@ -903,7 +888,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: sheep_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: sheep
     Icon: {fileID: 21300000, guid: f09ab9cface484cf2a0e3b4b90391abb, type: 3}
@@ -912,7 +897,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: sheep_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: sheep
     Icon: {fileID: 21300000, guid: f09ab9cface484cf2a0e3b4b90391abb, type: 3}
@@ -921,7 +906,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: sheep_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: sheep
     Icon: {fileID: 21300000, guid: f09ab9cface484cf2a0e3b4b90391abb, type: 3}
@@ -930,7 +915,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: sheep_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: sheep
     Icon: {fileID: 21300000, guid: f09ab9cface484cf2a0e3b4b90391abb, type: 3}
@@ -939,7 +924,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: sheep_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: sheep
     Icon: {fileID: 21300000, guid: f09ab9cface484cf2a0e3b4b90391abb, type: 3}
@@ -948,7 +933,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: zebra_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: zebra
     Icon: {fileID: 21300000, guid: 34fd1d920fef24ac7870979dfb12d964, type: 3}
@@ -957,7 +942,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: zebra_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: zebra
     Icon: {fileID: 21300000, guid: 34fd1d920fef24ac7870979dfb12d964, type: 3}
@@ -966,7 +951,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: zebra_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: zebra
     Icon: {fileID: 21300000, guid: 34fd1d920fef24ac7870979dfb12d964, type: 3}
@@ -975,7 +960,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: zebra_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: zebra
     Icon: {fileID: 21300000, guid: 34fd1d920fef24ac7870979dfb12d964, type: 3}
@@ -984,7 +969,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: zebra_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: zebra
     Icon: {fileID: 21300000, guid: 34fd1d920fef24ac7870979dfb12d964, type: 3}
@@ -993,7 +978,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: zebra_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: zebra
     Icon: {fileID: 21300000, guid: 34fd1d920fef24ac7870979dfb12d964, type: 3}
@@ -1002,7 +987,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: fox_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: fox
     Icon: {fileID: 21300000, guid: 1b4c56bafcf9c4169908e48eebdc3a0b, type: 3}
@@ -1011,7 +996,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: fox_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: fox
     Icon: {fileID: 21300000, guid: 1b4c56bafcf9c4169908e48eebdc3a0b, type: 3}
@@ -1020,7 +1005,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: fox_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: fox
     Icon: {fileID: 21300000, guid: 1b4c56bafcf9c4169908e48eebdc3a0b, type: 3}
@@ -1029,7 +1014,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: fox_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: fox
     Icon: {fileID: 21300000, guid: 1b4c56bafcf9c4169908e48eebdc3a0b, type: 3}
@@ -1038,7 +1023,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: fox_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: fox
     Icon: {fileID: 21300000, guid: 1b4c56bafcf9c4169908e48eebdc3a0b, type: 3}
@@ -1047,7 +1032,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: fox_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: fox
     Icon: {fileID: 21300000, guid: 1b4c56bafcf9c4169908e48eebdc3a0b, type: 3}
@@ -1056,7 +1041,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: turtle_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: turtle
     Icon: {fileID: 21300000, guid: 8011247fd09264d199a524b436f17225, type: 3}
@@ -1065,7 +1050,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: turtle_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: turtle
     Icon: {fileID: 21300000, guid: 8011247fd09264d199a524b436f17225, type: 3}
@@ -1074,7 +1059,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: turtle_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: turtle
     Icon: {fileID: 21300000, guid: 8011247fd09264d199a524b436f17225, type: 3}
@@ -1083,7 +1068,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: turtle_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: turtle
     Icon: {fileID: 21300000, guid: 8011247fd09264d199a524b436f17225, type: 3}
@@ -1092,7 +1077,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: turtle_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: turtle
     Icon: {fileID: 21300000, guid: 8011247fd09264d199a524b436f17225, type: 3}
@@ -1101,7 +1086,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: turtle_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: turtle
     Icon: {fileID: 21300000, guid: 8011247fd09264d199a524b436f17225, type: 3}
@@ -1110,7 +1095,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: panda_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: panda
     Icon: {fileID: 21300000, guid: bc5308b8cff9143158d1216b17290319, type: 3}
@@ -1119,7 +1104,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: panda_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: panda
     Icon: {fileID: 21300000, guid: bc5308b8cff9143158d1216b17290319, type: 3}
@@ -1128,7 +1113,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: panda_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: panda
     Icon: {fileID: 21300000, guid: bc5308b8cff9143158d1216b17290319, type: 3}
@@ -1137,7 +1122,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: panda_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: panda
     Icon: {fileID: 21300000, guid: bc5308b8cff9143158d1216b17290319, type: 3}
@@ -1146,7 +1131,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: panda_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: panda
     Icon: {fileID: 21300000, guid: bc5308b8cff9143158d1216b17290319, type: 3}
@@ -1155,7 +1140,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: panda_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: panda
     Icon: {fileID: 21300000, guid: bc5308b8cff9143158d1216b17290319, type: 3}
@@ -1164,7 +1149,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: wolf_common
-    Rare: common
+    Rarity: common
     _bonus: 1
     Title: wolf
     Icon: {fileID: 21300000, guid: 3f0269c195e7347eb9e2d7ec19c9c0a6, type: 3}
@@ -1173,7 +1158,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: wolf_uncommon
-    Rare: uncommon
+    Rarity: uncommon
     _bonus: 1
     Title: wolf
     Icon: {fileID: 21300000, guid: 3f0269c195e7347eb9e2d7ec19c9c0a6, type: 3}
@@ -1182,7 +1167,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: wolf_rare
-    Rare: rare
+    Rarity: rare
     _bonus: 1
     Title: wolf
     Icon: {fileID: 21300000, guid: 3f0269c195e7347eb9e2d7ec19c9c0a6, type: 3}
@@ -1191,7 +1176,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: wolf_epic
-    Rare: epic
+    Rarity: epic
     _bonus: 1
     Title: wolf
     Icon: {fileID: 21300000, guid: 3f0269c195e7347eb9e2d7ec19c9c0a6, type: 3}
@@ -1200,7 +1185,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: wolf_legendary
-    Rare: legendary
+    Rarity: legendary
     _bonus: 1
     Title: wolf
     Icon: {fileID: 21300000, guid: 3f0269c195e7347eb9e2d7ec19c9c0a6, type: 3}
@@ -1209,7 +1194,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: wolf_mystical
-    Rare: mystical
+    Rarity: mystical
     _bonus: 1
     Title: wolf
     Icon: {fileID: 21300000, guid: 3f0269c195e7347eb9e2d7ec19c9c0a6, type: 3}
@@ -1218,7 +1203,7 @@ MonoBehaviour:
     Undeletable: 0
     IsInApp: 0
   - Id: cute_dragon1
-    Rare: secret
+    Rarity: secret
     _bonus: 100
     Title: cute_dragon1
     Icon: {fileID: 21300000, guid: 182d5cba8ac7d46049fb9c5e30aa3953, type: 3}
@@ -1227,7 +1212,7 @@ MonoBehaviour:
     Undeletable: 1
     IsInApp: 1
   - Id: cute_dragon2
-    Rare: secret
+    Rarity: secret
     _bonus: 200
     Title: cute_dragon2
     Icon: {fileID: 21300000, guid: 9caeaa44779b94d2fa7f95162438ef65, type: 3}
@@ -1236,7 +1221,7 @@ MonoBehaviour:
     Undeletable: 1
     IsInApp: 1
   - Id: cute_dragon3
-    Rare: secret
+    Rarity: secret
     _bonus: 300
     Title: cute_dragon3
     Icon: {fileID: 21300000, guid: 8fd6686bc83b54c0ea1b6bff09f7b533, type: 3}
@@ -1245,7 +1230,7 @@ MonoBehaviour:
     Undeletable: 1
     IsInApp: 1
   - Id: cute_dragon4
-    Rare: secret
+    Rarity: secret
     _bonus: 400
     Title: cute_dragon4
     Icon: {fileID: 21300000, guid: 87fac03b653ad4b03b194f6f93f28765, type: 3}
@@ -1254,7 +1239,7 @@ MonoBehaviour:
     Undeletable: 1
     IsInApp: 1
   - Id: cute_dragon5
-    Rare: secret
+    Rarity: secret
     _bonus: 500
     Title: cute_dragon5
     Icon: {fileID: 21300000, guid: 21b699c8f70fa4d24ac57eb9da12082a, type: 3}
@@ -1263,7 +1248,7 @@ MonoBehaviour:
     Undeletable: 1
     IsInApp: 1
   - Id: cute_dragon6
-    Rare: secret
+    Rarity: secret
     _bonus: 600
     Title: cute_dragon6
     Icon: {fileID: 21300000, guid: 9137e12740158412f9b5019dd70806c8, type: 3}
@@ -1272,7 +1257,7 @@ MonoBehaviour:
     Undeletable: 1
     IsInApp: 1
   - Id: cute_dragon7
-    Rare: secret
+    Rarity: secret
     _bonus: 700
     Title: cute_dragon7
     Icon: {fileID: 21300000, guid: 2e01afb56cca94d908254130254abfd7, type: 3}
@@ -1372,7 +1357,7 @@ MonoBehaviour:
     English: Uncommon
     Russian: "\u041D\u0435\u043E\u0431\u044B\u0447\u043D\u044B\u0439"
   - Id: rare
-    English: Rare
+    English: Rarity
     Russian: "\u0420\u0435\u0434\u043A\u0438\u0439"
   - Id: epic
     English: Epic

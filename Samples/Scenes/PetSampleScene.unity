@@ -1728,8 +1728,9 @@ MonoBehaviour:
   _useAudio: 0
   _usePlaytimeGift: 0
   _useRoulette: 0
+  _useInteract: 0
   LocalizationConfig: {fileID: 11400000, guid: 2d105407e60aa4704a3aeb6c820731f9, type: 2}
-  RareConfig: {fileID: 11400000, guid: 832faf0ec43604b8a88ffaa4ddf9e681, type: 2}
+  _rarityConfig: {fileID: 11400000, guid: 832faf0ec43604b8a88ffaa4ddf9e681, type: 2}
   AudioConfig: {fileID: 0}
   PlaytimeGiftConfig: {fileID: 0}
   RouletteConfig: {fileID: 0}
@@ -1737,6 +1738,7 @@ MonoBehaviour:
   RoulettePopup: {fileID: 0}
   RewardPreviewPopup: {fileID: 1674512120}
   Notification: {fileID: 687763360}
+  InteractButton: {fileID: 0}
 --- !u!1001 &1669667520
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -48,7 +48,7 @@ namespace Serbull.GameAssets.Pets
             {
                 var slot = Instantiate(_eggSlotPrefab, _content);
                 var petData = petConfig.GetPetData(eggData.Pets[i].PetId);
-                slot.Init(petData.Icon, eggData.Pets[i].Weight, petData.Rare);
+                slot.Init(petData.Icon, eggData.Pets[i].Weight, petData.Rarity);
             }
 
             _priceText.text = eggData.Price.ToShortValue();

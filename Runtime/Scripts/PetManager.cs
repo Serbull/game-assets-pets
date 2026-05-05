@@ -284,10 +284,10 @@ namespace Serbull.GameAssets.Pets
         public static void PreviewPet(string petId)
         {
             var petData = PetConfig.GetPetData(petId);
-            var rareData = PetConfig.GetRareData(petData.Rare);
+            var rareData = PetConfig.GetRarityData(petData.Rarity);
 
             var item = new RewardPreviewItem(LocalizationProvider.GetText(petData.Title),
-                LocalizationProvider.GetText(petData.Rare),
+                LocalizationProvider.GetText(petData.Rarity),
                 petData.Icon, 1, true,
                 Color.white, rareData.Color, rareData.Color);
 

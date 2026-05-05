@@ -80,7 +80,7 @@ namespace Serbull.GameAssets.Pets
             {
                 var slot = Instantiate(_petSlot, _petContent);
                 var petData = PetManager.PetConfig.GetPetData(petSave.Id);
-                var rare = PetManager.PetConfig.GetRareData(petData.Rare);
+                var rare = PetManager.PetConfig.GetRarityData(petData.Rarity);
                 var bonus = petData.GetBonus(petSave.IsGold).ToShortValue();
 
                 slot.Init(petSave, petData.Icon, rare.Color, $"x{bonus}");
@@ -121,7 +121,7 @@ namespace Serbull.GameAssets.Pets
         {
             var petConfig = PetManager.PetConfig;
             var pet = petConfig.GetPetData(petData.Id);
-            var rare = petConfig.GetRareData(pet.Rare);
+            var rare = petConfig.GetRarityData(pet.Rarity);
             _currentPetData = petData;
 
             _equipButton.gameObject.SetActive(!petData.IsEquipped);

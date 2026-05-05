@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Serbull.GameAssets.Rarity;
 
 namespace Serbull.GameAssets.Pets
 {
@@ -10,17 +11,10 @@ namespace Serbull.GameAssets.Pets
         public int InventoryCapacity = 50;
 
         [Serializable]
-        public class RareData
-        {
-            public string Id;
-            public Color Color;
-        }
-
-        [Serializable]
         public class PetData
         {
             public string Id;
-            [PetRareDropdown] public string Rare = "common";
+            [RarityDropdown] public string Rarity = "common";
             [SerializeField] private float _bonus = 1f;
             public string Title;
             public Sprite Icon;
@@ -62,7 +56,6 @@ namespace Serbull.GameAssets.Pets
             public string Russian;
         }
 
-        public RareData[] Rares;
         public PetData[] Pets;
         public EggData[] Eggs;
         [Space]
@@ -126,9 +119,9 @@ namespace Serbull.GameAssets.Pets
 
                     var id = allPets[j].Id.Split("_")[0];
 
-                    if (!raresInEgg.Contains(allPets[j].Rare) && !uniquePetsInEgg.Contains(id) && !uniquePetsInEggs.Contains(id))
+                    if (!raresInEgg.Contains(allPets[j].Rarity) && !uniquePetsInEgg.Contains(id) && !uniquePetsInEggs.Contains(id))
                     {
-                        raresInEgg.Add(allPets[j].Rare);
+                        raresInEgg.Add(allPets[j].Rarity);
                         uniquePetsInEgg.Add(id);
                         uniquePetsInEggs.Add(id);
                         eggPets.Add(new EggData.Pet() { PetId = allPets[j].Id, Weight = weights[eggPets.Count] });
@@ -168,11 +161,11 @@ namespace Serbull.GameAssets.Pets
             var uniquePetsInEggs = new List<string>();
             var weights = new int[] { 60, 30, 10 };
 
-           
+
             for (int i = 0; i < eggsCount; i++)
             {
                 var targetRares = (i + 1) % 2 == 1 ?
-                    new string[] { "common","rare","legendary" } :
+                    new string[] { "common", "rare", "legendary" } :
                     new string[] { "uncommon", "epic", "mystical" };
 
                 var egg = new EggData() { Id = "egg_" + (i + 1) };
@@ -192,9 +185,12 @@ namespace Serbull.GameAssets.Pets
 
                     var id = allPets[j].Id.Split("_")[0];
 
-                    if (!raresInEgg.Contains(allPets[j].Rare) && !uniquePetsInEgg.Contains(id) && !uniquePetsInEggs.Contains(id) && targetRares.Contains(allPets[j].Rare))
+                    if (!raresInEgg.Contains(allPets[j].Rarity) 
+                        && !uniquePetsInEgg.Contains(id) 
+                        && !uniquePetsInEggs.Contains(id) 
+                        && targetRares.Contains(allPets[j].Rarity))
                     {
-                        raresInEgg.Add(allPets[j].Rare);
+                        raresInEgg.Add(allPets[j].Rarity);
                         uniquePetsInEgg.Add(id);
                         uniquePetsInEggs.Add(id);
 
@@ -211,18 +207,9 @@ namespace Serbull.GameAssets.Pets
             Eggs = eggs.ToArray();
         }
 
-        public RareData GetRareData(string rareId)
+        public RarityConfig.RarityData GetRarityData(string rarityId)
         {
-            foreach (var rare in Rares)
-            {
-                if (rare.Id == rareId)
-                {
-                    return rare;
-                }
-            }
-
-            Debug.LogError($"Not found RareData with id: {rareId}");
-            return null;
+            return Services.Rarity.Config.GetRarityData(rarityId);
         }
 
         public PetData GetPetData(string petId)

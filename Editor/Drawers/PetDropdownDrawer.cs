@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using Serbull.GameAssets.Rarity;
 using UnityEditor;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ namespace Serbull.GameAssets.Pets.Editor
     public class PetDropdownDrawer : PropertyDrawer
     {
         private PetConfig _petConfig;
+        private RarityConfig _rarityConfig;
 
         private string[] _petIds;
         private string[] _petLabels;
@@ -62,11 +64,16 @@ namespace Serbull.GameAssets.Pets.Editor
                 _petConfig = ConfigProvider.LoadConfig();
             }
 
-            if (_petConfig != null && _petConfig.Pets != null)
+            if (_rarityConfig == null)
+            {
+                _rarityConfig = GameAssets.ConfigProvider.LoadConfig<RarityConfig>(GameAssets.ConfigProvider.ConfigType.Rarity);
+            }
+
+            if (_petConfig != null && _petConfig.Pets != null && _rarityConfig != null)
             {
                 _petIds = _petConfig.Pets.Select(p => p.Id).ToArray();
                 _petLabels = _petConfig.Pets.Select(p => $"{p.Id} [x{p.GetBonus(false)}]").ToArray();
-                _petColors = _petConfig.Pets.Select(p => _petConfig.GetRareData(p.Rare).Color).ToArray();
+                _petColors = _petConfig.Pets.Select(p => _rarityConfig.GetRarityData(p.Rarity).Color).ToArray();
             }
             else
             {
