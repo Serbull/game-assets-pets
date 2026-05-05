@@ -3139,6 +3139,7 @@ MonoBehaviour:
   _inappPetPopup: {fileID: 1680570946}
   _eggPopup: {fileID: 534229833}
   _eggHatchPreviewPopup: {fileID: 538541070}
+  _autoEquipBestPets: 1
 --- !u!4 &3273000444582719466
 Transform:
   m_ObjectHideFlags: 0
