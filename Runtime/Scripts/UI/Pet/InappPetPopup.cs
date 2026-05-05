@@ -33,7 +33,7 @@ namespace Serbull.GameAssets.Pets
             _petIcon.sprite = petData.Icon;
             _glowImage.color = rarityData.Color;
             _petNameText.text = Services.Localization.GetText(_petId);
-            _petRareText.text = Services.Localization.GetText(petData.Rarity);
+            _petRareText.text = Services.Localization.GetText(rarityData.LocalizationId);
             _petRareText.color = rarityData.Color;
             _petBonusText.text = "X" + petData.GetBonus(false).ToShortValue();
         }

@@ -135,7 +135,7 @@ namespace Serbull.GameAssets.Pets
             _removeButton.gameObject.SetActive(_currentPetData != null && !_currentPetData.IsEquipped && !pet.Undeletable);
 
             _mainPetNameText.text = Services.Localization.GetText(pet.Title);
-            _rareText.text = Services.Localization.GetText(rarity.Id);
+            _rareText.text = Services.Localization.GetText(rarity.LocalizationId);
 
             _rareText.color = rarity.Color;
             _mainPetBg.color = rarity.Color;

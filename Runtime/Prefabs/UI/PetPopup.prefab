@@ -145,7 +145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 5.5}
+  m_AnchoredPosition: {x: 0, y: 4}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1389885250817416228
@@ -692,7 +692,7 @@ GameObject:
   - component: {fileID: 3318694587521337525}
   - component: {fileID: 683404812900832570}
   - component: {fileID: 3032210859176414049}
-  - component: {fileID: 7172932690592108946}
+  - component: {fileID: 2621197998439620146}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -818,7 +818,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &7172932690592108946
+--- !u!114 &2621197998439620146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -827,7 +827,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2731829634714400325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4a451791b649a8840809a866111145, type: 3}
+  m_Script: {fileID: 11500000, guid: 20ae1aa5b2c02446d9f2e8f636179223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _id: equip_best
@@ -1052,7 +1052,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3206993628982617347}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4a451791b649a8840809a866111145, type: 3}
+  m_Script: {fileID: 11500000, guid: 20ae1aa5b2c02446d9f2e8f636179223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _id: chance
@@ -1191,14 +1191,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.19999999, b: 0.19999999, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f3b408949e50471d9e87de7ebcc6f28b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3070a6f23e6ca4273897acf1b7e8c5ce, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1207,7 +1207,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1.45
+  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &5420011968392079423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1799,7 +1799,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5253689782706537822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4a451791b649a8840809a866111145, type: 3}
+  m_Script: {fileID: 11500000, guid: 20ae1aa5b2c02446d9f2e8f636179223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _id: equip
@@ -2283,7 +2283,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6200908653456792396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4a451791b649a8840809a866111145, type: 3}
+  m_Script: {fileID: 11500000, guid: 20ae1aa5b2c02446d9f2e8f636179223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _id: pets
@@ -3725,7 +3725,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8761443701823730754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4a451791b649a8840809a866111145, type: 3}
+  m_Script: {fileID: 11500000, guid: 20ae1aa5b2c02446d9f2e8f636179223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _id: unequip
@@ -4051,7 +4051,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9190680889252526155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4a451791b649a8840809a866111145, type: 3}
+  m_Script: {fileID: 11500000, guid: 20ae1aa5b2c02446d9f2e8f636179223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _id: merge

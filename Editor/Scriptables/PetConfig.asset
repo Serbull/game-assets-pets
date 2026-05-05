@@ -1267,7 +1267,7 @@ MonoBehaviour:
     IsInApp: 1
   Eggs:
   - Id: egg_1
-    Price: 0
+    Price: 100
     Pets:
     - PetId: chick_common
       Weight: 45
@@ -1282,7 +1282,7 @@ MonoBehaviour:
     - PetId: chicken_mystical
       Weight: 2
   - Id: egg_2
-    Price: 0
+    Price: 200
     Pets:
     - PetId: duck_common
       Weight: 45
@@ -1297,7 +1297,7 @@ MonoBehaviour:
     - PetId: goat_mystical
       Weight: 2
   - Id: egg_3
-    Price: 0
+    Price: 300
     Pets:
     - PetId: owl_common
       Weight: 45
