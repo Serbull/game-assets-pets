@@ -200,7 +200,7 @@ namespace Serbull.GameAssets.Pets
 
         private void EquipTheBest_OnClick()
         {
-            PetManager.SetTheBest();
+            PetManager.EquipBestPets();
             UpdateUI();
         }
 

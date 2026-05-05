@@ -13,6 +13,8 @@ namespace Serbull.GameAssets.Pets
         [SerializeField] private InappPetPopup _inappPetPopup;
         [SerializeField] private EggPopup _eggPopup;
         [SerializeField] private EggHatchPreviewPopup _eggHatchPreviewPopup;
+        [Header("Settings")]
+        [SerializeField] private bool _autoEquipBestPets = true;
 
 #if UNITY_EDITOR
         private void OnEnable()
@@ -28,7 +30,7 @@ namespace Serbull.GameAssets.Pets
         {
             PetManager.Init(_petConfig, saveData,
                 _petPopup, _inappPetPopup,
-                _eggPopup, _eggHatchPreviewPopup);
+                _eggPopup, _eggHatchPreviewPopup, _autoEquipBestPets);
 
             Services.Localization.AddLocalization(_petConfig.Localizations);
 

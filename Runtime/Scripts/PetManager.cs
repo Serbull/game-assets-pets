@@ -20,9 +20,12 @@ namespace Serbull.GameAssets.Pets
         private static EggPopup _eggPopup;
         private static EggHatchPreviewPopup _eggHatchPreviewPopup;
 
+        private static bool _autoEquipBestPets;
+
         public static void Init(PetConfig petConfig, List<PetData> petSaveData,
             PetPopup petPopup, InappPetPopup inappPetPopup,
-            EggPopup eggPopup, EggHatchPreviewPopup eggHatchPreviewPopup)
+            EggPopup eggPopup, EggHatchPreviewPopup eggHatchPreviewPopup,
+            bool autoEquipBestPets)
         {
             _petConfig = petConfig;
             _petSaveData = petSaveData;
@@ -31,6 +34,8 @@ namespace Serbull.GameAssets.Pets
             _inappPetPopup = inappPetPopup;
             _eggPopup = eggPopup;
             _eggHatchPreviewPopup = eggHatchPreviewPopup;
+
+            _autoEquipBestPets = autoEquipBestPets;
         }
 
         public static PetConfig PetConfig
@@ -146,6 +151,11 @@ namespace Serbull.GameAssets.Pets
             PetSaveData.Add(new PetData { Id = id, IsGold = isGold });
             SortPets();
             OnPetAdded?.Invoke();
+
+            if (_autoEquipBestPets)
+            {
+                EquipBestPets();
+            }
         }
 
         public static void RemovePet(string id)
@@ -199,7 +209,7 @@ namespace Serbull.GameAssets.Pets
             AddPet(id, true);
         }
 
-        public static void SetTheBest()
+        public static void EquipBestPets()
         {
             if (PetSaveData.Count == 0) return;
 
