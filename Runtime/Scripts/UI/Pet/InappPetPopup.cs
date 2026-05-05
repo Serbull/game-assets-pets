@@ -29,12 +29,12 @@ namespace Serbull.GameAssets.Pets
             }
 
             var petData = PetManager.PetConfig.GetPetData(_petId);
-            var rareData = PetManager.PetConfig.GetRarityData(petData.Rarity);
+            var rarityData = Services.Rarity.GetRarityData(petData.Rarity);
             _petIcon.sprite = petData.Icon;
-            _glowImage.color = rareData.Color;
-            _petNameText.text = LocalizationProvider.GetText(_petId);
-            _petRareText.text = LocalizationProvider.GetText(petData.Rarity);
-            _petRareText.color = rareData.Color;
+            _glowImage.color = rarityData.Color;
+            _petNameText.text = Services.Localization.GetText(_petId);
+            _petRareText.text = Services.Localization.GetText(petData.Rarity);
+            _petRareText.color = rarityData.Color;
             _petBonusText.text = "X" + petData.GetBonus(false).ToShortValue();
         }
 

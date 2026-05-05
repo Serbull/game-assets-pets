@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Serbull.GameAssets.Localization;
 
 namespace Serbull.GameAssets.Pets
 {
@@ -80,7 +81,7 @@ namespace Serbull.GameAssets.Pets
             {
                 var slot = Instantiate(_petSlot, _petContent);
                 var petData = PetManager.PetConfig.GetPetData(petSave.Id);
-                var rare = PetManager.PetConfig.GetRarityData(petData.Rarity);
+                var rare = Services.Rarity.GetRarityData(petData.Rarity);
                 var bonus = petData.GetBonus(petSave.IsGold).ToShortValue();
 
                 slot.Init(petSave, petData.Icon, rare.Color, $"x{bonus}");
@@ -121,7 +122,7 @@ namespace Serbull.GameAssets.Pets
         {
             var petConfig = PetManager.PetConfig;
             var pet = petConfig.GetPetData(petData.Id);
-            var rare = petConfig.GetRarityData(pet.Rarity);
+            var rarity = Services.Rarity.GetRarityData(pet.Rarity);
             _currentPetData = petData;
 
             _equipButton.gameObject.SetActive(!petData.IsEquipped);
@@ -133,11 +134,11 @@ namespace Serbull.GameAssets.Pets
             _bonusText.text = $"x{pet.GetBonus(petData.IsGold).ToShortValue()}";
             _removeButton.gameObject.SetActive(_currentPetData != null && !_currentPetData.IsEquipped && !pet.Undeletable);
 
-            _mainPetNameText.text = LocalizationProvider.GetText(pet.Title);
-            _rareText.text = LocalizationProvider.GetText(rare.Id);
+            _mainPetNameText.text = Services.Localization.GetText(pet.Title);
+            _rareText.text = Services.Localization.GetText(rarity.Id);
 
-            _rareText.color = rare.Color;
-            _mainPetBg.color = rare.Color;
+            _rareText.color = rarity.Color;
+            _mainPetBg.color = rarity.Color;
 
             _mainPetImage.sprite = pet.Icon;
 
@@ -150,13 +151,13 @@ namespace Serbull.GameAssets.Pets
             if (_currentPetData.IsGold)
             {
                 _specificPetText.gameObject.SetActive(true);
-                _specificPetText.text = LocalizationProvider.GetText("gold");
+                _specificPetText.text = Services.Localization.GetText("gold");
                 _specificPetText.colorGradient = _goldPetColor;
             }
             else if (petConfig.GetPetData(petData.Id).Undeletable)
             {
                 _specificPetText.gameObject.SetActive(true);
-                _specificPetText.text = LocalizationProvider.GetText("premium");
+                _specificPetText.text = Services.Localization.GetText("premium");
                 _specificPetText.colorGradient = _premiumPetColor;
             }
             else
@@ -183,7 +184,7 @@ namespace Serbull.GameAssets.Pets
 
             if (PetManager.GetEqippedPets().Count >= 3)
             {
-                Services.UI.Notification.ShowRed(LocalizationProvider.GetText("equip_max"));
+                Services.UI.Notification.ShowRed(Services.Localization.GetText("equip_max"));
                 return;
             }
 

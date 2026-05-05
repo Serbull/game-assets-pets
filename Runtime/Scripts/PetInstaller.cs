@@ -24,12 +24,13 @@ namespace Serbull.GameAssets.Pets
         }
 #endif
 
-        public void Init(ICurrency eggCurrency, List<PetData> saveData, string language = "en")
+        public void Init(ICurrency eggCurrency, List<PetData> saveData)
         {
-            PetManager.Init(_petConfig,
+            PetManager.Init(_petConfig, saveData,
                 _petPopup, _inappPetPopup,
-                _eggPopup, _eggHatchPreviewPopup,
-                saveData, language);
+                _eggPopup, _eggHatchPreviewPopup);
+
+            Services.Localization.AddLocalization(_petConfig.Localizations);
 
             _eggPopup.Init(eggCurrency);
         }

@@ -73,7 +73,7 @@ namespace Serbull.GameAssets.Pets.Editor
             {
                 _petIds = _petConfig.Pets.Select(p => p.Id).ToArray();
                 _petLabels = _petConfig.Pets.Select(p => $"{p.Id} [x{p.GetBonus(false)}]").ToArray();
-                _petColors = _petConfig.Pets.Select(p => _rarityConfig.GetRarityData(p.Rarity).Color).ToArray();
+                _petColors = _petConfig.Pets.Select(p => _rarityConfig.Rarities.FirstOrDefault((r) => r.Id == p.Rarity).Color).ToArray();
             }
             else
             {

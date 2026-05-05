@@ -20,17 +20,12 @@ namespace Serbull.GameAssets.Pets
         private static EggPopup _eggPopup;
         private static EggHatchPreviewPopup _eggHatchPreviewPopup;
 
-        public static void Init(PetConfig petConfig,
-            PetPopup petPopup,
-            InappPetPopup inappPetPopup,
-            EggPopup eggPopup,
-            EggHatchPreviewPopup eggHatchPreviewPopup,
-            List<PetData> petSaveData, string language = "en")
+        public static void Init(PetConfig petConfig, List<PetData> petSaveData,
+            PetPopup petPopup, InappPetPopup inappPetPopup,
+            EggPopup eggPopup, EggHatchPreviewPopup eggHatchPreviewPopup)
         {
             _petConfig = petConfig;
-
             _petSaveData = petSaveData;
-            LocalizationProvider.Initialize(language);
 
             _petPopup = petPopup;
             _inappPetPopup = inappPetPopup;
@@ -195,11 +190,11 @@ namespace Serbull.GameAssets.Pets
 
             if (!success)
             {
-                Services.UI.Notification.ShowRed(LocalizationProvider.GetText("merge_fail"));
+                Services.UI.Notification.ShowRed(Services.Localization.GetText("merge_fail"));
                 return;
             }
 
-            Services.UI.Notification.ShowGreen(LocalizationProvider.GetText("merge_success"));
+            Services.UI.Notification.ShowGreen(Services.Localization.GetText("merge_success"));
 
             AddPet(id, true);
         }
@@ -284,12 +279,12 @@ namespace Serbull.GameAssets.Pets
         public static void PreviewPet(string petId)
         {
             var petData = PetConfig.GetPetData(petId);
-            var rareData = PetConfig.GetRarityData(petData.Rarity);
+            var rarityData = Services.Rarity.GetRarityData(petData.Rarity);
 
-            var item = new RewardPreviewItem(LocalizationProvider.GetText(petData.Title),
-                LocalizationProvider.GetText(petData.Rarity),
+            var item = new RewardPreviewItem(Services.Localization.GetText(petData.Title),
+                Services.Localization.GetText(rarityData.LocalizationId),
                 petData.Icon, 1, true,
-                Color.white, rareData.Color, rareData.Color);
+                Color.white, rarityData.Color, rarityData.Color);
 
             Services.UI.RewardPreviewPopup.Show(item);
         }

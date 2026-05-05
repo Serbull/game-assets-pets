@@ -1313,157 +1313,134 @@ MonoBehaviour:
       Weight: 2
   Localizations:
   - Id: pets
-    English: Pets
-    Russian: "\u041F\u0438\u0442\u043E\u043C\u0446\u044B"
+    En: Pets
+    Ru: "\u041F\u0438\u0442\u043E\u043C\u0446\u044B"
   - Id: equip
-    English: Equip
-    Russian: "\u042D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u0430\u0442\u044C"
+    En: Equip
+    Ru: "\u042D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u0430\u0442\u044C"
   - Id: unequip
-    English: Unequip
-    Russian: "\u0421\u043D\u044F\u0442\u044C"
+    En: Unequip
+    Ru: "\u0421\u043D\u044F\u0442\u044C"
   - Id: equip_best
-    English: Equip best
-    Russian: "\u042D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u0430\u0442\u044C
-      \u043B\u0443\u0447\u0448\u0438\u0445"
+    En: Equip best
+    Ru: "\u042D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u043B\u0443\u0447\u0448\u0438\u0445"
   - Id: equip_max
-    English: the maximum number of pets is equipped
-    Russian: "\u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u0430\u043D\u043E
-      \u043C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E
-      \u043F\u0438\u0442\u043E\u043C\u0446\u0435\u0432"
+    En: the maximum number of pets is equipped
+    Ru: "\u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u0430\u043D\u043E \u043C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435
+      \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u043F\u0438\u0442\u043E\u043C\u0446\u0435\u0432"
   - Id: merge
-    English: Merge <b>{0}/5
-    Russian: "\u0421\u043B\u0438\u044F\u043D\u0438\u0435 <b>{0}/5"
+    En: Merge <b>{0}/5
+    Ru: "\u0421\u043B\u0438\u044F\u043D\u0438\u0435 <b>{0}/5"
   - Id: merge_success
-    English: the pet was successfully created
-    Russian: "\u043F\u0438\u0442\u043E\u043C\u0435\u0446 \u0443\u0434\u0430\u0447\u043D\u043E
+    En: the pet was successfully created
+    Ru: "\u043F\u0438\u0442\u043E\u043C\u0435\u0446 \u0443\u0434\u0430\u0447\u043D\u043E
       \u0441\u043E\u0437\u0434\u0430\u043D"
   - Id: merge_fail
-    English: failed to create a pet
-    Russian: "\u043D\u0435 \u0443\u0434\u0430\u043B\u043E\u0441\u044C \u0441\u043E\u0437\u0434\u0430\u0442\u044C
+    En: failed to create a pet
+    Ru: "\u043D\u0435 \u0443\u0434\u0430\u043B\u043E\u0441\u044C \u0441\u043E\u0437\u0434\u0430\u0442\u044C
       \u043F\u0438\u0442\u043E\u043C\u0446\u0430"
   - Id: chance
-    English: Chance <color=yellow><b>{0}%
-    Russian: "\u0428\u0430\u043D\u0441 <color=yellow><b>{0}%"
+    En: Chance <color=yellow><b>{0}%
+    Ru: "\u0428\u0430\u043D\u0441 <color=yellow><b>{0}%"
   - Id: inventory_full
-    English: The inventory is full
-    Russian: "\u0418\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C \u043F\u043E\u043B\u043E\u043D"
+    En: The inventory is full
+    Ru: "\u0418\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C \u043F\u043E\u043B\u043E\u043D"
   - Id: not_enough_money
-    English: Not enough funds
-    Russian: "\u041D\u0435 \u0445\u0432\u0430\u0442\u0430\u0435\u0442 c\u0440\u0435\u0434\u0441\u0442\u0432"
-  - Id: common
-    English: Common
-    Russian: "\u041E\u0431\u044B\u0447\u043D\u044B\u0439"
-  - Id: uncommon
-    English: Uncommon
-    Russian: "\u041D\u0435\u043E\u0431\u044B\u0447\u043D\u044B\u0439"
-  - Id: rare
-    English: Rarity
-    Russian: "\u0420\u0435\u0434\u043A\u0438\u0439"
-  - Id: epic
-    English: Epic
-    Russian: "\u042D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0439"
-  - Id: legendary
-    English: Legendary
-    Russian: "\u041B\u0435\u0433\u0435\u043D\u0434\u0430\u0440\u043D\u044B\u0439"
-  - Id: mystical
-    English: Mystical
-    Russian: "\u041C\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0439"
-  - Id: secret
-    English: Secret
-    Russian: "\u0421\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0439"
+    En: Not enough funds
+    Ru: "\u041D\u0435 \u0445\u0432\u0430\u0442\u0430\u0435\u0442 c\u0440\u0435\u0434\u0441\u0442\u0432"
   - Id: gold
-    English: Gold
-    Russian: "\u0417\u043E\u043B\u043E\u0442\u043E\u0439"
+    En: Gold
+    Ru: "\u0417\u043E\u043B\u043E\u0442\u043E\u0439"
   - Id: premium
-    English: Premium
-    Russian: "\u041F\u0440\u0435\u043C\u0438\u0443\u043C"
+    En: Premium
+    Ru: "\u041F\u0440\u0435\u043C\u0438\u0443\u043C"
   - Id: bear
-    English: Bear
-    Russian: "\u041C\u0435\u0434\u0432\u0435\u0434\u044C"
+    En: Bear
+    Ru: "\u041C\u0435\u0434\u0432\u0435\u0434\u044C"
   - Id: bird
-    English: Bird
-    Russian: "\u041F\u0442\u0435\u043D\u0435\u0446"
+    En: Bird
+    Ru: "\u041F\u0442\u0435\u043D\u0435\u0446"
   - Id: bunny
-    English: Bunny
-    Russian: "\u041A\u0440\u043E\u043B\u0438\u043A"
+    En: Bunny
+    Ru: "\u041A\u0440\u043E\u043B\u0438\u043A"
   - Id: cat
-    English: Cat
-    Russian: "\u041A\u043E\u0442"
+    En: Cat
+    Ru: "\u041A\u043E\u0442"
   - Id: chick
-    English: Chick
-    Russian: "\u0426\u044B\u043F\u043B\u0435\u043D\u043E\u043A"
+    En: Chick
+    Ru: "\u0426\u044B\u043F\u043B\u0435\u043D\u043E\u043A"
   - Id: chicken
-    English: Chicken
-    Russian: "\u041A\u0443\u0440\u0438\u0446\u0430"
+    En: Chicken
+    Ru: "\u041A\u0443\u0440\u0438\u0446\u0430"
   - Id: cow
-    English: Cow
-    Russian: "\u041A\u043E\u0440\u043E\u0432\u0430"
+    En: Cow
+    Ru: "\u041A\u043E\u0440\u043E\u0432\u0430"
   - Id: deer
-    English: Deer
-    Russian: "\u041E\u043B\u0435\u043D\u044C"
+    En: Deer
+    Ru: "\u041E\u043B\u0435\u043D\u044C"
   - Id: dog
-    English: Dog
-    Russian: "\u0421\u043E\u0431\u0430\u043A\u0430"
+    En: Dog
+    Ru: "\u0421\u043E\u0431\u0430\u043A\u0430"
   - Id: duck
-    English: Duck
-    Russian: "\u0423\u0442\u043A\u0430"
+    En: Duck
+    Ru: "\u0423\u0442\u043A\u0430"
   - Id: fox
-    English: Fox
-    Russian: "\u041B\u0438\u0441\u0430"
+    En: Fox
+    Ru: "\u041B\u0438\u0441\u0430"
   - Id: goat
-    English: Goat
-    Russian: "\u041A\u043E\u0437\u0435\u043B"
+    En: Goat
+    Ru: "\u041A\u043E\u0437\u0435\u043B"
   - Id: horse
-    English: Horse
-    Russian: "\u041B\u043E\u0448\u0430\u0434\u044C"
+    En: Horse
+    Ru: "\u041B\u043E\u0448\u0430\u0434\u044C"
   - Id: lion
-    English: Lion
-    Russian: "\u041B\u0435\u0432"
+    En: Lion
+    Ru: "\u041B\u0435\u0432"
   - Id: lizard
-    English: Lizard
-    Russian: "\u042F\u0449\u0435\u0440\u0438\u0446\u0430"
+    En: Lizard
+    Ru: "\u042F\u0449\u0435\u0440\u0438\u0446\u0430"
   - Id: owl
-    English: Owl
-    Russian: "\u0421\u043E\u0432\u0430"
+    En: Owl
+    Ru: "\u0421\u043E\u0432\u0430"
   - Id: panda
-    English: Panda
-    Russian: "\u041F\u0430\u043D\u0434\u0430"
+    En: Panda
+    Ru: "\u041F\u0430\u043D\u0434\u0430"
   - Id: pig
-    English: Pig
-    Russian: "\u0421\u0432\u0438\u043D\u044C\u044F"
+    En: Pig
+    Ru: "\u0421\u0432\u0438\u043D\u044C\u044F"
   - Id: sheep
-    English: Sheep
-    Russian: "\u041E\u0432\u0446\u0430"
+    En: Sheep
+    Ru: "\u041E\u0432\u0446\u0430"
   - Id: turtle
-    English: Turtle
-    Russian: "\u0427\u0435\u0440\u0435\u043F\u0430\u0445\u0430"
+    En: Turtle
+    Ru: "\u0427\u0435\u0440\u0435\u043F\u0430\u0445\u0430"
   - Id: wolf
-    English: Wolf
-    Russian: "\u0412\u043E\u043B\u043A"
+    En: Wolf
+    Ru: "\u0412\u043E\u043B\u043A"
   - Id: zebra
-    English: Zebra
-    Russian: "\u0417\u0435\u0431\u0440\u0430"
+    En: Zebra
+    Ru: "\u0417\u0435\u0431\u0440\u0430"
   - Id: cute_dragon1
-    English: Nightram
-    Russian: "\u041D\u0430\u0439\u0442\u0440\u0430\u043C"
+    En: Nightram
+    Ru: "\u041D\u0430\u0439\u0442\u0440\u0430\u043C"
   - Id: cute_dragon2
-    English: Inferny
-    Russian: "\u0418\u043D\u0444\u0435\u0440\u043D\u0438"
+    En: Inferny
+    Ru: "\u0418\u043D\u0444\u0435\u0440\u043D\u0438"
   - Id: cute_dragon3
-    English: Icytail
-    Russian: "\u0410\u0439\u0441\u0438\u0442\u0435\u0439\u043B"
+    En: Icytail
+    Ru: "\u0410\u0439\u0441\u0438\u0442\u0435\u0439\u043B"
   - Id: cute_dragon4
-    English: Sunleaf
-    Russian: "\u0421\u0430\u043D\u043B\u0438\u0444"
+    En: Sunleaf
+    Ru: "\u0421\u0430\u043D\u043B\u0438\u0444"
   - Id: cute_dragon5
-    English: Mystclaw
-    Russian: "\u041C\u0438\u0441\u0442\u0438\u043A\u043B\u0430\u043F"
+    En: Mystclaw
+    Ru: "\u041C\u0438\u0441\u0442\u0438\u043A\u043B\u0430\u043F"
   - Id: cute_dragon6
-    English: Voltwing
-    Russian: "\u0412\u043E\u043B\u044C\u0442\u043A\u0440\u044B\u043B"
+    En: Voltwing
+    Ru: "\u0412\u043E\u043B\u044C\u0442\u043A\u0440\u044B\u043B"
   - Id: cute_dragon7
-    English: Frosty
-    Russian: "\u0424\u0440\u043E\u0441\u0442\u0438"
+    En: Frosty
+    Ru: "\u0424\u0440\u043E\u0441\u0442\u0438"
   Visual:
     BonusSprite: {fileID: 21300000, guid: e59251683cb71492ca2b6d7a48bf8ddf, type: 3}
     EggPriceSprite: {fileID: 21300000, guid: e59251683cb71492ca2b6d7a48bf8ddf, type: 3}

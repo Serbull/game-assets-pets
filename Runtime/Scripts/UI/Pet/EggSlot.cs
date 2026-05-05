@@ -12,7 +12,7 @@ namespace Serbull.GameAssets.Pets
 
         public void Init(Sprite icon, int probability, string rare)
         {
-            _background.color = PetManager.PetConfig.GetRarityData(rare).Color;
+            _background.color = Services.Rarity.GetRarityData(rare).Color;
             _probabilityText.text = probability.ToString() + "%";
             _petIcon.sprite = icon;
         }

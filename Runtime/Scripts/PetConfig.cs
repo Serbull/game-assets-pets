@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Serbull.GameAssets.Rarity;
+using Serbull.GameAssets.Localization;
 
 namespace Serbull.GameAssets.Pets
 {
@@ -46,14 +47,6 @@ namespace Serbull.GameAssets.Pets
         {
             public Sprite BonusSprite;
             public Sprite EggPriceSprite;
-        }
-
-        [Serializable]
-        public class LocalizationData
-        {
-            public string Id;
-            public string English;
-            public string Russian;
         }
 
         public PetData[] Pets;
@@ -205,11 +198,6 @@ namespace Serbull.GameAssets.Pets
             }
 
             Eggs = eggs.ToArray();
-        }
-
-        public RarityConfig.RarityData GetRarityData(string rarityId)
-        {
-            return Services.Rarity.Config.GetRarityData(rarityId);
         }
 
         public PetData GetPetData(string petId)
