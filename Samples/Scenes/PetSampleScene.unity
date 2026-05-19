@@ -1678,8 +1678,8 @@ MonoBehaviour:
   noise: {fileID: 0}
   resolution: 256
   iterations: 2
-  intensity: 2
-  threshold: 2.5
+  intensity: 0.5
+  threshold: 5
   softKnee: 0.5
 --- !u!1 &1559899029
 GameObject:
