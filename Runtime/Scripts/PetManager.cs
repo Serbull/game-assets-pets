@@ -146,6 +146,32 @@ namespace Serbull.GameAssets.Pets
             }
         }
 
+        public static void AddEggWithPreview(string id)
+        {
+            if (PetConfig == null)
+                return;
+
+            var eggData = _petConfig.Eggs.FirstOrDefault(i => i.Id == id);
+            if (eggData == null)
+            {
+                Debug.LogError($"Not exist Egg with id: {id}");
+                return;
+            }
+
+            var weights = eggData.Pets.Select(i => i.Weight).ToArray();
+            var index = MathfUtils.GetRandomIndexByWeight(weights);
+            var petId = eggData.Pets[index].PetId;
+            AddPet(petId);
+
+            if (!EggHatchPreviewPopup.Instance)
+            {
+                Debug.LogError("Add 'EggHatchPreviewPopup.prefab' on the scene.");
+                return;
+            }
+
+            EggHatchPreviewPopup.Instance.Show(() => PreviewPet(petId));
+        }
+
         public static void AddPet(string id, bool isGold = false)
         {
             PetSaveData.Add(new PetData { Id = id, IsGold = isGold });

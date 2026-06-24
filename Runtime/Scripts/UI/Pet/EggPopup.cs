@@ -94,19 +94,7 @@ namespace Serbull.GameAssets.Pets
             }
 
             _currency.Spend(config.Price);
-
-            var weights = config.Pets.Select((i) => i.Weight).ToArray();
-            var id = MathfUtils.GetRandomIndexByWeight(weights);
-            var petId = config.Pets[id].PetId;
-            PetManager.AddPet(petId);
-
-            if (!EggHatchPreviewPopup.Instance)
-            {
-                Debug.LogError("Add 'EggHatchPreviewPopup.prefab' on the scene.");
-                return;
-            }
-
-            EggHatchPreviewPopup.Instance.Show(() => PetManager.PreviewPet(petId));
+            PetManager.AddEggWithPreview(_currentEggId);
         }
     }
 }
