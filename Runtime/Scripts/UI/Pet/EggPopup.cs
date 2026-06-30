@@ -1,11 +1,10 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Linq;
 
 namespace Serbull.GameAssets.Pets
 {
-    public class EggPopup : MonoBehaviour
+    public class EggPopup : Popup
     {
         [SerializeField] private Transform _content;
 
@@ -18,11 +17,10 @@ namespace Serbull.GameAssets.Pets
         [SerializeField] private TextMeshProUGUI _priceText;
 
         private string _currentEggId;
-        private ICurrency _currency;
 
         private void Awake()
         {
-            _closeButton.onClick.AddListener(CloseButton_OnClick);
+            _closeButton.onClick.AddListener(Hide);
             _buyButton.onClick.AddListener(BuyButton_OnClick);
 
             _priceImage.sprite = PetManager.PetConfig.Visual.EggPriceSprite;
@@ -59,29 +57,19 @@ namespace Serbull.GameAssets.Pets
             _currentEggId = null;
         }
 
-        public void Init(ICurrency currency)
-        {
-            _currency = currency;
-        }
-
         public void Show(string eggId)
         {
             _currentEggId = eggId;
-
-            gameObject.SetActive(true);
-        }
-
-        private void CloseButton_OnClick()
-        {
-            gameObject.SetActive(false);
+            base.Show();
         }
 
         private void BuyButton_OnClick()
         {
             if (_currentEggId == null) return;
 
+            var currency = Services.PetService.EggShopCurrency;
             var config = PetManager.PetConfig.GetEggData(_currentEggId);
-            if (config.Price > _currency.Amount)
+            if (config.Price > currency.Amount)
             {
                 Services.UI.Notification.ShowRed(Services.Localization.GetText("not_enough_money"));
                 return;
@@ -93,8 +81,8 @@ namespace Serbull.GameAssets.Pets
                 return;
             }
 
-            _currency.Spend(config.Price);
-            PetManager.AddEggWithPreview(_currentEggId);
+            currency.Spend(config.Price);
+            Services.PetService.AddEggWithPreview(_currentEggId);
         }
     }
 }

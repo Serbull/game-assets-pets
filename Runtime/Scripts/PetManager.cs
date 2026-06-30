@@ -6,10 +6,18 @@ using UnityEngine;
 
 namespace Serbull.GameAssets.Pets
 {
-    public class PetManager
+    public class PetManager : IPetService
     {
         public static event Action OnEquippedPetChanged;
         public static event Action OnPetAdded;
+
+        private readonly ICurrency _eggShopCurrency;
+        public ICurrency EggShopCurrency => _eggShopCurrency;
+
+        public PetManager(ICurrency eggShopCurrency)
+        {
+            _eggShopCurrency = eggShopCurrency;
+        }
 
         private static PetConfig _petConfig;
         private static List<PetData> _petSaveData;
@@ -122,6 +130,17 @@ namespace Serbull.GameAssets.Pets
             }
         }
 
+        IPetService.PetData IPetService.GetPetData(string petId)
+        {
+            var petData = PetConfig.GetPetData(petId);
+            return new IPetService.PetData()
+            {
+                title = petData.Title,
+                icon = petData.Icon,
+                rarity = petData.Rarity
+            };
+        }
+
         public static void EquipPet(string id)
         {
             var pet = PetSaveData.FirstOrDefault(p => p.Id == id && !p.IsEquipped);
@@ -146,7 +165,7 @@ namespace Serbull.GameAssets.Pets
             }
         }
 
-        public static void AddEggWithPreview(string id)
+        public void AddEggWithPreview(string id)
         {
             if (PetConfig == null)
                 return;
@@ -169,10 +188,15 @@ namespace Serbull.GameAssets.Pets
                 return;
             }
 
-            EggHatchPreviewPopup.Instance.Show(() => PreviewPet(petId));
+            EggHatchPreviewPopup.Instance.Show(() => Services.Reward.PreviewPet(petId));
         }
 
-        public static void AddPet(string id, bool isGold = false)
+        public void AddPet(string id)
+        {
+            PetManager.AddPet(id);
+        }
+
+        private static void AddPet(string id, bool isGold = false)
         {
             PetSaveData.Add(new PetData { Id = id, IsGold = isGold });
             SortPets();
@@ -310,19 +334,6 @@ namespace Serbull.GameAssets.Pets
                     return yBonus.CompareTo(xBonus);
                 }
             });
-        }
-
-        public static void PreviewPet(string petId)
-        {
-            var petData = PetConfig.GetPetData(petId);
-            var rarityData = Services.Rarity.GetRarityData(petData.Rarity);
-
-            var item = new RewardPreviewItem(Services.Localization.GetText(petData.Title),
-                Services.Localization.GetText(rarityData.LocalizationId),
-                petData.Icon, 1, true,
-                Color.white, rarityData.Color, rarityData.Color);
-
-            Services.UI.RewardPreviewPopup.Show(item);
         }
     }
 }

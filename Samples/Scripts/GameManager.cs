@@ -49,7 +49,7 @@ namespace Serbull.GameAssets.Pets.Samples
             {
                 var pets = PetManager.PetConfig.Pets;
                 var pet = pets[Random.Range(0, pets.Length)];
-                PetManager.AddPet(pet.Id);
+                Services.PetService.AddPet(pet.Id);
                 Debug.Log("Added random pet: " + pet.Id);
             }
 
@@ -57,7 +57,7 @@ namespace Serbull.GameAssets.Pets.Samples
             {
                 foreach (var pet in PetManager.PetConfig.Pets)
                 {
-                    PetManager.AddPet(pet.Id);
+                    Services.PetService.AddPet(pet.Id);
                 }
                 Debug.Log("Added all pets");
             }

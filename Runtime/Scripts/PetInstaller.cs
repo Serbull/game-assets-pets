@@ -26,15 +26,16 @@ namespace Serbull.GameAssets.Pets
         }
 #endif
 
-        public void Init(ICurrency eggCurrency, List<PetData> saveData)
+        public void Init(ICurrency eggShopCurrency, List<PetData> saveData)
         {
+            IPetService petService = new PetManager(eggShopCurrency);
             PetManager.Init(_petConfig, saveData,
                 _petPopup, _inappPetPopup,
                 _eggPopup, _eggHatchPreviewPopup, _autoEquipBestPets);
 
-            Services.Localization.AddLocalization(_petConfig.Localizations);
+            Services.PetService = petService;
 
-            _eggPopup.Init(eggCurrency);
+            Services.Localization.AddLocalization(_petConfig.Localizations);
         }
     }
 }
